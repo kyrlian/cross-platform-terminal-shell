@@ -19,7 +19,7 @@ wsl.exe --install Debian
 ```
 - Launch wsl debian and install fish and tmux
 ```sh
-wsl.exe -d Debian --  sudo apt-get update && sudo apt-get install fish tmux
+wsl.exe -d Debian --  sudo sh -c "apt-get update && apt-get install fish tmux"
 ```
 - Donwload and install hyper [hyper](https://hyper.is/)
 - Launch hyper, and setup WSL Debian + Fish as shell in hyper : edit preferences and set:
