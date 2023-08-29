@@ -10,7 +10,15 @@ How to setup a cross plateform terminal + shell for mac, linux, and windows WSL
 ```sh
 brew install hyper fish tmux
 ```
-- Donwload and install hyper [hyper](https://hyper.is/)
+- Setup fish shell in hyper : Edit .hyper.js config file and change 'shell'
+```sh
+vi ~/.hyper.js```
+```
+```sh
+	shell: '/opt/homebrew/bin/fish',
+	shellArgs: ['--login'],
+```
+
 
 ## Windows setup:
 - Install WSL Debian
@@ -32,15 +40,6 @@ wsl.exe -d Debian -- sudo chsh -s /usr/bin/fish
 	shellArgs: ['-d', 'Debian'],
 ```
 
-## Optional - Setup fish to always start tmux
-```sh
-vi ~/.config/fish/config.fish
-```
-Add
-```
- tmux a || tmux
-```
-
 ## Optional - edit tmux settings
 ```sh
 vi ~/.tmux.conf
@@ -51,4 +50,12 @@ set-option -g prefix C-Space
 set -g mouse on 
 ```
 
+## Optional - Setup fish to always start tmux
+```sh
+vi ~/.config/fish/config.fish
+```
+add this to attach to an existing session or create a new one
+```
+echo Attaching ; and tmux a ; or echo Creating ; and tmux
+```
 
