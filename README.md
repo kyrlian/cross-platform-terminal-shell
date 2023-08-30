@@ -19,7 +19,6 @@ vi ~/.hyper.js```
 	shellArgs: ['--login'],
 ```
 
-
 ## Windows setup:
 - Install WSL Debian
 ```sh
@@ -34,7 +33,7 @@ wsl.exe -d Debian -- sudo sh -c "apt-get update && apt-get install fish tmux"
 wsl.exe -d Debian -- sudo chsh -s /usr/bin/fish
 ```
 - Donwload and install hyper [hyper](https://hyper.is/)
-- Launch hyper, and setup WSL Debian as shell in hyper : edit preferences and set:
+- Launch hyper, and setup WSL Debian as shell in hyper : edit hyper preferences and set:
 ```
 	shell: 'wsl.exe',
 	shellArgs: ['-d', 'Debian'],
@@ -58,4 +57,15 @@ add this to attach to an existing session or create a new one
 ```
 echo Attaching ; and tmux a ; or echo Creating ; and tmux
 ```
-
+## Optionnal - add [hyperterm-summon](https://www.npmjs.com/package/hyperterm-summon) to open hyper with hotkey
+```sh
+hyper i hyperterm-summon
+```
+edit hyper preferences and add:
+```js
+        summon: {
+          hideDock: true,
+          hideOnBlur: true,
+          hotkey: 'Control+Space',
+        },
+```
