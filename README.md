@@ -1,6 +1,7 @@
-# cross-platform-terminal-shell <!-- omit in toc -->
-Searching for a cross plateform combo terminal, shell, prompt for mac and windows
+# Cross Platform Terminal & Shell <!-- omit in toc -->
+Searching for a cross plateform combo : terminal, shell, prompt - for mac and windows.
 
+TOC
 - [Alacrity - Nushell - Starship - Zellij - Helix](#alacrity---nushell---starship---zellij---helix)
 	- [Macos setup](#macos-setup)
 	- [Windows setup](#windows-setup)
@@ -23,18 +24,27 @@ Searching for a cross plateform combo terminal, shell, prompt for mac and window
 
 `TODO - Test and complete`
 
-1. Install alacritty and nushell
+1. Install alacritty, nu, starship, helix
 	```sh
 	brew install alacritty nu starship helix
 	```
+	Start `alacritty` and enter nushell with `nu`.
 
 1. Set nu as default shell in alacritty config
   
-	Create and edit `$HOME/.config/alacritty/alacritty.toml` and add
+	Create and edit `$HOME/.config/alacritty/alacritty.toml` 
+	```sh
+	mkdir -p $HOME/.config/alacritty
+	cd alacritty
+	helix alacritty.toml
+	```
+	
+	add:
 	```toml
 	[shell]
 	program = "nu"
 	```
+	And re-start alacritty to get in nu.
 
 ## Windows setup
 
@@ -51,6 +61,7 @@ Searching for a cross plateform combo terminal, shell, prompt for mac and window
 	```sh
 	cd ~\AppData\Roaming\
 	mkdir alacritty
+	cd alacritty
 	helix alacritty.toml
 	```
 
