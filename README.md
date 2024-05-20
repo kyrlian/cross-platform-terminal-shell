@@ -78,9 +78,9 @@ My first try to get a cross plateform combo terminal + shell + multiplexer for m
 
 ## Advanced config
 
-- [hyperterm config](./hyperterm-config.md)
-- [fish config](./fish-config.md)
-- [tmux config](./tmux-config.md)
+- [hyperterm config](./advanced_configs/hyperterm-config.md)
+- [fish config](./advanced_configs/fish-config.md)
+- [tmux config](./advanced_configs/tmux-config.md)
 
 ## Verdict and lessons learned
 - Hyper is a bit too slow to start for me as I tend to open/close my terminal a lot
@@ -178,10 +178,10 @@ For my second try I switched to [Alacrity](https://alacritty.org/) which is much
 
 ## Advanced config
 
-- [Helix config](./helix-config.md)
-- [Neovim config](./neovim-config.md)
-- [Nushell config](./nushell-config.md)
-- [Starship config](./starship-config.md)
+- [Helix config](./advanced_configs/helix-config.md)
+- [Neovim config](./advanced_configs/neovim-config.md)
+- [Nushell config](./advanced_configs/nushell-config.md)
+- [Starship config](./advanced_configs/starship-config.md)
 
 ## Ressources
 
