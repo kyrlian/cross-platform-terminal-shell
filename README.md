@@ -8,11 +8,10 @@ TOC
 	- [Windows setup](#windows-setup)
 	- [Advanced config](#advanced-config)
 	- [Verdict and lessons learned](#verdict-and-lessons-learned)
-- [2nd try - Alacrity - Nushell - Starship - Zellij - Helix](#2nd-try---alacrity---nushell---starship---zellij---helix)
+- [2nd try - Westerm - Nushell - Starship](#2nd-try---westerm---nushell---starship)
 	- [Macos setup](#macos-setup-1)
 	- [Windows setup](#windows-setup-1)
 	- [Advanced config](#advanced-config-1)
-	- [Ressources](#ressources)
 
 # Intro
 
@@ -36,17 +35,10 @@ My first try to get a cross plateform combo terminal + shell + multiplexer for m
 ## Macos setup
 
 1. Install fish and tmux
-   
 	```sh
 	brew install hyper fish tmux
 	```
-
-2. Setup fish shell in hyper : Edit `.hyper.js` config file and change `shell`
-   
-	```sh
-	vi ~/.hyper.js
-	```
-
+2. Setup fish shell in hyper : Edit `~/.hyper.js` config file and change `shell`
 	```sh
 		shell: '/opt/homebrew/bin/fish',
 		shellArgs: ['--login'],
@@ -87,14 +79,13 @@ My first try to get a cross plateform combo terminal + shell + multiplexer for m
 - Fish is fun, but not POSIX so my old aliases and muscle memory is lost, and it's not "modern" enough to warrant learning for me. I'm probably too late for this one
 - In the end I kept getting back to iterm2/win terminal and zsh
 
-# 2nd try - Alacrity - Nushell - Starship - Zellij - Helix
+# 2nd try - Westerm - Nushell - Starship
 
-For my second try I switched to [Alacrity](https://alacritty.org/) which is much faster to start, [nushell](https://www.nushell.sh/) because it seems different enough to warrant learning a new shell, and included a few editors.
+For my second try I tried [Alacrity](https://alacritty.org/) but settled on [Westerm](https://wezfurlong.org/wezterm/index.html) for the ability to split windows (as I can't use [tmux](https://github.com/tmux/tmux/wiki) nor [zellij](https://zellij.dev/) on windows), [nushell](https://www.nushell.sh/) because it seems different enough to warrant learning a new shell, [Starship](https://starship.rs/) to customize my prompt, and included a few editors.
 
-- Terminal: [Alacrity](https://alacritty.org/)
+- Terminal: [Westerm](https://wezfurlong.org/wezterm/index.html)
 - Shell: [Nushell](https://www.nushell.sh/)
 - Prompt: [Starship](https://starship.rs/)
-- Multiplexer: [zellij](https://zellij.dev/) (on macOS)
 - Editors: [nano](https://www.nano-editor.org/), [neovim](https://neovim.io/), [helix](https://helix-editor.com/)
   
 ## Macos setup
@@ -104,70 +95,49 @@ For my second try I switched to [Alacrity](https://alacritty.org/) which is much
 1. Install everything
 
 	```sh
-	brew install alacritty nu starship nano neovim helix
+	brew install wezterm nu starship nano neovim helix
 	```
-	Start `alacritty` and enter nushell with `nu`.
-
-2. Set nu as default shell in alacritty config
-  
-	Create and edit `$HOME/.config/alacritty/alacritty.toml` 
-	```sh
-	mkdir -p $HOME/.config/alacritty
-	cd alacritty
-	nano alacritty.toml
-	```
-	add:
-	```toml
-	[shell]
-	program = "nu"
-	```
-	And re-start alacritty to get in nu.
+	Start `wezterm` and enter nushell with `nu`.
 
 ## Windows setup
 
 1. Install everything
    
 	```sh
-	scoop install alacritty nu starship nano neovim helix
+	scoop install alaweztermcritty nu starship nano neovim helix
 	```
-	Start `alacritty` and enter nushell with `nu`.
+	Start `wezterm` and enter nushell with `nu`.
 
-2. Set nu as default shell in alacritty config
+2. Set `nu` as default shell in `wezterm` config
    
-	Create and edit `%APPDATA%\alacritty\alacritty.toml`
-	```sh
-	cd ~\AppData\Roaming\
-	mkdir alacritty
-	cd alacritty
-	nano alacritty.toml
-	```
-	add:
-	```toml
-	[shell]
-	program = "nu"
+	Open `wezterm` config `~/.wezterm.lua` and add:
+
+	```lua
+	local wezterm = require 'wezterm'
+	local config = wezterm.config_builder()
+
+	-- This is where you actually apply your config choices
+
+	-- Changing the color scheme:
+	config.color_scheme = 'AdventureTime'
+
+	-- Set default shell
+	config.default_prog = { 'nu', '-l' }
+
+	-- and finally, return the configuration to wezterm
+	return config
 	```
 
-	And re-start alacritty to get in nu.
+	Then re-start wezterm to get in nu.
 
-3. Set helix as nu default editor
-   
-	Edit `config.nu`
-	```sh
-	config nu
-	```
-	Search for `buffer_editor`, and add `helix`:
-	```sh
-	buffer_editor: "helix" 
-	```
-
-4. Setup starship as nu prompt
+3. Setup starship as nu prompt
   
-  	Go to `%APPDATA%\nushell` and create the starship overlay
+  	Go to nu config directory using `$nu.config-path` and create the starship overlay
 	```sh
-	cd ~\AppData\Roaming\nushell\
+	cd ($nu.config-path | path dirname)
 	starship init nu | save -f starship.nu
 	```
-  	Edit nu config with:
+  	Edit nu config
 	```sh
 	config nu
 	```
@@ -176,15 +146,22 @@ For my second try I switched to [Alacrity](https://alacritty.org/) which is much
 	use starship.nu
 	```
 
+4. Set nu default editor
+   
+	Edit nu config
+	```sh
+	config nu
+	```
+	Search for `buffer_editor`, and add your prefered editor:
+	```sh
+	buffer_editor: "helix" 
+	```
+
 ## Advanced config
 
+- [Alacritty config](./advanced_configs/alacritty-config.md)
 - [Helix config](./advanced_configs/helix-config.md)
 - [Neovim config](./advanced_configs/neovim-config.md)
 - [Nushell config](./advanced_configs/nushell-config.md)
 - [Starship config](./advanced_configs/starship-config.md)
-
-## Ressources
-
-- https://dev.to/yjdoc2/completely-oxidizing-my-terminal-setup-43d8
-- https://alacritty.org/config-alacritty.html
-
+- [Westerm config](./advanced_configs/wezterm-config.md)
