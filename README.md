@@ -8,7 +8,7 @@ TOC
 	- [Windows setup](#windows-setup)
 	- [Advanced config](#advanced-config)
 	- [Verdict and lessons learned](#verdict-and-lessons-learned)
-- [2nd try - Westerm - Nushell - Starship](#2nd-try---westerm---nushell---starship)
+- [2nd try - Wezterm - Nushell - Starship](#2nd-try---wezterm---nushell---starship)
 	- [Macos setup](#macos-setup-1)
 	- [Windows setup](#windows-setup-1)
 	- [Advanced config](#advanced-config-1)
@@ -79,11 +79,11 @@ My first try to get a cross plateform combo terminal + shell + multiplexer for m
 - Fish is fun, but not POSIX so my old aliases and muscle memory is lost, and it's not "modern" enough to warrant learning for me. I'm probably too late for this one
 - In the end I kept getting back to iterm2/win terminal and zsh
 
-# 2nd try - Westerm - Nushell - Starship
+# 2nd try - Wezterm - Nushell - Starship
 
-For my second try I tried [Alacrity](https://alacritty.org/) but settled on [Westerm](https://wezfurlong.org/wezterm/index.html) for the ability to split windows (as I can't use [tmux](https://github.com/tmux/tmux/wiki) nor [zellij](https://zellij.dev/) on windows), [nushell](https://www.nushell.sh/) because it seems different enough to warrant learning a new shell, [Starship](https://starship.rs/) to customize my prompt, and included a few editors.
+For my second try I tried [Alacrity](https://alacritty.org/) but settled on [Wezterm](https://wezfurlong.org/wezterm/index.html) for the ability to split windows (as I can't use [tmux](https://github.com/tmux/tmux/wiki) nor [zellij](https://zellij.dev/) on windows), [nushell](https://www.nushell.sh/) because it seems different enough to warrant learning a new shell, [Starship](https://starship.rs/) to customize my prompt, and included a few editors.
 
-- Terminal: [Westerm](https://wezfurlong.org/wezterm/index.html)
+- Terminal: [Wezterm](https://wezfurlong.org/wezterm/index.html)
 - Shell: [Nushell](https://www.nushell.sh/)
 - Prompt: [Starship](https://starship.rs/)
 - Editors: [nano](https://www.nano-editor.org/), [neovim](https://neovim.io/), [helix](https://helix-editor.com/)
@@ -164,4 +164,4 @@ For my second try I tried [Alacrity](https://alacritty.org/) but settled on [Wes
 - [Neovim config](./advanced_configs/neovim-config.md)
 - [Nushell config](./advanced_configs/nushell-config.md)
 - [Starship config](./advanced_configs/starship-config.md)
-- [Westerm config](./advanced_configs/wezterm-config.md)
+- [Wezterm config](./advanced_configs/wezterm-config.md)
