@@ -185,8 +185,7 @@ For my second try I switched to [Alacrity](https://alacritty.org/) which is much
    
 	Edit `config.nu`
 	```sh
-	cd ~\AppData\Roaming\nushell\
-	helix config.nu
+	config nu
 	```
 	Search for `buffer_editor`, and add `helix`:
 	```sh
