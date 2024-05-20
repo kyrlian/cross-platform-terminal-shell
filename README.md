@@ -6,12 +6,12 @@ TOC
 - [1st try: Hyper - Fish - Tmux](#1st-try-hyper---fish---tmux)
 	- [Macos setup](#macos-setup)
 	- [Windows setup](#windows-setup)
-	- [Optional config](#optional-config)
+	- [Advanced config](#advanced-config)
 	- [Verdict and lessons learned](#verdict-and-lessons-learned)
 - [2nd try - Alacrity - Nushell - Starship - Zellij - Helix](#2nd-try---alacrity---nushell---starship---zellij---helix)
 	- [Macos setup](#macos-setup-1)
 	- [Windows setup](#windows-setup-1)
-	- [Advanced config](#advanced-config)
+	- [Advanced config](#advanced-config-1)
 	- [Ressources](#ressources)
 
 # Intro
@@ -76,43 +76,11 @@ My first try to get a cross plateform combo terminal + shell + multiplexer for m
 		shellArgs: ['-d', 'Debian'],
 	```
 
-## Optional config
+## Advanced config
 
-- Edit tmux settings
-  
-	```sh
-	vi ~/.tmux.conf
-	```
-	Enable mouse support and use Control+Space prefix
-	```
-	set-option -g prefix C-Space
-	set -g mouse on 
-	```
-
-- Setup fish to always start tmux
-  
-	```sh
-	vi ~/.config/fish/config.fish
-	```
-	add this to attach to an existing session or create a new one
-	```
-	echo Attaching ; and tmux a ; or echo Creating ; and tmux
-	```
-
-- Add [hyperterm-summon](https://www.npmjs.com/package/hyperterm-summon) to open hyper with hotkey
-  
-	Install hyperterm-summon
-	```sh
-	hyper i hyperterm-summon
-	```
-	Edit hyper preferences and add:
-	```js
-			summon: {
-			hideDock: true,
-			hideOnBlur: true,
-			hotkey: 'Control+Shift+Space',
-			},
-	```
+- [hyperterm config](./hyperterm-config.md)
+- [fish config](./fish-config.md)
+- [tmux config](./tmux-config.md)
 
 ## Verdict and lessons learned
 - Hyper is a bit too slow to start for me as I tend to open/close my terminal a lot
@@ -121,22 +89,22 @@ My first try to get a cross plateform combo terminal + shell + multiplexer for m
 
 # 2nd try - Alacrity - Nushell - Starship - Zellij - Helix
 
-For my second try I switched to [Alacrity](https://alacritty.org/) which is much faster to start, [nushell](https://www.nushell.sh/) because it seems different enough to warrant learning a new shell, and included a couple of editors ([nano](https://www.nano-editor.org/) and [helix](https://helix-editor.com/))
+For my second try I switched to [Alacrity](https://alacritty.org/) which is much faster to start, [nushell](https://www.nushell.sh/) because it seems different enough to warrant learning a new shell, and included a few editors.
 
 - Terminal: [Alacrity](https://alacritty.org/)
 - Shell: [Nushell](https://www.nushell.sh/)
 - Prompt: [Starship](https://starship.rs/)
 - Multiplexer: [zellij](https://zellij.dev/) (on macOS)
-- Editors: [nano](https://www.nano-editor.org/), [helix](https://helix-editor.com/)
+- Editors: [nano](https://www.nano-editor.org/), [neovim](https://neovim.io/), [helix](https://helix-editor.com/)
   
 ## Macos setup
 
 `TODO - Test and complete`
 
-1. Install alacritty, nu, starship, helix
+1. Install everything
 
 	```sh
-	brew install alacritty nu starship nano helix
+	brew install alacritty nu starship nano neovim helix
 	```
 	Start `alacritty` and enter nushell with `nu`.
 
@@ -157,10 +125,10 @@ For my second try I switched to [Alacrity](https://alacritty.org/) which is much
 
 ## Windows setup
 
-1. Install alacritty, nu, starship, helix
+1. Install everything
    
 	```sh
-	scoop install alacritty nu starship nano helix
+	scoop install alacritty nu starship nano neovim helix
 	```
 	Start `alacritty` and enter nushell with `nu`.
 
@@ -210,12 +178,13 @@ For my second try I switched to [Alacrity](https://alacritty.org/) which is much
 
 ## Advanced config
 
-- [Nushell config](./nushell-config.md)
 - [Helix config](./helix-config.md)
+- [Neovim config](./neovim-config.md)
+- [Nushell config](./nushell-config.md)
+- [Starship config](./starship-config.md)
 
 ## Ressources
 
 - https://dev.to/yjdoc2/completely-oxidizing-my-terminal-setup-43d8
-- https://github.com/alacritty/alacritty/tree/master/alacritty#configuration
 - https://alacritty.org/config-alacritty.html
 
