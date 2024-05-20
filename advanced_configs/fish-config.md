@@ -1,5 +1,7 @@
 # Fish config
 
+## Tmux
+
 Setup fish to always start tmux
   
 ```sh

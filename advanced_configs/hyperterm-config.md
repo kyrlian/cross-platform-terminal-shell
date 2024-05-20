@@ -1,6 +1,8 @@
 # hyperterm config
 
-## Add [hyperterm-summon](https://www.npmjs.com/package/hyperterm-summon) to open hyper with hotkey
+## hyperterm-summon
+
+Add [hyperterm-summon](https://www.npmjs.com/package/hyperterm-summon) to open hyper with hotkey
   
 Install hyperterm-summon
 
