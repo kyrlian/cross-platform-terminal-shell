@@ -91,8 +91,6 @@ For my second try I tried [Alacrity](https://alacritty.org/) but settled on [Wez
   
 ## Macos setup
 
-`TODO - Test and complete`
-
 1. Install everything
 
 	```sh
@@ -100,7 +98,7 @@ For my second try I tried [Alacrity](https://alacritty.org/) but settled on [Wez
 	```
 	Start `wezterm` and enter nushell with `nu`.
 
-1. Customize nu PATH
+2. Customize nu PATH
 
 	Create a `custom-profile.nu` file (I have mine in ~/scripts)
 	```sh
@@ -147,7 +145,8 @@ For my second try I tried [Alacrity](https://alacritty.org/) but settled on [Wez
 	-- This is where you actually apply your config choices
 
 	-- Changing the color scheme:
-	config.color_scheme = 'AdventureTime'
+	config.color_scheme = 'catppuccin-mocha'
+	-- config.color_scheme = 'dracula'
 
 	-- Set default shell
 	config.default_prog = { 'nu', '-l' }
@@ -168,9 +167,8 @@ For my second try I tried [Alacrity](https://alacritty.org/) but settled on [Wez
 	```
 	Search for `buffer_editor`, and add your prefered editor:
 	```sh
-	buffer_editor: "helix" 
+	buffer_editor: "hx" 
 	```
- 	**NOTE**: On macos helix executable is `hx`
  
 4. Setup starship as nu prompt
   
