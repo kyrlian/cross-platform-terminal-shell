@@ -18,21 +18,29 @@ config.default_prog = { '/opt/homebrew/bin/nu', '-l' }
 
 -- Set tmux like bindings
 config.leader = { key = "w", mods = "CTRL" }
+-- local act = wezterm.action
 config.keys = {
-    { key = "%",          mods = "LEADER",      action = wezterm.action { SplitHorizontal = { domain = "CurrentPaneDomain" } } },
-    { key = "-",          mods = "LEADER",      action = wezterm.action { SplitVertical = { domain = "CurrentPaneDomain" } } },
-    { key = "s",          mods = "LEADER",      action = wezterm.action { SplitHorizontal = { domain = "CurrentPaneDomain" } } },
-    { key = "s",          mods = "LEADER|CTRL", action = wezterm.action { SplitVertical = { domain = "CurrentPaneDomain" } } },
-    { key = "x",          mods = "LEADER",      action = wezterm.action { CloseCurrentPane = { confirm = true } } },
-    { key = "Space",      mods = "LEADER",      action = "TogglePaneZoomState" },
-    { key = "LeftArrow",  mods = "LEADER",      action = wezterm.action { ActivatePaneDirection = "Left" } },
-    { key = "DownArrow",  mods = "LEADER",      action = wezterm.action { ActivatePaneDirection = "Down" } },
-    { key = "UpArrow",    mods = "LEADER",      action = wezterm.action { ActivatePaneDirection = "Up" } },
-    { key = "RightArrow", mods = "LEADER",      action = wezterm.action { ActivatePaneDirection = "Right" } },
-    { key = "LeftArrow",  mods = "LEADER|CTRL", action = wezterm.action { AdjustPaneSize = { "Left", 5 } } },
-    { key = "DownArrow",  mods = "LEADER|CTRL", action = wezterm.action { AdjustPaneSize = { "Down", 5 } } },
-    { key = "UpArrow",    mods = "LEADER|CTRL", action = wezterm.action { AdjustPaneSize = { "Up", 5 } } },
-    { key = "RightArrow", mods = "LEADER|CTRL", action = wezterm.action { AdjustPaneSize = { "Right", 5 } } },
+    -- pane split
+    { key = "%",          mods = "LEADER",      action = wezterm.action.SplitHorizontal { domain = "CurrentPaneDomain" } },
+    { key = "-",          mods = "LEADER",      action = wezterm.action.SplitVertical { domain = "CurrentPaneDomain" } },
+    { key = "s",          mods = "LEADER",      action = wezterm.action.SplitHorizontal { domain = "CurrentPaneDomain" } },
+    { key = "s",          mods = "LEADER|CTRL", action = wezterm.action.SplitVertical { domain = "CurrentPaneDomain" } },
+    -- pane zoom and close
+    { key = "Space",      mods = "LEADER",      action = wezterm.action.TogglePaneZoomState },
+    { key = "x",          mods = "LEADER",      action = wezterm.action.CloseCurrentPane { confirm = true } },
+    -- pane focus
+    { key = "LeftArrow",  mods = "LEADER",      action = wezterm.action.ActivatePaneDirection "Left" },
+    { key = "DownArrow",  mods = "LEADER",      action = wezterm.action.ActivatePaneDirection "Down" },
+    { key = "UpArrow",    mods = "LEADER",      action = wezterm.action.ActivatePaneDirection "Up" },
+    { key = "RightArrow", mods = "LEADER",      action = wezterm.action.ActivatePaneDirection "Right" },
+    -- pane adjust size
+    { key = "LeftArrow",  mods = "LEADER|CTRL", action = wezterm.action.AdjustPaneSize { "Left", 5 } },
+    { key = "DownArrow",  mods = "LEADER|CTRL", action = wezterm.action.AdjustPaneSize { "Down", 5 } },
+    { key = "UpArrow",    mods = "LEADER|CTRL", action = wezterm.action.AdjustPaneSize { "Up", 5 } },
+    { key = "RightArrow", mods = "LEADER|CTRL", action = wezterm.action.AdjustPaneSize { "Right", 5 } },
+    -- spawn tab and windows
+    { key = 't',          mods = 'LEADER',      action = wezterm.action.SpawnTab "CurrentPaneDomain" },
+    { key = 'w',          mods = 'LEADER',      action = wezterm.action.SpawnWindow },
 }
 
 -- Return the configuration to wezterm
