@@ -11,6 +11,7 @@ TOC
 - [2nd try - Wezterm - Nushell - Starship](#2nd-try---wezterm---nushell---starship)
 	- [Macos setup](#macos-setup-1)
 	- [Windows setup](#windows-setup-1)
+	- [Common setup](#common-setup)
 	- [Advanced config](#advanced-config-1)
 
 # Intro
