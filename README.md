@@ -99,6 +99,28 @@ For my second try I tried [Alacrity](https://alacritty.org/) but settled on [Wez
 	```
 	Start `wezterm` and enter nushell with `nu`.
 
+1. Customize nu PATH
+
+	Create a custom-profile.nu (I have mine in ~/scripts)
+	```sh
+	vi ~/scripts/custom-profile.nu
+	```
+	add
+	```sh
+	use std *
+	path add /opt/homebrew/bin /usr/local/bin
+	```
+	
+	Then edit `config.nu` to load your custom profile:
+	```sh
+	vi $nu.config-path
+	```
+	
+	Add at the end:
+	```sh
+	source '~/scripts/custom-profile.nu' 
+	```
+
 ## Windows setup
 
 1. Install everything
@@ -128,6 +150,8 @@ For my second try I tried [Alacrity](https://alacritty.org/) but settled on [Wez
 	return config
 	```
 
+	**NOTE**: On macos with homebrew, use the full path `/opt/homebrew/bin/nu`
+
 	Then re-start wezterm to get in nu.
 
 3. Set nu default editor
@@ -140,6 +164,7 @@ For my second try I tried [Alacrity](https://alacritty.org/) but settled on [Wez
 	```sh
 	buffer_editor: "helix" 
 	```
+ 	**NOTE**: On macos helix executable is `hx`
  
 4. Setup starship as nu prompt
   
