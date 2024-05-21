@@ -1,1 +1,3 @@
-theme = "doom_acario_dark"
+
+theme = "catppuccin_mocha"
+# theme = "dracula"

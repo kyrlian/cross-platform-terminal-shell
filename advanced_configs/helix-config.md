@@ -16,7 +16,8 @@ Type `:theme ` (note the space after 'theme') to display available themes. Type 
 Once you find one you like add theme = "your theme" in the config, and save.
 
 ```sh
-theme = "doom_acario_dark"
+theme = "catppuccin_mocha"
+# theme = "dracula"
 ```
 
 ## Ressources
