@@ -101,7 +101,7 @@ For my second try I tried [Alacrity](https://alacritty.org/) but settled on [Wez
 
 1. Customize nu PATH
 
-	Create a custom-profile.nu (I have mine in ~/scripts)
+	Create a `custom-profile.nu` file (I have mine in ~/scripts)
 	```sh
 	vi ~/scripts/custom-profile.nu
 	```
@@ -120,7 +120,8 @@ For my second try I tried [Alacrity](https://alacritty.org/) but settled on [Wez
 	```sh
 	source '~/scripts/custom-profile.nu' 
 	```
-
+	Then continue the [Common setup](#common-setup)
+ 	
 ## Windows setup
 
 1. Install everything
@@ -129,6 +130,10 @@ For my second try I tried [Alacrity](https://alacritty.org/) but settled on [Wez
 	scoop install alaweztermcritty nu starship nano neovim helix
 	```
 	Start `wezterm` and enter nushell with `nu`.
+
+	Then continue the [Common setup](#common-setup)
+
+## Common setup
 
 2. Set `nu` as default shell in `wezterm` config
    
