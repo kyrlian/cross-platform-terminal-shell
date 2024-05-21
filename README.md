@@ -130,7 +130,18 @@ For my second try I tried [Alacrity](https://alacritty.org/) but settled on [Wez
 
 	Then re-start wezterm to get in nu.
 
-3. Setup starship as nu prompt
+3. Set nu default editor
+   
+	Edit nu config
+	```sh
+	nano $nu.config-path
+	```
+	Search for `buffer_editor`, and add your prefered editor:
+	```sh
+	buffer_editor: "helix" 
+	```
+ 
+4. Setup starship as nu prompt
   
   	Go to nu config directory using `$nu.config-path` and create the starship overlay
 	```sh
@@ -144,17 +155,6 @@ For my second try I tried [Alacrity](https://alacritty.org/) but settled on [Wez
 	Add the starship overlay at the end of the nu config
 	```sh
 	use starship.nu
-	```
-
-4. Set nu default editor
-   
-	Edit nu config
-	```sh
-	config nu
-	```
-	Search for `buffer_editor`, and add your prefered editor:
-	```sh
-	buffer_editor: "helix" 
 	```
 
 ## Advanced config
