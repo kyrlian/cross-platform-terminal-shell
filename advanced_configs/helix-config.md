@@ -1,5 +1,12 @@
 # Helix config
 
+## Config location
+
+- Linux and Mac: `~/.config/helix/config.toml`
+- Windows: `%AppData%\helix\config.toml`
+
+You can open the config directly from helix with `:config-open`
+
 ## Customize theme
 
 Run helix, and open the config with `:config-open`
