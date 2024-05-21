@@ -1,19 +1,34 @@
-
--- Pull in the wezterm API
 local wezterm = require 'wezterm'
-
--- This will hold the configuration.
 local config = wezterm.config_builder()
 
 -- This is where you actually apply your config choices
 
 -- Changing the color scheme:
-config.color_scheme = 'AdventureTime'
+config.color_scheme = 'catppuccin-mocha'
+-- config.color_scheme = 'dracula'
+
+-- hide_tab_bar_if_only_one_tab
+config.hide_tab_bar_if_only_one_tab = true
 
 -- Set default shell
--- https://wezfurlong.org/wezterm/config/launch.html#changing-the-default-program
-config.default_prog = { 'nu', '-l' }
+-- Windows
+-- config.default_prog = { 'nu', '-l' }
+-- MacOS homebrew
+config.default_prog = { '/opt/homebrew/bin/nu', '-l' }
 
--- and finally, return the configuration to wezterm
+-- Set tmux like bindings
+config.leader = { key = "w", mods = "CTRL" }
+config.keys = {
+    { key = "%", mods = "LEADER", action = wezterm.action { SplitHorizontal = { domain = "CurrentPaneDomain" } } },
+    { key = "-", mods = "LEADER", action = wezterm.action { SplitVertical = { domain = "CurrentPaneDomain" } } },
+    { key = "s", mods = "LEADER", action = wezterm.action { SplitHorizontal = { domain = "CurrentPaneDomain" } } },
+    { key = "s", mods = "LEADER|CTRL", action = wezterm.action { SplitVertical = { domain = "CurrentPaneDomain" } } },
+    { key = "x", mods = "LEADER", action = wezterm.action { CloseCurrentPane = { confirm = true } } },
+    { key = "LeftArrow", mods = "LEADER",       action=wezterm.action{ActivatePaneDirection="Left"}},
+    { key = "DownArrow", mods = "LEADER",       action=wezterm.action{ActivatePaneDirection="Down"}},
+    { key = "UpArrow", mods = "LEADER",       action=wezterm.action{ActivatePaneDirection="Up"}},
+    { key = "RightArrow", mods = "LEADER",       action=wezterm.action{ActivatePaneDirection="Right"}},
+}
+
+-- Return the configuration to wezterm
 return config
-
