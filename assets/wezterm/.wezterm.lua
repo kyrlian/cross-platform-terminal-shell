@@ -18,7 +18,6 @@ config.default_prog = { '/opt/homebrew/bin/nu', '-l' }
 
 -- Set tmux like bindings
 config.leader = { key = "w", mods = "CTRL" }
--- local act = wezterm.action
 config.keys = {
     -- pane split
     { key = "%",          mods = "LEADER",      action = wezterm.action.SplitHorizontal { domain = "CurrentPaneDomain" } },
