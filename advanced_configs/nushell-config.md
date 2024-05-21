@@ -8,7 +8,7 @@ Search nu config file with:
 $nu.config-path
 ```
 
-- Mac: ``
+- Mac: `~/Library/Application Support/nushell`
 - Windows: `~\AppData\Roaming\nushell\config.nu`
 
 
@@ -22,7 +22,7 @@ config nu
 
 or to open with vscode
 ```sh
-vscode $nu.config-path
+code $nu.config-path
 ```
 
 ## Setup editor
@@ -37,9 +37,16 @@ buffer_editor: "helix"
 
 Add your alias in `custom_alias.nu`, for example shortcuts to manage python virtualenv (**Note** venv doesn't support nu):
 
+Macos:
 ```sh
-alias venvc = python -m virtualenv venv
-alias activate = overlay use venv\Scripts\activate.nu
+alias venvc = virtualenv virtualenv
+alias activate = overlay use ./virtualenv/bin/activate.nu
+```
+
+Windows:
+```sh
+alias venvc = python -m virtualenv virtualenv
+alias activate = overlay use virtualenv\Scripts\activate.nu
 ```
 
 And load `custom_alias.nu` at the end of `config.nu`
