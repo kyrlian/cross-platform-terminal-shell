@@ -60,5 +60,5 @@ source custom_alias.nu
 - [Nushell - configuration](https://github.com/nushell/nushell?tab=readme-ov-file#configuration)
 - [Custom banner](https://gist.github.com/jeffock/dce0c67169111ce3e17287ea7c2d0183)
 - My custom files: 
-  - [custom_alias.nu](./assets/nushell/custom_alias.nu)
-  - [custom_banner.nu](./assets/nushell/custom_banner.nu)
+  - [custom_alias.nu](../assets/nushell/custom_alias.nu)
+  - [custom_banner.nu](../assets/nushell/custom_banner.nu)
