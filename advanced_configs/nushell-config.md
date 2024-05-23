@@ -56,12 +56,12 @@ And load `custom_banner.nu` at the end of `config.nu`
 source custom_banner.nu
 ```
 
-## Aliases
+## Custom config
 
-Create `custom_alias.nu`
+Create `custom_config.nu`
 ```sh
 cd ($nu.config-path | path dirname)
-vi custom_alias.nu
+vi custom_config.nu
 ```
 
 Add your alias, for example shortcuts to manage python virtualenv (**Note** venv doesn't support nu):
@@ -78,9 +78,9 @@ alias venvc = python -m virtualenv virtualenv
 alias activate = overlay use virtualenv\Scripts\activate.nu
 ```
 
-And load `custom_alias.nu` at the end of `config.nu`
+And load `custom_config.nu` at the end of `config.nu`
 ```sh
-source custom_alias.nu
+source custom_config.nu
 ```
 
 ## Ressources
@@ -89,5 +89,6 @@ source custom_alias.nu
 - [Nushell - configuration](https://github.com/nushell/nushell?tab=readme-ov-file#configuration)
 - [Custom banner](https://gist.github.com/jeffock/dce0c67169111ce3e17287ea7c2d0183)
 - My custom files: 
-  - [custom_alias.nu](../assets/nushell/custom_alias.nu)
+  - [custom_config_mac.nu](../assets/nushell/custom_config_mac.nu)
+  - [custom_config_win.nu](../assets/nushell/custom_config_win.nu)
   - [custom_banner.nu](../assets/nushell/custom_banner.nu)
