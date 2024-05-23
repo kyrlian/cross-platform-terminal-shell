@@ -39,7 +39,7 @@ config.keys = {
     { key = "RightArrow", mods = "LEADER|CTRL", action = wezterm.action.AdjustPaneSize { "Right", 5 } },
     -- spawn tab and windows
     { key = 't',          mods = 'LEADER',      action = wezterm.action.SpawnTab "CurrentPaneDomain" },
-    { key = 'w',          mods = 'LEADER',      action = wezterm.action.SpawnWindow },
+    { key = 'n',          mods = 'LEADER',      action = wezterm.action.SpawnWindow },
 }
 
 -- Return the configuration to wezterm
