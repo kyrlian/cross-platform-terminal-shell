@@ -1,6 +1,6 @@
 # Custom banner
 
-# load with 'source' in config.nu
+# load with 'source' in config.nu:
 # source custom_banner.nu
 
 # https://gist.github.com/jeffock/dce0c67169111ce3e17287ea7c2d0183
