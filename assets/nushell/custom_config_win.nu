@@ -6,6 +6,7 @@
 # Windows
 alias venvc = python -m virtualenv venv
 alias activate = overlay use venv\Scripts\activate.nu
+alias murex = `c:\Program Files\murex-windows-amd64\bin\murex-6-windows-amd64.exe`
 
 # Macos
 # alias venvc = virtualenv virtualenv
