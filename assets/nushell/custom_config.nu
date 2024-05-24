@@ -1,4 +1,7 @@
-# Loaded from config.nu with
+# Loaded from 
+#  mac: ~/Library/Application Support/nushell/config.nu 
+#  win: ~\AppData\Roaming\nushell\config.nu 
+# with:
 # source '~/.../nushell/custom_config.nu'
 
 # Custom banner

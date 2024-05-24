@@ -9,7 +9,7 @@ $nu.config-path
 ```
 
 - Mac: `~/Library/Application Support/nushell`
-- Windows: `~\AppData\Roaming\nushell\config.nu`
+- Windows: `~\AppData\Roaming\nushell\`
 
 
 ## Edit config
@@ -89,6 +89,7 @@ source custom_config.nu
 - [Nushell - configuration](https://github.com/nushell/nushell?tab=readme-ov-file#configuration)
 - [Custom banner](https://gist.github.com/jeffock/dce0c67169111ce3e17287ea7c2d0183)
 - My custom files: 
+  - [custom_config.nu](../assets/nushell/custom_config.nu)
   - [custom_config_mac.nu](../assets/nushell/custom_config_mac.nu)
   - [custom_config_win.nu](../assets/nushell/custom_config_win.nu)
   - [custom_banner.nu](../assets/nushell/custom_banner.nu)
