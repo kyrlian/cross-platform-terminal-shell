@@ -1,12 +1,17 @@
-# murex profile
+# custom murex profile
+# loaded from ~/.murex_profile
+# with 
+# source $HOME/.../murex/custom_murex_profile
 
-# Aliases
+echo 'Loading custom profile with os:' ${os}
 
-alias ll=ls -al
-
-# Murex aliases on windows
+# windows aliases
 if { os windows } then {
     alias ls=dir
+}
+# mac aliases
+if { os darwin } then {
+    alias ll=ls -al
 }
 
 # Improve readability of ls
@@ -27,37 +32,12 @@ if { which nvim } then { alias vi=nvim }
 
 config: set shell max-suggestions 12
 
-# https://github.com/sharkdp/bat
-if { which bat } then {
-    alias cat=bat
-    summary cat ${man-summary cat}
-}
-
-function pless {
-    # less for JSON
-    -> trypipe { -> pretty -> less }
-}
-
-function chdir {
-    # make a directory then change to that new dir (assumes `-p` flag where supported)
-    try {
-        switch ${os} {
-            case windows { tout json {} }
-            case linux   { tout json {[ "-p", "--" ]} }
-            catch        { tout json {[ "-p" ]} }
-        } -> set flags
-
-        mkdir @flags $ARGS[1]
-        cd $ARGS[1]
-    }
-}
+# Prompt
 
 function pwd_short {
     # Normalise path to it's short form
     pwd -> regexp "s#^$HOME#\~#"
 }
-
-# Prompt
 
 config: set shell prompt {
     exitnum -> !if {
@@ -71,5 +51,3 @@ config: set shell prompt-multiline {
     let len = ${pwd_short -> wc -c} - 1
     printf "%${$len}s » " $linenum
 }
-
-#config: set shell hint-text-formatting "{ALT-FONT-1}{BLUE}"
