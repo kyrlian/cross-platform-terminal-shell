@@ -100,9 +100,9 @@ For my second try I tried [Alacrity](https://alacritty.org/) but settled on [Wez
 
 2. Customize nu PATH
 
-	Create a `custom-profile.nu` file (I have mine in ~/scripts)
+	Create a `custom_config.nu` file (I have mine in ~/scripts)
 	```sh
-	vi ~/scripts/custom-profile.nu
+	vi ~/scripts/custom_config.nu
 	```
 	add
 	```sh
@@ -117,7 +117,7 @@ For my second try I tried [Alacrity](https://alacritty.org/) but settled on [Wez
 	
 	Add at the end:
 	```sh
-	source '~/scripts/custom-profile.nu' 
+	source '~/scripts/custom_config.nu' 
 	```
 	Then continue the [Common setup](#common-setup)
  	

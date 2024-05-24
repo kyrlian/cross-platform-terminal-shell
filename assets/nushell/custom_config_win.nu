@@ -1,13 +1,12 @@
-# Custom nu config
+# Custom nu config - for windows
 
 # load with 'source' in config.nu:
 # source custom_config_win.nu
 
-# Windows
-alias venvc = python -m virtualenv venv
-alias activate = overlay use venv\Scripts\activate.nu
+# Alias
+alias ll = ls -al
 alias murex = `c:\Program Files\murex-windows-amd64\bin\murex-6-windows-amd64.exe`
 
-# Macos
-# alias venvc = virtualenv virtualenv
-# alias activate = overlay use ./virtualenv/bin/activate.nu
+# Python venv
+alias venvc = python -m virtualenv venv
+alias activate = overlay use venv\Scripts\activate.nu

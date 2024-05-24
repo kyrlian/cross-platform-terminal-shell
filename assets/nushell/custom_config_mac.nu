@@ -1,12 +1,15 @@
-# Custom nu config
+# Custom nu config - for mac
 
 # load with 'source' in config.nu:
 # source custom_config_mac.nu
 
-# Windows
-# alias venvc = python -m virtualenv venv
-# alias activate = overlay use venv\Scripts\activate.nu
+# Path
+use std *
+path add /opt/homebrew/bin /usr/local/bin
 
-# Macos
+# Alias
+alias ll = ls -al
+
+# Python venv
 alias venvc = virtualenv virtualenv
 alias activate = overlay use ./virtualenv/bin/activate.nu
