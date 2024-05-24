@@ -1,3 +1,4 @@
+# Location: ~/.config/starship.toml
 # https://starship.rs/config/
 
 "$schema" = 'https://starship.rs/config-schema.json'

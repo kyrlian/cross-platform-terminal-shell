@@ -1,4 +1,5 @@
-# Added at the end of config.nu (using 'config nu')
+# Loaded from config.nu with
+# source '~/.../nushell/custom_config.nu'
 
 # Custom banner
 source custom_banner.nu

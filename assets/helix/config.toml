@@ -1,3 +1,4 @@
+# Location: ~/.config/helix/config.toml
 
 theme = "catppuccin_mocha"
 # theme = "dracula"
