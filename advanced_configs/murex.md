@@ -61,6 +61,10 @@ You can also source a custom file, for example :
 source $HOME/.../murex/custom_murex_profile
 ```
 
+## Starship module for murex
+https://github.com/orefalo/murex-module-starship
+https://github.com/lmorg/murex/discussions/699
+
 ## Ressources
 
 - [My murex config](../assets/murex/custom_murex_profile)
