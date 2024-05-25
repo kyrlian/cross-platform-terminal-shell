@@ -1,14 +1,22 @@
-# Custom nu config - for mac
+# Custom nu config for mac
 
-# load with 'source' in config.nu:
-# source custom_config_mac.nu
+# Loaded from 
+#  mac: ~/Library/Application Support/nushell/config.nu 
+#  win: ~\AppData\Roaming\nushell\config.nu 
+# with:
+# source '~/.../nushell/custom_config_mac.nu'
+
+# First source the common config
+source custom_config_common.nu
+
+# Mac specifics
+print $"(ansi light_blue_bold)Loading mac config(ansi reset)"
 
 # Path
 use std *
 path add /opt/homebrew/bin /usr/local/bin
 
 # Alias
-alias ll = ls -al
 
 # Python venv
 alias venvc = virtualenv virtualenv
