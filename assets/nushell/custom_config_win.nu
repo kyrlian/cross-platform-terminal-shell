@@ -1,6 +1,7 @@
 # Custom nu config for windows
+# kyrlian - 20240525
 
-# Loaded from 
+# Loaded from config.nu 
 #  mac: ~/Library/Application Support/nushell/config.nu 
 #  win: ~\AppData\Roaming\nushell\config.nu 
 # with:
@@ -16,7 +17,12 @@ print $"(ansi light_blue_bold)Loading windows config(ansi reset)"
 export alias what_is_my_os = print 'This is windows'
 
 # Alias
-alias murex = `c:\Program Files\murex-windows-amd64\bin\murex-6-windows-amd64.exe`
+alias muw = `c:\Program Files\murex\murex-6-windows-amd64.exe`
+alias deb = wsl -d Debian
+# def murex [] { wsl -d Debian -- /usr/bin/murex }
+# alias mu = murex
+alias murex = deb
+alias mu = deb
 
 # Python venv
 alias venvc = python -m virtualenv venv

@@ -1,5 +1,15 @@
 # Helix config
 
+## Install on wsl debian
+
+```sh
+sudo apt update
+sudo apt install software-properties-common
+sudo add-apt-repository ppa:maveonair/helix-editor
+sudo apt update
+sudo apt install helix
+```
+
 ## Config location
 
 - Linux and Mac: `~/.config/helix/config.toml`

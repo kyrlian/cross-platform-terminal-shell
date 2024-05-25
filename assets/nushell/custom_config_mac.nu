@@ -1,6 +1,7 @@
 # Custom nu config for mac
+# kyrlian - 20240525
 
-# Loaded from 
+# Loaded from config.nu
 #  mac: ~/Library/Application Support/nushell/config.nu 
 #  win: ~\AppData\Roaming\nushell\config.nu 
 # with:
@@ -20,6 +21,7 @@ use std *
 path add /opt/homebrew/bin /usr/local/bin
 
 # Alias
+alias mu = murex
 
 # Python venv
 alias venvc = virtualenv virtualenv

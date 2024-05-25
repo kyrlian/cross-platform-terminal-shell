@@ -71,9 +71,9 @@ My first try to get a cross plateform combo terminal + shell + multiplexer for m
 
 ## Advanced config
 
-- [hyperterm config](./advanced_configs/hyperterm-config.md)
-- [fish config](./advanced_configs/fish-config.md)
-- [tmux config](./advanced_configs/tmux-config.md)
+- [hyperterm](./advanced_configs/hyperterm.md)
+- [fish](./advanced_configs/fish.md)
+- [tmux](./advanced_configs/tmux.md)
 
 ## Verdict and lessons learned
 - Hyper is a bit too slow to start for me as I tend to open/close my terminal a lot
@@ -188,9 +188,12 @@ For my second try I tried [Alacrity](https://alacritty.org/) but settled on [Wez
 
 ## Advanced config
 
-- [Alacritty config](./advanced_configs/alacritty-config.md)
-- [Helix config](./advanced_configs/helix-config.md)
-- [Neovim config](./advanced_configs/neovim-config.md)
-- [Nushell config](./advanced_configs/nushell-config.md)
-- [Starship config](./advanced_configs/starship-config.md)
-- [Wezterm config](./advanced_configs/wezterm-config.md)
+- [Alacritty](./advanced_configs/alacritty.md)
+- [Fish](./advanced_configs/fish.md)
+- [Helix](./advanced_configs/helix.md)
+- [Murex](./advanced_configs/murex.md)
+- [Neovim](./advanced_configs/neovim.md)
+- [Nushell](./advanced_configs/nushell.md)
+- [Starship](./advanced_configs/starship.md)
+- [TMUX](./advanced_configs/tmux.md)
+- [Wezterm](./advanced_configs/wezterm.md)

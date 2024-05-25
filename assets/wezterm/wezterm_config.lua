@@ -1,32 +1,52 @@
-# Wezterm config
+-- custom wezterm config
+-- kyrlian - 20240525
 
-## Config file location
+-- loaded from  ~/.wezterm.lua
+-- with
+-- dofile('E:/docs/coding/shell/cross-platform-terminal-shell/assets/wezterm/wezterm_config.lua')
 
-`~/.wezterm.lua`
-
-## Change default shell
-
-Open wezterm config, and add
-
-```lua
 local wezterm = require 'wezterm'
 local config = wezterm.config_builder()
 
--- This is where you actually apply your config choices
+-- utils
+-- https://wezfurlong.org/wezterm/config/lua/wezterm/target_triple.html
+local is_os = function(os) -- linux, darwin, windows
+    return wezterm.target_triple:find(os) ~= nil
+end
 
 -- Changing the color scheme:
+--- https://wezfurlong.org/wezterm/colorschemes/index.html
 config.color_scheme = 'catppuccin-mocha'
+-- config.color_scheme = 'dracula'
 
--- Set default shell
-config.default_prog = { 'nu', '-l' }
+-- hide_tab_bar_if_only_one_tab
+config.hide_tab_bar_if_only_one_tab = true
 
--- and finally, return the configuration to wezterm
-return config
-```
+-----------------------
+-- Set default shell --
+-----------------------
+--- https://wezfurlong.org/wezterm/config/lua/config/default_prog.html
+if is_os("darwin") then
+    -- MacOS homebrew
+    config.default_prog = { '/opt/homebrew/bin/nu', '-l' } -- nu shell
+    --- config.default_prog = { '/opt/homebrew/bin/murex' } -- murex
+elseif is_os("windows") then
+    -- Windows
+    config.default_prog = { 'nu', '-l' } -- nu shell
+    -- config.default_prog = { 'C:/Program Files/murex/murex-6-windows-amd64.exe' } -- murex for windows
+    -- config.default_prog = { 'wsl', '-d', 'Debian' } -- murex via wsl
+end
 
-## Custom shortcuts
+-----------------------
+-- Key bindings      --
+-----------------------
 
-```lua
+-- Set tmux like bindings
+--- https://wezfurlong.org/wezterm/config/keys.html
+--- https://wezfurlong.org/wezterm/config/keys.html#leader-key
+--- https://wezfurlong.org/wezterm/config/lua/keyassignment/index.html
+--- https://gist.github.com/quangIO/556fa4abca46faf40092282d0c11a367
+
 config.leader = { key = "w", mods = "CTRL" }
 config.keys = {
     -- pane split
@@ -49,14 +69,8 @@ config.keys = {
     { key = "RightArrow", mods = "LEADER|CTRL", action = wezterm.action.AdjustPaneSize { "Right", 5 } },
     -- spawn tab and windows
     { key = 't',          mods = 'LEADER',      action = wezterm.action.SpawnTab "CurrentPaneDomain" },
-    { key = 'w',          mods = 'LEADER',      action = wezterm.action.SpawnWindow },
+    { key = 'n',          mods = 'LEADER',      action = wezterm.action.SpawnWindow },
 }
-```
 
-## Ressources
-
-- [My config](../assets/wezterm/.wezterm.lua)
-- [wezterm doc - changing the default shell](https://wezfurlong.org/wezterm/config/launch.html#changing-the-default-program)
-- [wezterm doc - colors chemes](https://wezfurlong.org/wezterm/colorschemes/index.html)
-- [wezterm cheatsheet](https://ansidev.substack.com/p/wezterm-cheatsheet)
-- [tmux like bindings](https://gist.github.com/quangIO/556fa4abca46faf40092282d0c11a367)
+-- Return the configuration to wezterm
+return config

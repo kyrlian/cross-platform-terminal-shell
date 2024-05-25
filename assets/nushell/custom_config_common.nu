@@ -1,4 +1,7 @@
-# load with 'source' in custom_config_mac.nu and custom_config_win.nu:
+# Custom nu config
+# kyrlian - 20240525
+
+# loaded with 'source' in custom_config_mac.nu and custom_config_win.nu:
 # source custom_config_common.nu
 
 # Custom banner

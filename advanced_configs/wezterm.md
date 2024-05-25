@@ -1,5 +1,22 @@
--- Location: ~/.wezterm.lua
+# Wezterm config
 
+## Config file location
+
+`~/.wezterm.lua`
+
+## Load custom config file
+
+You can load a custom config with
+
+```lua
+dofile('<your custom config path>/wezterm_config.lua')
+```
+
+## Change default shell
+
+Open wezterm config, and add
+
+```lua
 local wezterm = require 'wezterm'
 local config = wezterm.config_builder()
 
@@ -7,18 +24,17 @@ local config = wezterm.config_builder()
 
 -- Changing the color scheme:
 config.color_scheme = 'catppuccin-mocha'
--- config.color_scheme = 'dracula'
-
--- hide_tab_bar_if_only_one_tab
-config.hide_tab_bar_if_only_one_tab = true
 
 -- Set default shell
--- Windows
--- config.default_prog = { 'nu', '-l' }
--- MacOS homebrew
-config.default_prog = { '/opt/homebrew/bin/nu', '-l' }
+config.default_prog = { 'nu', '-l' }
 
--- Set tmux like bindings
+-- and finally, return the configuration to wezterm
+return config
+```
+
+## Custom shortcuts
+
+```lua
 config.leader = { key = "w", mods = "CTRL" }
 config.keys = {
     -- pane split
@@ -41,8 +57,14 @@ config.keys = {
     { key = "RightArrow", mods = "LEADER|CTRL", action = wezterm.action.AdjustPaneSize { "Right", 5 } },
     -- spawn tab and windows
     { key = 't',          mods = 'LEADER',      action = wezterm.action.SpawnTab "CurrentPaneDomain" },
-    { key = 'n',          mods = 'LEADER',      action = wezterm.action.SpawnWindow },
+    { key = 'w',          mods = 'LEADER',      action = wezterm.action.SpawnWindow },
 }
+```
 
--- Return the configuration to wezterm
-return config
+## Ressources
+
+- [My config](../assets/wezterm/wezterm_config.lua)
+- [wezterm doc - changing the default shell](https://wezfurlong.org/wezterm/config/launch.html#changing-the-default-program)
+- [wezterm doc - colors chemes](https://wezfurlong.org/wezterm/colorschemes/index.html)
+- [wezterm cheatsheet](https://ansidev.substack.com/p/wezterm-cheatsheet)
+- [tmux like bindings](https://gist.github.com/quangIO/556fa4abca46faf40092282d0c11a367)

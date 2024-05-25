@@ -1,7 +1,14 @@
 # custom murex profile
+# kyrlian - 20240525
+
 # loaded from ~/.murex_profile
 # with 
-# source $HOME/.../murex/custom_murex_profile
+#  mac:
+#   source $HOME/.../murex/custom_murex_profile
+#  wsl:
+#   source /mnt/e/docs/coding/shell/cross-platform-terminal-shell/assets/murex/custom_murex_profile
+#  windows:
+#   source E:/docs/coding/shell/cross-platform-terminal-shell/assets/murex/custom_murex_profile
 
 echo 'Loading custom profile with os:' ${os}
 

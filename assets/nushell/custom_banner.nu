@@ -6,6 +6,7 @@
 # https://gist.github.com/jeffock/dce0c67169111ce3e17287ea7c2d0183
 # https://www.nushell.sh/commands/docs/format_date.html
 # https://www.nushell.sh/commands/docs/ansi.html
+
 def show_banner [] {
   let ellie = [
     "      __  ,"
