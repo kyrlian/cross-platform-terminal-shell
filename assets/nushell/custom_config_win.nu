@@ -18,11 +18,12 @@ export alias what_is_my_os = print 'This is windows'
 
 # Alias
 alias muw = `c:\Program Files\murex\murex-6-windows-amd64.exe`
-alias deb = wsl -d Debian
+alias debian = wsl -d Debian
+alias ubuntu = wsl -d Ubuntu
 # def murex [] { wsl -d Debian -- /usr/bin/murex }
 # alias mu = murex
-alias murex = deb
-alias mu = deb
+alias murex = wsl
+alias mu = murex
 
 # Python venv
 alias venvc = python -m virtualenv venv
