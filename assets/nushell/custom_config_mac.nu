@@ -12,6 +12,9 @@ source custom_config_common.nu
 # Mac specifics
 print $"(ansi light_blue_bold)Loading mac config(ansi reset)"
 
+# Test
+export alias what_is_my_os = print 'This is macos'
+
 # Path
 use std *
 path add /opt/homebrew/bin /usr/local/bin

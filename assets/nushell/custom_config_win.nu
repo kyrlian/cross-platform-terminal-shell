@@ -12,6 +12,9 @@ source custom_config_common.nu
 # Windows specifics
 print $"(ansi light_blue_bold)Loading windows config(ansi reset)"
 
+# Test
+export alias what_is_my_os = print 'This is windows'
+
 # Alias
 alias murex = `c:\Program Files\murex-windows-amd64\bin\murex-6-windows-amd64.exe`
 
