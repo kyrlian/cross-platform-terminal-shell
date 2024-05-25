@@ -2,12 +2,18 @@
 
 ## Murex on windows with WSL
 
-1. Install WSL Debian 
+1. Install WSL 
 
    (If you haven't already)
    
 	```sh
 	wsl.exe --install Debian
+	```
+
+    or 
+
+	```sh
+	wsl.exe --install Ubuntu
 	```
 
 2. Download murex for linux
@@ -23,8 +29,8 @@
 3. Register murex in /etc/shells 
    
     ```sh
-    wsl.exe -d Debian
-    sudo ln -s '/mnt/c/Program\ Files/murex/murex-6-linux-amd64' /usr/bin/murex
+    wsl.exe
+    sudo ln -s '/mnt/c/Program Files/murex/murex-6-linux-amd64' /usr/bin/murex
     sudo vi /etc/shells
     ```
     add `/usr/bin/murex` at the end of /etc/shells
@@ -32,13 +38,13 @@
 4. Launch wsl with murex shell
    
     ```sh
-	wsl.exe -d Debian -- /usr/bin/murex
+	wsl.exe -- /usr/bin/murex
     ```
 
 5. Optional: Set murex as default shell 
    
     ```sh
-    wsl.exe -d Debian -- sudo chsh -s /usr/bin/murex
+    wsl.exe -- sudo chsh -s /usr/bin/murex
     ```
 
 ## Custom murex profile
