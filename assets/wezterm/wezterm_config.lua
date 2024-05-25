@@ -35,15 +35,15 @@ config.hide_tab_bar_if_only_one_tab = true
 --- https://wezfurlong.org/wezterm/config/lua/config/default_prog.html
 if is_os("darwin") then
     -- MacOS homebrew
-    -- config.default_prog = { '/opt/homebrew/bin/nu', '-l' } -- nu shell
-    config.default_prog = { '/opt/homebrew/bin/murex' } -- murex
+    config.default_prog = { '/opt/homebrew/bin/nu', '-l' } -- nu shell
+    -- config.default_prog = { '/opt/homebrew/bin/murex' } -- murex
 elseif is_os("windows") then
     -- Windows
-    -- config.default_prog = { 'nu', '-l' } -- nu shell
+    config.default_prog = { 'nu', '-l' } -- nu shell
     -- config.default_prog = { 'C:/Program Files/murex/murex-6-windows-amd64.exe' } -- murex for windows
     -- config.default_prog = { 'wsl', '-d', 'Debian' } -- murex via wsl Debian
     -- config.default_prog = { 'wsl', '-d', 'Ubuntu' } -- murex via wsl Ubuntu
-    config.default_prog = { 'wsl' } -- murex via wsl Ubuntu
+    -- config.default_prog = { 'wsl' } -- murex via wsl Ubuntu
 end
 
 -----------------------
