@@ -1,10 +1,13 @@
 # Helix config
 
-## Install on wsl debian
+## Install on wsl Ubuntu
+
+```sh
+wsl.exe --install Ubuntu
+```
 
 ```sh
 sudo apt update
-sudo apt install software-properties-common
 sudo add-apt-repository ppa:maveonair/helix-editor
 sudo apt update
 sudo apt install helix
