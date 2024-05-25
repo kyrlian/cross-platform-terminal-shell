@@ -44,7 +44,7 @@
 5. Optional: Set murex as default shell 
    
     ```sh
-    wsl.exe -- sudo chsh -s /usr/bin/murex
+    wsl.exe -- chsh -s /usr/bin/murex
     ```
 
 ## Custom murex profile
@@ -56,6 +56,7 @@ Set your aliases in
 ```
 
 You can also source a custom file, for example :
+
 ```sh
 source $HOME/.../murex/custom_murex_profile
 ```
