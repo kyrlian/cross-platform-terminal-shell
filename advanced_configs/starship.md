@@ -1,5 +1,24 @@
 # Starship config
 
+## Install starship module for murex
+
+### Mac OS
+
+```sh
+brew install starship
+```
+### Windows
+
+```sh
+scoop install starship
+```
+
+### Unix & WSL
+
+```sh
+curl -sS https://starship.rs/install.sh | sh
+```
+
 ## Create configuration file
 
 Create `~/.config/starship.toml`

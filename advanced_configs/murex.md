@@ -62,6 +62,23 @@ source $HOME/.../murex/custom_murex_profile
 ```
 
 ## Starship module for murex
+
+### Mac OS
+
+### WSL
+
+Install starship
+
+```sh
+curl -sS https://starship.rs/install.sh | sh
+```
+
+Install murex module for starship
+```sh
+murex-package install https://github.com/orefalo/murex-module-starship.git
+murex-package update
+```
+
 https://github.com/orefalo/murex-module-starship
 https://github.com/lmorg/murex/discussions/699
 
