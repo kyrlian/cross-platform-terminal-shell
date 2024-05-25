@@ -1,9 +1,11 @@
--- custom wezterm config
+-- Custom wezterm config
 -- kyrlian - 20240525
 
 -- loaded from  ~/.wezterm.lua
 -- with
 -- dofile('E:/docs/coding/shell/cross-platform-terminal-shell/assets/wezterm/wezterm_config.lua')
+
+-- https://wezfurlong.org/wezterm/
 
 local wezterm = require 'wezterm'
 local config = wezterm.config_builder()
@@ -13,6 +15,10 @@ local config = wezterm.config_builder()
 local is_os = function(os) -- linux, darwin, windows
     return wezterm.target_triple:find(os) ~= nil
 end
+
+---------------
+-- Settings  --
+---------------
 
 -- Changing the color scheme:
 --- https://wezfurlong.org/wezterm/colorschemes/index.html
@@ -25,16 +31,19 @@ config.hide_tab_bar_if_only_one_tab = true
 -----------------------
 -- Set default shell --
 -----------------------
+
 --- https://wezfurlong.org/wezterm/config/lua/config/default_prog.html
 if is_os("darwin") then
     -- MacOS homebrew
-    config.default_prog = { '/opt/homebrew/bin/nu', '-l' } -- nu shell
-    --- config.default_prog = { '/opt/homebrew/bin/murex' } -- murex
+    -- config.default_prog = { '/opt/homebrew/bin/nu', '-l' } -- nu shell
+    config.default_prog = { '/opt/homebrew/bin/murex' } -- murex
 elseif is_os("windows") then
     -- Windows
-    config.default_prog = { 'nu', '-l' } -- nu shell
+    -- config.default_prog = { 'nu', '-l' } -- nu shell
     -- config.default_prog = { 'C:/Program Files/murex/murex-6-windows-amd64.exe' } -- murex for windows
-    -- config.default_prog = { 'wsl', '-d', 'Debian' } -- murex via wsl
+    -- config.default_prog = { 'wsl', '-d', 'Debian' } -- murex via wsl Debian
+    -- config.default_prog = { 'wsl', '-d', 'Ubuntu' } -- murex via wsl Ubuntu
+    config.default_prog = { 'wsl' } -- murex via wsl Ubuntu
 end
 
 -----------------------
