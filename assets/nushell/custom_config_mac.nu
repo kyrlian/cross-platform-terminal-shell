@@ -20,7 +20,9 @@ export alias what_is_my_os = print 'This is macos'
 use std *
 path add /opt/homebrew/bin /usr/local/bin
 
-# Alias
+##############
+## Aliases  ##
+##############
 alias mu = murex
 
 # Python venv
