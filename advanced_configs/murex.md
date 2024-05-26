@@ -73,9 +73,17 @@ See [my murex config](../assets/murex/custom_murex_profile)
 
 [Install starship](./starship.md#install)
 
-Install [murex module for starship](https://github.com/orefalo/murex-module-starship), or [my fork](https://github.com/kyrlian/murex-module-starship)
+Install [murex module for starship](https://github.com/orefalo/murex-module-starship)
+
 ```sh
 murex-package install https://github.com/orefalo/murex-module-starship.git
+murex-package update
+```
+
+or [my fork](https://github.com/kyrlian/murex-module-starship)
+
+```sh
+murex-package install https://github.com/kyrlian/murex-module-starship.git
 murex-package update
 ```
 
