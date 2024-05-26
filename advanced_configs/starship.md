@@ -1,6 +1,8 @@
 # Starship config
 
-## Install starship module for murex
+## Install
+
+Install [starship](https://starship.rs/)
 
 ### Mac OS
 
@@ -13,7 +15,7 @@ brew install starship
 scoop install starship
 ```
 
-### Unix & WSL
+### Unix / WSL
 
 ```sh
 curl -sS https://starship.rs/install.sh | sh
@@ -38,8 +40,14 @@ helix ~/.config/starship.toml
 
 See [Starship config doc](https://starship.rs/config/), or [my custom config](../assets/starship/starship.toml).
 
+## For Murex shell
+
+See [Starship module for murex](./murex.md#starship-module-for-murex)
+
 ## Ressources
 
-- [starship doc - config](https://starship.rs/config/)
-- [starship on windows](https://dev.to/ganmahmud/take-your-windows-powershell-to-the-next-level-by-starship-2gb2)
+- [Starship](https://starship.rs/)
+- [Starship doc - config](https://starship.rs/config/)
+- [Starship on windows](https://dev.to/ganmahmud/take-your-windows-powershell-to-the-next-level-by-starship-2gb2)
+- [Murex Module Starship](https://github.com/orefalo/murex-module-starship)
 - [My starship config](../assets/starship/starship.toml)

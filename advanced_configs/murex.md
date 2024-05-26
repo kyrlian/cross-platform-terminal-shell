@@ -1,11 +1,17 @@
 # Murex config
 
-## Murex on windows with WSL
+## Install 
 
-1. Install WSL 
+### Mac
 
-   (If you haven't already)
-   
+```sh
+brew install murex
+```
+
+### Windows with WSL
+
+1. Install WSL - if you haven't already
+
 	```sh
 	wsl.exe --install Debian
 	```
@@ -61,27 +67,23 @@ You can also source a custom file, for example :
 source $HOME/.../murex/custom_murex_profile
 ```
 
+See [my murex config](../assets/murex/custom_murex_profile)
+
 ## Starship module for murex
 
-### Mac OS
+[Install starship](./starship.md#install)
 
-### WSL
-
-Install starship
-
-```sh
-curl -sS https://starship.rs/install.sh | sh
-```
-
-Install murex module for starship
+Install [murex module for starship](https://github.com/orefalo/murex-module-starship), or [my fork](https://github.com/kyrlian/murex-module-starship)
 ```sh
 murex-package install https://github.com/orefalo/murex-module-starship.git
 murex-package update
 ```
 
-https://github.com/orefalo/murex-module-starship
-https://github.com/lmorg/murex/discussions/699
+**Note**: Murex doesn't support right prompt.
 
 ## Ressources
 
+- [Murex](https://murex.rocks)
+- [Murex Module Starship](https://github.com/orefalo/murex-module-starship)
 - [My murex config](../assets/murex/custom_murex_profile)
+- [My fork of Murex Module Starship](https://github.com/kyrlian/murex-module-starship) - to keep the starship hint above the prompt, and not be overwritten by Murex hint
