@@ -1,10 +1,20 @@
 # Helix config
 
-## Install on wsl Ubuntu
+## Install 
+
+### Mac
 
 ```sh
-wsl.exe --install Ubuntu
+brew install helix
 ```
+
+### Windows
+
+```sh
+scoop install helix
+```
+
+### wsl Ubuntu
 
 ```sh
 sudo apt update
