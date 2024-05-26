@@ -16,12 +16,15 @@ print $"(ansi light_blue_bold)Loading windows config(ansi reset)"
 # Test
 export alias what_is_my_os = print 'This is windows'
 
-# Alias
+##############
+## Aliases  ##
+##############
+alias cat = more
+## Murex
 alias muw = `c:\Program Files\murex\murex-6-windows-amd64.exe`
 alias debian = wsl -d Debian
 alias ubuntu = wsl -d Ubuntu
-# def murex [] { wsl -d Debian -- /usr/bin/murex }
-# alias mu = murex
+# def murex [] { wsl -d Ubuntu -- /usr/bin/murex }
 alias murex = wsl
 alias mu = murex
 
