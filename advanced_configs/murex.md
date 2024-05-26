@@ -32,10 +32,12 @@ brew install murex
     C:\Program Files\murex\murex-6-linux-amd64
     ```
 
-3. Register murex in /etc/shells 
+3. Register murex in wsl /etc/shells 
    
     ```sh
     wsl.exe
+    ```
+    ```sh
     sudo ln -s '/mnt/c/Program Files/murex/murex-6-linux-amd64' /usr/bin/murex
     sudo vi /etc/shells
     ```
@@ -80,7 +82,8 @@ murex-package install https://github.com/orefalo/murex-module-starship.git
 murex-package update
 ```
 
-or [my fork](https://github.com/kyrlian/murex-module-starship)
+or [my fork](https://github.com/kyrlian/murex-module-starship), modified to keep the starship hint above the prompt, and not be overwritten by Murex hint
+
 
 ```sh
 murex-package install https://github.com/kyrlian/murex-module-starship.git

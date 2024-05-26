@@ -82,10 +82,10 @@ My first try to get a cross plateform combo terminal + shell + multiplexer for m
 
 # 2nd try - Wezterm - Nushell - Starship
 
-For my second try I tried [Alacrity](https://alacritty.org/) but settled on [Wezterm](https://wezfurlong.org/wezterm/index.html) for the ability to split windows (as I can't use [tmux](https://github.com/tmux/tmux/wiki) nor [zellij](https://zellij.dev/) on windows), [nushell](https://www.nushell.sh/) because it seems different enough to warrant learning a new shell, [Starship](https://starship.rs/) to customize my prompt, and included a few editors.
+For my second try I tried [Alacrity](https://alacritty.org/) but settled on [Wezterm](https://wezfurlong.org/wezterm/index.html) for the ability to split windows (as I can't use [tmux](https://github.com/tmux/tmux/wiki) nor [zellij](https://zellij.dev/) on windows), [nushell](https://www.nushell.sh/) because it seems different enough to warrant learning a new shell, and [Murex](https://murex.rocks/) as secondary shell to keep a POSIX option, [Starship](https://starship.rs/) to customize my prompt, and included a few editors.
 
 - Terminal: [Wezterm](https://wezfurlong.org/wezterm/index.html)
-- Shell: [Nushell](https://www.nushell.sh/)
+- Shells: [Nushell](https://www.nushell.sh/), [Murex](https://murex.rocks/)
 - Prompt: [Starship](https://starship.rs/)
 - Editors: [nano](https://www.nano-editor.org/), [neovim](https://neovim.io/), [helix](https://helix-editor.com/)
   
@@ -94,7 +94,7 @@ For my second try I tried [Alacrity](https://alacritty.org/) but settled on [Wez
 1. Install everything
 
 	```sh
-	brew install wezterm nu starship nano neovim helix
+	brew install wezterm nu murex starship nano neovim helix
 	```
 	Start `wezterm` and enter nushell with `nu`.
 
@@ -128,9 +128,12 @@ For my second try I tried [Alacrity](https://alacritty.org/) but settled on [Wez
 	```sh
 	scoop install alaweztermcritty nu starship nano neovim helix
 	```
-	Start `wezterm` and enter nushell with `nu`.
 
-	Then continue the [Common setup](#common-setup)
+2. [Install Murex shell in WSL](./advanced_configs/murex.md#windows-with-wsl)
+
+3. Start `wezterm` and enter nushell with `nu`.
+
+4. Then continue the [Common setup](#common-setup)
 
 ## Common setup
 
