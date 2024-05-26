@@ -11,8 +11,8 @@ right_format = '$time'
 
 # https://starship.rs/config/#character
 [character]
-success_symbol = "[>](bold green) "
-error_symbol = "[x](bold red) "
+success_symbol = "[>](bold green)"
+error_symbol = "[x](bold red)"
 
 # https://starship.rs/config/#directory
 [directory]
