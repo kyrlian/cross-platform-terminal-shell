@@ -41,21 +41,6 @@ Edit `config.nu`, search for `show_banner`, and set to false:
 show_banner: false
 ```
 
-## Custom banner
-
-Create `custom_banner.nu`
-```sh
-cd ($nu.config-path | path dirname)
-vi custom_banner.nu
-```
-
-copy [my custom_banner.nu](../assets/nushell/custom_banner.nu) or [this one](https://gist.github.com/jeffock/dce0c67169111ce3e17287ea7c2d0183)
-
-And load `custom_banner.nu` at the end of `config.nu`
-```sh
-source custom_banner.nu
-```
-
 ## Custom config
 
 Create `custom_config.nu`
@@ -81,6 +66,24 @@ alias activate = overlay use virtualenv\Scripts\activate.nu
 And load `custom_config.nu` at the end of `config.nu`
 ```sh
 source custom_config.nu
+```
+
+## Setup starship as nu prompt
+
+Install [starship](https://starship.rs/)
+
+Go to nu config directory using `$nu.config-path` and create the starship overlay
+```sh
+cd ($nu.config-path | path dirname)
+starship init nu | save -f starship.nu
+```
+Edit nu config
+```sh
+config nu
+```
+Add the starship overlay at the end of the nu config
+```sh
+use starship.nu
 ```
 
 ## Ressources
