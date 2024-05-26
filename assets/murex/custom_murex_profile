@@ -47,6 +47,9 @@ if { os windows } then {
 
 ##### Linux / wsl ##### 
 if { os linux } then {
+    # alias
+    alias ll=ls -al
+    # Path
     export PATH=$PATH:/mnt/c/Users/key/scoop/shims
 }
 
