@@ -12,7 +12,7 @@
 # https://www.nushell.sh/commands/docs/format_date.html
 # https://www.nushell.sh/commands/docs/ansi.html
 
-def banner [] {
+export def custom_banner [] {
   let ellie = [
     "      __  ,"
     " .--()°'.' "
@@ -28,7 +28,7 @@ def banner [] {
   print $"(ansi green)($ellie.3)  (ansi light_green_bold)Directory (ansi reset)(ansi light_green)(pwd)(ansi reset)"
   print $"(ansi reset)"
 } 
-banner 
+custom_banner 
 
 ####################
 ## Common config  ##
