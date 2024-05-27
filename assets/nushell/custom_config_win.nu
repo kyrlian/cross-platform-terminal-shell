@@ -29,8 +29,8 @@ alias murex = wsl
 alias mu = murex
 
 # Python venv
-alias venvc = python -m virtualenv venv
-alias activate = overlay use venv\Scripts\activate.nu
+alias venvc = python -m virtualenv virtualenv
+alias activate = overlay use virtualenv\Scripts\activate.nu
 
 # swap files location
 def swap [a, b] {
