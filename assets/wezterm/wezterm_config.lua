@@ -52,11 +52,11 @@ end
 
 -- Set tmux like bindings
 --- https://wezfurlong.org/wezterm/config/keys.html
---- https://wezfurlong.org/wezterm/config/keys.html#leader-key
---- https://wezfurlong.org/wezterm/config/lua/keyassignment/index.html
 --- https://gist.github.com/quangIO/556fa4abca46faf40092282d0c11a367
 
+-- leader key - https://wezfurlong.org/wezterm/config/keys.html#leader-key
 config.leader = { key = "w", mods = "CTRL" }
+-- key assigments - https://wezfurlong.org/wezterm/config/lua/keyassignment/index.html
 config.keys = {
     -- pane split
     { key = "%",          mods = "LEADER",      action = wezterm.action.SplitHorizontal { domain = "CurrentPaneDomain" } },
@@ -66,6 +66,7 @@ config.keys = {
     -- pane zoom and close
     { key = "Space",      mods = "LEADER",      action = wezterm.action.TogglePaneZoomState },
     { key = "x",          mods = "LEADER",      action = wezterm.action.CloseCurrentPane { confirm = true } },
+    { key = "f",          mods = "LEADER",      action = wezterm.action.ToggleFullScreen },
     -- pane focus
     { key = "LeftArrow",  mods = "LEADER",      action = wezterm.action.ActivatePaneDirection "Left" },
     { key = "DownArrow",  mods = "LEADER",      action = wezterm.action.ActivatePaneDirection "Down" },
