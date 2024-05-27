@@ -23,11 +23,16 @@ function banner {
     doom_line_5='| |  | | |_| | |\ \| |___/ /^\ \'
     doom_line_6='\_|  |_/\___/\_| \_\____/\/   \/'  
 
+    set sysversion = ${ switch {
+        if { os windows } { ${systeminfo | grep 'OS Name'} }
+        if { os linux   } { ${hostnamectl | grep Operating} }
+        if { os darwin  } { ${system_profiler SPSoftwareDataType | grep 'System Version'} }
+    } | xargs } #use xargs to strip spaces
+    
     # https://murex.rocks/user-guide/ansi.html#constants
-
     out {RESET}{CYAN}$doom_line_1{RESET}
     out {RESET}{CYAN}$doom_line_2{YELLOW}'  Murex shell - [https://murex.rocks]'{RESET}
-    out {RESET}{CYAN}$doom_line_3{BLUE}'  '${hostnamectl |grep Operating}{RESET}
+    out {RESET}{CYAN}$doom_line_3{BLUE}'  '$(sysversion){RESET}
     out {RESET}{CYAN}$doom_line_4{MAGENTA}'  Date '${date +'%Y-%m-%d %H:%M:%S'}{RESET}
     out {RESET}{CYAN}$doom_line_5{GREEN}'  Directory' ${pwd}{RESET}
     out {RESET}{CYAN}$doom_line_6{RED}'  User' ${whoami}{RESET}
@@ -49,6 +54,9 @@ if { os windows } then {
 if { os linux } then {
     # alias
     alias ll=ls -al
+    # # Python venv
+    alias venvc=python -m virtualenv virtualenv
+    alias activate=source virtualenv/Scripts/activate
     # Path
     export PATH=$PATH:/mnt/c/Users/key/scoop/shims
 }
@@ -58,6 +66,9 @@ if { os linux } then {
 if { os darwin } then {
     # alias
     alias ll=ls -al
+    # python
+    alias venvc=virtualenv virtualenv
+    alias activate=source virtualenv/bin/activate
     # Path
     export PATH=$PATH:/opt/homebrew/bin
 }
