@@ -1,3 +1,7 @@
 # location ~/.murex_profile
+
 # source murex profile from murex on wsl
-source /mnt/e/docs/coding/shell/cross-platform-terminal-shell/assets/murex/custom_murex_profile
+#  source /mnt/xxxxx/cross-platform-terminal-shell/assets/murex/custom_murex_profile
+
+# on mac
+#  source $HOME/xxxx/assets/murex/custom_murex_profile
