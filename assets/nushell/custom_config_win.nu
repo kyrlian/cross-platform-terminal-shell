@@ -10,11 +10,10 @@
 # First source the common config
 source custom_config_common.nu
 
-# Windows specifics
-print $"(ansi light_blue_bold)Loading windows config(ansi reset)"
+########################
+## Windows specifics  ##
+########################
 
-# Test
-export alias what_is_my_os = print 'This is windows'
 
 ##############
 ## Aliases  ##
@@ -45,3 +44,8 @@ def swap [a, b] {
   mv $a $atarget
   mv $b $btarget
 }
+
+###############
+## Feedback  ##
+###############
+print $"(ansi light_blue_bold)Windows config loaded(ansi reset)"
