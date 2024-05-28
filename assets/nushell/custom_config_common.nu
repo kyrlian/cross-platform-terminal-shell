@@ -34,7 +34,6 @@ custom_banner
 ## Common config  ##
 ####################
 
-print $"(ansi light_blue_bold)Loading common config(ansi reset)"
 
 ##############
 ## Aliases  ##
@@ -44,6 +43,10 @@ alias ll = ls -al
 alias vi = nvim
 
 # starship prompt
+## Done in config.nu
 # use starship.nu
 
-# os specific config will run after
+###############
+## Feedback  ##
+###############
+print $"(ansi light_blue_bold)Common config loaded(ansi reset)"
