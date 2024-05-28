@@ -24,3 +24,6 @@ source ( if (true) { 'custom_config_win.nu' } else { 'custom_config_mac.nu' } )
 # This Works
 alias alias_test2 = if (sys).host.name == 'Windows' { print 'this is a windows' } else { print 'this is a mac' }
 alias_test2
+
+# TODO - test with use module
+####  if (sys).host.name == 'Windows' { use custom_config_win.nu } else { use custom_config_mac.nu }
