@@ -41,6 +41,30 @@ function banner {
 }
 ${banner}
 
+
+###############
+## Settings  ##
+###############
+
+# Improve readability of ls
+export TIME_STYLE=long-iso
+export BLOCK_SIZE="'1"
+
+# Suggestions
+config: set shell max-suggestions 12
+
+# Editors
+export EDITOR=hx
+if { which nvim } then { alias vi=nvim }
+
+#####################
+## Common Aliases  ##
+#####################
+
+# Improve readability of grep
+alias grep=grep --color=auto
+if { os linux } then { alias ls=ls --color=auto }
+
 ###################
 ## OS Specifics  ##
 ###################
@@ -73,29 +97,6 @@ if { os darwin } then {
     export PATH=$PATH:/opt/homebrew/bin
 }
 
-###############
-## Settings  ##
-###############
-
-# Improve readability of ls
-export TIME_STYLE=long-iso
-export BLOCK_SIZE="'1"
-
-# Improve readability of grep
-alias grep=grep --color=auto
-if { os linux } then { alias ls=ls --color=auto }
-
-# Editors
-
-export EDITOR=hx
-
-if { which nvim } then { alias vi=nvim }
-
-# Suggestions
-
-config: set shell max-suggestions 12
-
-
 ##############
 ## Prompt   ##
 ##############
@@ -120,3 +121,8 @@ config: set shell max-suggestions 12
 #     let len = ${pwd_short -> wc -c} - 1
 #     printf "%${$len}s » " $linenum
 # }
+
+###############
+## Feedback  ##
+###############
+out {RESET}{CYAN} Murex custom profile loaded{RESET}
