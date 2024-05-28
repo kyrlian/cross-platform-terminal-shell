@@ -10,13 +10,14 @@
 # First source the common config
 source custom_config_common.nu
 
-# Mac specifics
-print $"(ansi light_blue_bold)Loading mac config(ansi reset)"
+#####################
+##  Mac specifics  ##
+#####################
 
-# Test
-export alias what_is_my_os = print 'This is macos'
 
-# Path
+##############
+## Path     ##
+##############
 use std *
 path add /opt/homebrew/bin /usr/local/bin
 
@@ -28,3 +29,8 @@ alias mu = murex
 # Python venv
 alias venvc = virtualenv virtualenv
 alias activate = overlay use ./virtualenv/bin/activate.nu
+
+###############
+## Feedback  ##
+###############
+print $"(ansi light_blue_bold)Mac config loaded(ansi reset)"
