@@ -8,7 +8,10 @@
 # [...]
 
 # Load custom config
-source 'E:\docs\coding\shell\cross-platform-terminal-shell\assets\nushell\custom_config_win.nu'
+## Windows
+# source 'E:\...\assets\nushell\custom_config_win.nu'
+## Mac
+# source '~/Documents/.../assets/nushell/custom_config_mac.nu'
 
 # starship prompt
 use starship.nu
