@@ -1,4 +1,9 @@
-# My custom fish profile, is sourced by ~/.config/fish/config.fish
+# My custom fish profile
+# Sourced from ~/.config/fish/config.fish
+# with:
+# if status is-interactive
+#     test -e {$HOME}/scripts/custom-profile.fish ; and source {$HOME}/scripts/custom-profile.fish
+# end
 
 #############
 ## Banner  ##
@@ -10,24 +15,24 @@ function fish_greeting
         case Linux
                 set sysversion $(systeminfo | grep 'OS Name' | xargs)
         case Darwin
-                set sysversion $(system_profiler SPSoftwareDataType | grep 'System Version')
+                set sysversion $(system_profiler SPSoftwareDataType | grep 'System Version' | xargs)
         case '*'
                 set sysversion Unknown
     end
 
     # https://fishshell.com/docs/current/cmds/set_color.html
     # set_color cyan; echo "   __ _     _      "; set_color normal
-    # set_color cyan; echo "  / _(_)___| |__   $(set_color yellow) Fish shell "; set_color normal
-    # set_color cyan; echo " | |_| / __| '_ \  $(set_color blue) System $systeminfo"; set_color normal
-    # set_color cyan; echo " |  _| \__ \ | | | $(set_color magenta) Date $(date +'%Y-%m-%d %H:%M:%S')"; set_color normal
-    # set_color cyan; echo " |_| |_|___/_| |_| $(set_color green) Directory $(pwd)"; set_color normal
-    # set_color cyan; echo " |_| |_|___/_| |_| $(set_color red) User $(whoami)"; set_color normal
+    # set_color cyan; echo "  / _(_)___| |__   $(set_color yellow) Fish shell [https://fishshell.com/]"; set_color normal
+    # set_color cyan; echo " | |_| / __| '_ \  $(set_color blue) $sysversion"; set_color normal
+    # set_color cyan; echo " |  _| \__ \ | | | $(set_color magenta) Date: $(date +'%Y-%m-%d %H:%M:%S')"; set_color normal
+    # set_color cyan; echo " |_| |_|___/_| |_| $(set_color green) Directory: $(pwd)"; set_color normal
+    # set_color cyan; echo " |_| |_|___/_| |_| $(set_color red) User: $(whoami)"; set_color normal
     set_color cyan; echo "   _______     "; set_color normal
-    set_color cyan; echo "   \      \    $(set_color yellow) Fish shell "; set_color normal
-    set_color cyan; echo "  _ \/'''''\   $(set_color blue) System $systeminfo"; set_color normal
-    set_color cyan; echo " | \/  _  @ \  $(set_color magenta) Date $(date +'%Y-%m-%d %H:%M:%S')"; set_color normal
-    set_color cyan; echo " |    (_>   <  $(set_color green) Directory $(pwd)"; set_color normal
-    set_color cyan; echo " |_/\       /  $(set_color red) User $(whoami)"; set_color normal
+    set_color cyan; echo "   \      \    $(set_color yellow) Fish shell [https://fishshell.com/]"; set_color normal
+    set_color cyan; echo "  _ \/'''''\   $(set_color blue) $sysversion"; set_color normal
+    set_color cyan; echo " | \/  _  @ \  $(set_color magenta) Date: $(date +'%Y-%m-%d %H:%M:%S')"; set_color normal
+    set_color cyan; echo " |    (_>   <  $(set_color green) Directory: $(pwd)"; set_color normal
+    set_color cyan; echo " |_/\       /  $(set_color red) User: $(whoami)"; set_color normal
     set_color cyan; echo "    /\...../   "; set_color normal
     set_color cyan; echo "    \____//    "; set_color normal
 end
@@ -48,9 +53,7 @@ alias activate='source virtualenv/bin/activate.fish'
 # Starship prompt
 starship init fish | source
 
-# Info
-echo ' Fish custom profile loaded'
-
-# run tmux
-#echo Attaching ; and tmux a ; or echo Creating ; and tmux
-
+###############
+## Feedback  ##
+###############
+set_color cyan; echo "Fish custom profile loaded"; set_color normal
