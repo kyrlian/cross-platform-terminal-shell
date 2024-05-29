@@ -19,12 +19,14 @@ source custom_config_common.nu
 ## Aliases  ##
 ##############
 alias cat = more
-## Murex
-alias muw = `c:\Program Files\murex\murex-6-windows-amd64.exe`
-alias debian = wsl -d Debian
-alias ubuntu = wsl -d Ubuntu
-# def murex [] { wsl -d Ubuntu -- /usr/bin/murex }
-alias murex = wsl
+
+## Shortcuts to other shells
+alias muw = `c:\Program Files\murex\murex-6-windows-amd64.exe` # Murex for windows
+alias debian = wsl -d Debian # wsl Debian with default shell
+alias ubuntu = wsl -d Ubuntu # wsl Ubuntu with default shell
+def murex [] { wsl -d Ubuntu -e /usr/bin/murex } # wsl Ubuntu with murex shell
+def fish [] { wsl -d Ubuntu -e /usr/bin/fish -l } # wsl Ubuntu with fish shell
+def zsh [] { wsl -d Ubuntu -e /usr/bin/zsh -l } # wsl Ubuntu with zsh shell
 alias mu = murex
 
 # Python venv
