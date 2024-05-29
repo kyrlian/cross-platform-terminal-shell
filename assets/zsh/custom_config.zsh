@@ -1,3 +1,4 @@
+# My custom zsh profile
 # Sourced by  ~/.zshrc
 
 # Color support : $fg[red]
@@ -8,7 +9,7 @@ autoload -U colors && colors
 ## Banner  ##
 #############
 banner() { 
-    print "welcome to Zsh"
+    print "Welcome to Zsh"
     print "Date : $(date +'%Y-%m-%d %H:%M:%S')"
 }
 banner
@@ -16,6 +17,7 @@ banner
 ##############
 ## Aliases  ##
 ##############
+alias ll='ls -al'
 
 #python
 # alias venvc='python3 -m venv venv'
