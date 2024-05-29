@@ -28,6 +28,9 @@ config.color_scheme = 'catppuccin-mocha'
 -- hide_tab_bar_if_only_one_tab
 config.hide_tab_bar_if_only_one_tab = true
 
+-- Font size
+config.font_size = 14.0
+
 -----------------------
 -- Set default shell --
 -----------------------
@@ -35,15 +38,19 @@ config.hide_tab_bar_if_only_one_tab = true
 --- https://wezfurlong.org/wezterm/config/lua/config/default_prog.html
 if is_os("darwin") then
     -- MacOS homebrew
-    config.default_prog = { '/opt/homebrew/bin/nu', '-l' } -- nu shell
-    -- config.default_prog = { '/opt/homebrew/bin/murex' } -- murex
+        config.default_prog = { '/opt/homebrew/bin/nu', '-l' } -- nu shell
+        -- config.default_prog = { '/opt/homebrew/bin/fish', '-l' } -- fish shell
+        -- config.default_prog = { '/opt/homebrew/bin/murex' } -- murex shell
 elseif is_os("windows") then
     -- Windows
     config.default_prog = { 'nu', '-l' } -- nu shell
     -- config.default_prog = { 'C:/Program Files/murex/murex-6-windows-amd64.exe' } -- murex for windows
-    -- config.default_prog = { 'wsl', '-d', 'Debian' } -- murex via wsl Debian
-    -- config.default_prog = { 'wsl', '-d', 'Ubuntu' } -- murex via wsl Ubuntu
-    -- config.default_prog = { 'wsl' } -- murex via wsl Ubuntu
+    -- config.default_prog = { 'wsl' } -- Default wsl with default shell
+    -- config.default_prog = { 'wsl', '-d', 'Debian' } -- wsl Debian with default shell
+    -- config.default_prog = { 'wsl', '-d', 'Ubuntu' } -- wsl Ubuntu with default shell
+    -- config.default_prog = { 'wsl', '-d', 'Ubuntu', '-e', '/usr/bin/murex' } -- wsl Ubuntu with murex shell
+    -- config.default_prog = { 'wsl', '-d', 'Ubuntu', '-e', '/usr/bin/fish', '-l' } -- wsl Ubuntu with fish shell
+    -- config.default_prog = { 'wsl', '-d', 'Ubuntu', '-e', '/usr/bin/zsh', '-l' } -- wsl Ubuntu with zsh shell
 end
 
 -----------------------
