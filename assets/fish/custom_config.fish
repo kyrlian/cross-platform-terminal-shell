@@ -2,7 +2,9 @@
 # Sourced from ~/.config/fish/config.fish
 # with:
 # if status is-interactive
-#     test -e {$HOME}/scripts/custom-profile.fish ; and source {$HOME}/scripts/custom-profile.fish
+#       set customconf {$HOME}/scripts/custom-profile.fish
+#       set customconf /mnt/e/docs/coding/shell/cross-platform-terminal-shell/assets/fish/custom_config.fish
+#       test -e $customconf ; and source $customconf
 # end
 
 #############
@@ -13,26 +15,30 @@
 function fish_greeting
     switch (uname)
         case Linux
-                set sysversion $(systeminfo | grep 'OS Name' | xargs)
+                set sysversion (hostnamectl | grep Operating | xargs)
         case Darwin
-                set sysversion $(system_profiler SPSoftwareDataType | grep 'System Version' | xargs)
+                set sysversion (system_profiler SPSoftwareDataType | grep 'System Version' | xargs)
         case '*'
                 set sysversion Unknown
     end
 
     # https://fishshell.com/docs/current/cmds/set_color.html
-    # set_color cyan; echo "   __ _     _      "; set_color normal
-    # set_color cyan; echo "  / _(_)___| |__   $(set_color yellow) Fish shell [https://fishshell.com/]"; set_color normal
-    # set_color cyan; echo " | |_| / __| '_ \  $(set_color blue) $sysversion"; set_color normal
-    # set_color cyan; echo " |  _| \__ \ | | | $(set_color magenta) Date: $(date +'%Y-%m-%d %H:%M:%S')"; set_color normal
-    # set_color cyan; echo " |_| |_|___/_| |_| $(set_color green) Directory: $(pwd)"; set_color normal
-    # set_color cyan; echo " |_| |_|___/_| |_| $(set_color red) User: $(whoami)"; set_color normal
+#     set_color cyan; echo "   _______     "; set_color normal
+#     set_color cyan; echo "   \      \    $(set_color yellow) Fish shell [https://fishshell.com/]"; set_color normal
+#     set_color cyan; echo "  _ \/'''''\   $(set_color blue) $sysversion"; set_color normal
+#     set_color cyan; echo " | \/  _  @ \  $(set_color magenta) Date: $(date +'%Y-%m-%d %H:%M:%S')"; set_color normal
+#     set_color cyan; echo " |    (_>   <  $(set_color green) Directory: $(pwd)"; set_color normal
+#     set_color cyan; echo " |_/\       /  $(set_color red) User: $(whoami)"; set_color normal
+#     set_color cyan; echo "    /\...../   "; set_color normal
+#     set_color cyan; echo "    \____//    "; set_color normal
+
+# On linux echo "a$(set_color blue)b" doesnt work - but this does : echo "a"$(set_color blue)"b"
     set_color cyan; echo "   _______     "; set_color normal
-    set_color cyan; echo "   \      \    $(set_color yellow) Fish shell [https://fishshell.com/]"; set_color normal
-    set_color cyan; echo "  _ \/'''''\   $(set_color blue) $sysversion"; set_color normal
-    set_color cyan; echo " | \/  _  @ \  $(set_color magenta) Date: $(date +'%Y-%m-%d %H:%M:%S')"; set_color normal
-    set_color cyan; echo " |    (_>   <  $(set_color green) Directory: $(pwd)"; set_color normal
-    set_color cyan; echo " |_/\       /  $(set_color red) User: $(whoami)"; set_color normal
+    set_color cyan; echo "   \      \    "(set_color yellow)" Fish shell [https://fishshell.com/]"; set_color normal
+    set_color cyan; echo "  _ \/'''''\   "(set_color blue)" $sysversion"; set_color normal
+    set_color cyan; echo " | \/  _  @ \  "(set_color magenta)" Date: "(date +'%Y-%m-%d %H:%M:%S'); set_color normal
+    set_color cyan; echo " |    (_>   <  "(set_color green)" Directory: "(pwd); set_color normal
+    set_color cyan; echo " |_/\       /  "(set_color red)" User: "(whoami); set_color normal
     set_color cyan; echo "    /\...../   "; set_color normal
     set_color cyan; echo "    \____//    "; set_color normal
 end
