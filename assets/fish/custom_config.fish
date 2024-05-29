@@ -46,6 +46,7 @@ end
 ##############
 ## Aliases  ##
 ##############
+alias ll='ls -al'
 
 #python
 # alias venvc='python3 -m venv venv'
