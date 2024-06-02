@@ -1,0 +1,6 @@
+# XONSH WIZARD START
+source-zsh "echo loading xonsh foreign shell"
+# XONSH WIZARD END
+
+# ~/.xonshrc
+execx($(starship init xonsh))
