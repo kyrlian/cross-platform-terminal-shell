@@ -14,6 +14,12 @@ source custom_config_common.nu
 ## Windows specifics  ##
 ########################
 
+##############
+## Path     ##
+##############
+use std *
+path add C:\Users\key\AppData\Roaming\Python\Python312\Scripts
+
 
 ##############
 ## Aliases  ##
