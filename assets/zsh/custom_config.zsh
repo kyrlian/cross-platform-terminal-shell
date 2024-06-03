@@ -8,19 +8,36 @@ autoload -U colors && colors
 #############
 ## Banner  ##
 #############
+
 banner() { 
-    print "Welcome to Zsh"
-    print "Date : $(date +'%Y-%m-%d %H:%M:%S')"
+    sysversion='Unknown'
+    case $(uname) in
+    Darwin)
+    sysversion=$(system_profiler SPSoftwareDataType | grep 'System Version' | xargs)
+    ;;
+    Linux)
+    sysversion=$(hostnamectl | grep Operating | xargs)
+    ;;
+    esac
+    echo "$fg[yellow]  _______ _  _   Welcome to Zsh"
+    echo "$fg[yellow] |_  / __| || | $fg[blue] ${sysversion} $reset_color"
+    echo "$fg[yellow]  / /\\__ \\ __ | $fg[magenta] Date : $(date +'%Y-%m-%d %H:%M:%S')$reset_color"
+    echo "$fg[yellow] /___|___/_||_| $fg[green] Directory:  $(pwd)$reset_color"
+    echo "$fg[yellow]                $fg[red] User: $(whoami)$reset_color"
 }
 banner
+
+##############
+## Path     ##
+##############
+export PATH="$PATH:/usr/local/bin"
+export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$HOME/scripts"
 
 ##############
 ## Aliases  ##
 ##############
 alias ll='ls -al'
-
-#python
-# alias venvc='python3 -m venv venv'
 alias venvc='virtualenv virtualenv'
 alias activate='source virtualenv/bin/activate'
 
@@ -34,4 +51,4 @@ eval "$(starship init zsh)"
 ###############
 ## Feedback  ##
 ###############
-echo "$fg[cyan]Zsh custom profile loaded$reset_color"
+echo "$fg[cyan]$(date +'%H:%M:%S') Zsh custom profile loaded$reset_color"
