@@ -33,4 +33,5 @@ alias activate = overlay use ./virtualenv/bin/activate.nu
 ###############
 ## Feedback  ##
 ###############
-print $"(ansi light_blue_bold)Mac config loaded(ansi reset)"
+let hh = date now | format date "%H:%M:%S"
+print $"(ansi light_blue_bold)($hh) Mac config loaded(ansi reset)"
