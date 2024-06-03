@@ -22,34 +22,34 @@ function fish_greeting
                 set sysversion Unknown
     end
 
-    # https://fishshell.com/docs/current/cmds/set_color.html
-#     set_color cyan; echo "   _______     "; set_color normal
-#     set_color cyan; echo "   \      \    $(set_color yellow) Fish shell [https://fishshell.com/]"; set_color normal
-#     set_color cyan; echo "  _ \/'''''\   $(set_color blue) $sysversion"; set_color normal
-#     set_color cyan; echo " | \/  _  @ \  $(set_color magenta) Date: $(date +'%Y-%m-%d %H:%M:%S')"; set_color normal
-#     set_color cyan; echo " |    (_>   <  $(set_color green) Directory: $(pwd)"; set_color normal
-#     set_color cyan; echo " |_/\       /  $(set_color red) User: $(whoami)"; set_color normal
-#     set_color cyan; echo "    /\...../   "; set_color normal
-#     set_color cyan; echo "    \____//    "; set_color normal
+    set ascfish "    _______    °"\
+                "  _ \/     \   °"\
+                " | \/  _  @ \  °"\
+                " |    (_>   < ° "\
+                " |_/\       /   "\
+                "     \_____/    ";
 
-# On linux echo "a$(set_color blue)b" doesnt work - but this does : echo "a"$(set_color blue)"b"
-    set_color cyan; echo "   _______     "; set_color normal
-    set_color cyan; echo "   \      \    "(set_color yellow)" Fish shell [https://fishshell.com/]"; set_color normal
-    set_color cyan; echo "  _ \/'''''\   "(set_color blue)" $sysversion"; set_color normal
-    set_color cyan; echo " | \/  _  @ \  "(set_color magenta)" Date: "(date +'%Y-%m-%d %H:%M:%S'); set_color normal
-    set_color cyan; echo " |    (_>   <  "(set_color green)" Directory: "(pwd); set_color normal
-    set_color cyan; echo " |_/\       /  "(set_color red)" User: "(whoami); set_color normal
-    set_color cyan; echo "    /\...../   "; set_color normal
-    set_color cyan; echo "    \____//    "; set_color normal
+    # https://fishshell.com/docs/current/cmds/set_color.html
+    # On linux echo "a$(set_color blue)b" doesnt work - but this does : echo "a"$(set_color blue)"b"
+    set_color cyan; echo $ascfish[1]; set_color normal
+    set_color cyan; echo $ascfish[2](set_color yellow)" Fish shell [https://fishshell.com/]"; set_color normal
+    set_color cyan; echo $ascfish[3](set_color blue)" $sysversion"; set_color normal
+    set_color cyan; echo $ascfish[4](set_color magenta)" Date: "(date +'%Y-%m-%d %H:%M:%S'); set_color normal
+    set_color cyan; echo $ascfish[5](set_color green)" Directory: "(pwd); set_color normal
+    set_color cyan; echo $ascfish[6](set_color red)" User: "(whoami); set_color normal
 end
+
+##############
+## Path     ##
+##############
+fish_add_path /usr/local/bin
+fish_add_path $HOME/.local/bin
+fish_add_path $HOME/scripts
 
 ##############
 ## Aliases  ##
 ##############
 alias ll='ls -al'
-
-#python
-# alias venvc='python3 -m venv venv'
 alias venvc='virtualenv virtualenv'
 alias activate='source virtualenv/bin/activate.fish'
 
@@ -63,4 +63,4 @@ starship init fish | source
 ###############
 ## Feedback  ##
 ###############
-set_color cyan; echo "Fish custom profile loaded"; set_color normal
+set_color cyan; echo (date +'%H:%M:%S')" Fish custom profile loaded"; set_color normal
