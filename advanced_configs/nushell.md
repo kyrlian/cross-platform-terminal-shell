@@ -49,7 +49,7 @@ cd ($nu.config-path | path dirname)
 vi custom_config.nu
 ```
 
-Add your alias, for example shortcuts to manage python virtualenv (**Note** venv doesn't support nu):
+Add your alias, for example shortcuts to manage python virtualenv (**Note** pip's embedded `venv` doesn't support nu, first install virtualenv with mac:`brew install virtualenv`, win:`pip install virtualenv`):
 
 Macos:
 ```sh
