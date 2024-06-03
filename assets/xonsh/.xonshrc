@@ -1,6 +1,49 @@
+# My custom xonsh profile
+# Linked from ~/.xonshrc
+
 # XONSH WIZARD START
-source-zsh "echo loading xonsh foreign shell"
+# source-zsh "echo loading xonsh foreign shell"
 # XONSH WIZARD END
+
+# XONSH WEBCONFIG START
+$XONSH_COLOR_STYLE = 'one-dark'
+$PROMPT = '{env_name}{BOLD_GREEN}{user}@{hostname}{BOLD_BLUE} {cwd}{branch_color}{curr_branch: {}}{RESET} {RED}{last_return_code_if_nonzero:[{BOLD_INTENSE_RED}{}{RED}] }{RESET}{BOLD_BLUE}{prompt_end}{RESET} '
+xontrib load coreutils
+# XONSH WEBCONFIG END
+
+#############
+## Banner  ##
+#############
+
+##############
+## Path     ##
+##############
+for new_path in [
+    "/usr/local/bin",
+    "$HOME/.local/bin",
+    "$HOME/scripts",
+    ]:
+    $PATH.append(new_path)
+
+##############
+## Aliases  ##
+##############
+
+aliases['ll'] = ['ls','-al'] 
+
+##############
+## Prompt   ##
+##############
 
 # Starship config - https://starship.rs/#xonsh
 execx($(starship init xonsh))
+
+###############
+## Feedback  ##
+###############
+# echo "{CYAN}$(date +'%H:%M:%S') Xonsh custom profile loaded{RESET}"
+# echo $(date +'%H:%M:%S') Xonsh custom profile loaded
+# printx("{CYAN}$(date +'%H:%M:%S') Xonsh custom profile loaded{RESET}")
+# printx("{CYAN}$d Xonsh custom profile loaded{RESET}")
+# print(f"Date:${date +'%H:%M:%S'} Xonsh custom profile loaded")
+# print(f"Date:$(date +'%H:%M:%S') Xonsh custom profile loaded")
