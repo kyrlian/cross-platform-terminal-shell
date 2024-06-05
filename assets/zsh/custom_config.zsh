@@ -19,20 +19,22 @@ banner() {
     sysversion=$(hostnamectl | grep Operating | xargs)
     ;;
     esac
-    echo "$fg[yellow]  _______ _  _   Welcome to Zsh"
+    echo "$fg[yellow]  _______ _  _   Zsh on $(uname)"
     echo "$fg[yellow] |_  / __| || | $fg[blue] ${sysversion} $reset_color"
-    echo "$fg[yellow]  / /\\__ \\ __ | $fg[magenta] Date : $(date +'%Y-%m-%d %H:%M:%S')$reset_color"
+    echo "$fg[yellow]  / /\\__ \\ __ | $fg[magenta] Date: $(date +'%Y-%m-%d %H:%M:%S')$reset_color"
     echo "$fg[yellow] /___|___/_||_| $fg[green] Directory:  $(pwd)$reset_color"
     echo "$fg[yellow]                $fg[red] User: $(whoami)$reset_color"
+    echo "$fg[black]█$fg[red]█$fg[green]█$fg[yellow]█$fg[blue]█$fg[magenta]█$fg[cyan]█$fg[white]█${reset_color}█"
 }
 banner
 
 ##############
 ## Path     ##
 ##############
-export PATH="$PATH:/usr/local/bin"
-export PATH="$PATH:$HOME/.local/bin"
-export PATH="$PATH:$HOME/scripts"
+path+=/opt/homebrew/bin
+path+=/usr/local/bin
+path+=$HOME/.local/bin
+path+=$HOME/scripts
 
 ##############
 ## Aliases  ##

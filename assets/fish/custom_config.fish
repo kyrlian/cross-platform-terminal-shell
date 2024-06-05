@@ -32,16 +32,18 @@ function fish_greeting
     # https://fishshell.com/docs/current/cmds/set_color.html
     # On linux echo "a$(set_color blue)b" doesnt work - but this does : echo "a"$(set_color blue)"b"
     set_color cyan; echo $ascfish[1]; set_color normal
-    set_color cyan; echo $ascfish[2](set_color yellow)" Fish shell [https://fishshell.com/]"; set_color normal
+    set_color cyan; echo $ascfish[2](set_color yellow)" Fish shell [https://fishshell.com/] on "(uname); set_color normal
     set_color cyan; echo $ascfish[3](set_color blue)" $sysversion"; set_color normal
     set_color cyan; echo $ascfish[4](set_color magenta)" Date: "(date +'%Y-%m-%d %H:%M:%S'); set_color normal
     set_color cyan; echo $ascfish[5](set_color green)" Directory: "(pwd); set_color normal
     set_color cyan; echo $ascfish[6](set_color red)" User: "(whoami); set_color normal
+    echo (set_color BLACK)"█"(set_color RED)"█"(set_color GREEN)"█"(set_color YELLOW)"█"(set_color BLUE)"█"(set_color MAGENTA)"█"(set_color CYAN)"█"(set_color WHITE)"█"(set_color normal)"█"
 end
 
 ##############
 ## Path     ##
 ##############
+fish_add_path /opt/homebrew/bin
 fish_add_path /usr/local/bin
 fish_add_path $HOME/.local/bin
 fish_add_path $HOME/scripts

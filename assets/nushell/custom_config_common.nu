@@ -26,6 +26,7 @@ export def custom_banner [] {
   print $"(ansi green)($ellie.2)  (ansi light_purple_bold)Date (ansi reset)(ansi light_purple)($dt)(ansi reset)"
   print $"(ansi green)($ellie.3)  (ansi light_green_bold)Directory (ansi reset)(ansi light_green)(pwd)(ansi reset)"
   print $"(ansi reset)"
+  print $"(ansi black)█(ansi red)█(ansi green)█(ansi yellow)█(ansi blue)█(ansi magenta)█(ansi cyan)█(ansi white)█(ansi reset)█"
 } 
 custom_banner 
 
