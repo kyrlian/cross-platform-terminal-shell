@@ -22,8 +22,8 @@ end
 
 -- Changing the color scheme:
 --- https://wezfurlong.org/wezterm/colorschemes/index.html
-config.color_scheme = 'catppuccin-mocha'
--- config.color_scheme = 'dracula'
+-- config.color_scheme = 'Catppuccin Mocha'
+config.color_scheme = 'Dark Pastel'
 
 -- hide_tab_bar_if_only_one_tab
 config.hide_tab_bar_if_only_one_tab = true

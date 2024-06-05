@@ -1,5 +1,7 @@
 # Location: 
 # mac/linux/wsl : ~/.config/helix/config.toml
 # win: ~\AppData\Roaming\helix
-theme = "catppuccin_mocha"
+theme = "dark_plus"
+# theme = "dracula_at_night"
+# theme = "catppuccin_mocha"
 # theme = "dracula"
