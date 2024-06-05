@@ -19,7 +19,10 @@ source custom_config_common.nu
 ## Path     ##
 ##############
 use std *
-path add /opt/homebrew/bin /usr/local/bin
+path add /opt/homebrew/bin
+path add /usr/local/bin
+path add ~/.local/bin
+path add ~/scripts
 
 ##############
 ## Aliases  ##
