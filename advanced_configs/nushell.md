@@ -95,4 +95,3 @@ use starship.nu
   - [custom_config_common.nu](../assets/nushell/custom_config_common.nu)
   - [custom_config_mac.nu](../assets/nushell/custom_config_mac.nu)
   - [custom_config_win.nu](../assets/nushell/custom_config_win.nu)
-  - [custom_banner.nu](../assets/nushell/custom_banner.nu)
