@@ -37,7 +37,11 @@ function fish_greeting
     set_color cyan; echo $ascfish[4](set_color magenta)" Date: "(date +'%Y-%m-%d %H:%M:%S'); set_color normal
     set_color cyan; echo $ascfish[5](set_color green)" Directory: "(pwd); set_color normal
     set_color cyan; echo $ascfish[6](set_color red)" User: "(whoami); set_color normal
-    echo (set_color BLACK)"█"(set_color RED)"█"(set_color GREEN)"█"(set_color YELLOW)"█"(set_color BLUE)"█"(set_color MAGENTA)"█"(set_color CYAN)"█"(set_color WHITE)"█"(set_color normal)"█"
+    # echo (set_color BLACK)"█"(set_color RED)"█"(set_color GREEN)"█"(set_color YELLOW)"█"(set_color BLUE)"█"(set_color MAGENTA)"█"(set_color CYAN)"█"(set_color WHITE)"█"(set_color normal)"█"
+end
+
+function banner
+        fish_greeting
 end
 
 ##############
