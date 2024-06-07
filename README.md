@@ -200,3 +200,4 @@ For my second try I tried [Alacrity](https://alacritty.org/) but settled on [Wez
 - [Starship](./advanced_configs/starship.md)
 - [TMUX](./advanced_configs/tmux.md)
 - [Wezterm](./advanced_configs/wezterm.md)
+- [XONSH](./advanced_configs/xonsh.md)

@@ -33,7 +33,7 @@ def banner():
     printx("{CYAN}"+logo[3]+"{GREEN} Directory: "+$(pwd).strip()+"{RESET}")
     printx("{CYAN}"+logo[4]+"{RED} User: "+$(whoami).strip()+"{RESET}")
     # https://gist.github.com/rene-d/9e584a7dd2935d0f461904b9f2950007
-    printx("{BLACK}█{RED}█{GREEN}█{YELLOW}█{BLUE}█{PURPLE}█{CYAN}█{WHITE}█{RESET}█")
+    # printx("{BLACK}█{RED}█{GREEN}█{YELLOW}█{BLUE}█{PURPLE}█{CYAN}█{WHITE}█{RESET}█")
 
 banner()
 
