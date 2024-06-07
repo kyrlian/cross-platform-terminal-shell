@@ -24,7 +24,7 @@ banner() {
     echo "$fg[yellow]  / /\\__ \\ __ | $fg[magenta] Date: $(date +'%Y-%m-%d %H:%M:%S')$reset_color"
     echo "$fg[yellow] /___|___/_||_| $fg[green] Directory:  $(pwd)$reset_color"
     echo "$fg[yellow]                $fg[red] User: $(whoami)$reset_color"
-    echo "$fg[black]█$fg[red]█$fg[green]█$fg[yellow]█$fg[blue]█$fg[magenta]█$fg[cyan]█$fg[white]█${reset_color}█"
+    # echo "$fg[black]█$fg[red]█$fg[green]█$fg[yellow]█$fg[blue]█$fg[magenta]█$fg[cyan]█$fg[white]█${reset_color}█"
 }
 banner
 

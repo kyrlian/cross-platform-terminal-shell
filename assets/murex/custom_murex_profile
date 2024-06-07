@@ -36,8 +36,8 @@ function banner {
     out {RESET}{CYAN}$doom_line_4{MAGENTA}'  Date '${date +'%Y-%m-%d %H:%M:%S'}{RESET}
     out {RESET}{CYAN}$doom_line_5{GREEN}'  Directory' ${pwd}{RESET}
     out {RESET}{CYAN}$doom_line_6{RED}'  User' ${whoami}{RESET}
-    out {BLACK}█{RED}█{GREEN}█{YELLOW}█{BLUE}█{MAGENTA}█{CYAN}█{WHITE}█{RESET}█
-    out {RESET}
+    # out {BLACK}█{RED}█{GREEN}█{YELLOW}█{BLUE}█{MAGENTA}█{CYAN}█{WHITE}█{RESET}█
+    # out {RESET}
 }
 ${banner}
 
