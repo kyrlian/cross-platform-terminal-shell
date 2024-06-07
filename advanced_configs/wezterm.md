@@ -63,7 +63,7 @@ config.keys = {
 
 ## Ressources
 
-- [My config](../assets/wezterm/wezterm_config.lua)
+- [My wezterm config](../assets/wezterm/wezterm_config.lua)
 - [wezterm doc - changing the default shell](https://wezfurlong.org/wezterm/config/launch.html#changing-the-default-program)
 - [wezterm doc - colors chemes](https://wezfurlong.org/wezterm/colorschemes/index.html)
 - [wezterm cheatsheet](https://ansidev.substack.com/p/wezterm-cheatsheet)
