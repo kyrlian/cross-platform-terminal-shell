@@ -38,9 +38,11 @@ config.font_size = 14.0
 --- https://wezfurlong.org/wezterm/config/lua/config/default_prog.html
 if is_os("darwin") then
     -- MacOS homebrew
-        config.default_prog = { '/opt/homebrew/bin/nu', '-l' } -- nu shell
-        -- config.default_prog = { '/opt/homebrew/bin/fish', '-l' } -- fish shell
+        -- config.default_prog = { '/opt/homebrew/bin/zsh' } -- zsh shell
+        config.default_prog = { '/opt/homebrew/bin/fish', '-l' } -- fish shell
+        -- config.default_prog = { '/opt/homebrew/bin/nu', '-l' } -- nu shell
         -- config.default_prog = { '/opt/homebrew/bin/murex' } -- murex shell
+        -- config.default_prog = { '/opt/homebrew/bin/xonsh', '-l' } -- xonsh shell
 elseif is_os("windows") then
     -- Windows
     config.default_prog = { 'nu', '-l' } -- nu shell
@@ -48,9 +50,10 @@ elseif is_os("windows") then
     -- config.default_prog = { 'wsl' } -- Default wsl with default shell
     -- config.default_prog = { 'wsl', '-d', 'Debian' } -- wsl Debian with default shell
     -- config.default_prog = { 'wsl', '-d', 'Ubuntu' } -- wsl Ubuntu with default shell
-    -- config.default_prog = { 'wsl', '-d', 'Ubuntu', '-e', '/usr/bin/murex' } -- wsl Ubuntu with murex shell
-    -- config.default_prog = { 'wsl', '-d', 'Ubuntu', '-e', '/usr/bin/fish', '-l' } -- wsl Ubuntu with fish shell
     -- config.default_prog = { 'wsl', '-d', 'Ubuntu', '-e', '/usr/bin/zsh', '-l' } -- wsl Ubuntu with zsh shell
+    -- config.default_prog = { 'wsl', '-d', 'Ubuntu', '-e', '/usr/bin/fish', '-l' } -- wsl Ubuntu with fish shell
+    -- config.default_prog = { 'wsl', '-d', 'Ubuntu', '-e', '/usr/bin/murex' } -- wsl Ubuntu with murex shell
+    -- config.default_prog = { 'wsl', '-d', 'Ubuntu', '-e', '/usr/bin/xonsh', '-l' } -- wsl Ubuntu with xonsh shell
 end
 
 -----------------------
