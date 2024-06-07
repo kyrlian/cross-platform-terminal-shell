@@ -32,3 +32,8 @@ add this to attach to an existing session or create a new one
 ```sh
 echo Attaching ; and tmux a ; or echo Creating ; and tmux
 ```
+
+## Ressources
+
+- [Fish shell](https://fishshell.com/)
+- [My fish config](../assets/fish/custom_config.fish)
