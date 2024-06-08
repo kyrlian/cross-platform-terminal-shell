@@ -1,8 +1,16 @@
 # Fish config
 
-## Fish on windows with WSL
+## Install 
 
-1. Install WSL Debian
+### Mac
+
+```sh
+brew install fish
+```
+
+### Windows with WSL (Debian)
+
+1. Install WSL Debian if needed
 	```sh
 	wsl.exe --install Debian
 	```
@@ -10,7 +18,7 @@
 	```sh
 	wsl.exe -d Debian -- sudo sh -c "apt-get update && apt-get install fish"
 	```
-3. Set fish as default shell in wsl Debian
+3. Optional: Set fish as default shell in wsl Debian
 	```sh
 	wsl.exe -d Debian -- sudo chsh -s /usr/bin/fish
 	```
@@ -18,6 +26,12 @@
     ```sh
 	wsl.exe -d Debian
     ```
+
+## Config location
+
+```sh
+~/.config/fish/config.fish
+```
 
 ## Tmux
 
