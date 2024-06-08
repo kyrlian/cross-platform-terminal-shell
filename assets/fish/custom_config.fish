@@ -22,12 +22,12 @@ function fish_greeting
                 set sysversion Unknown
     end
 
-    set ascfish "    _______    °"\
-                "  _ \/     \   °"\
-                " | \/  _  @ \  °"\
-                " |    (_>   < ° "\
-                " |_/\       /   "\
-                "     \_____/    ";
+    set ascfish[1] '    _______    °' 
+    set ascfish[2] '  _ \\/     \\   °'
+    set ascfish[3] ' | \\/  _  @ \\  °'
+    set ascfish[4] ' |    (_>   < ° '
+    set ascfish[5] ' |_/\\       /   '
+    set ascfish[6] '     \\_____/    '
 
     # https://fishshell.com/docs/current/cmds/set_color.html
     # On linux echo "a$(set_color blue)b" doesnt work - but this does : echo "a"$(set_color blue)"b"
