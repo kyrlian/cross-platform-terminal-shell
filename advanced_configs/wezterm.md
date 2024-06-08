@@ -1,5 +1,19 @@
 # Wezterm config
 
+## Install
+
+### Macos 
+
+```sh
+brew install wezterm
+```
+	
+### Windows
+
+```sh
+scoop install wezterm
+```
+
 ## Config file location
 
 `~/.wezterm.lua`

@@ -1,5 +1,19 @@
 # Nushell config
 
+## Install
+
+### Mac
+
+```sh
+brew install nu
+```
+ 	
+### Windows 
+
+```sh
+scoop nu
+```
+
 ## Config location
 
 Search nu config file with:
