@@ -126,7 +126,7 @@ For my second try I tried [Alacrity](https://alacritty.org/) but settled on [Wez
 1. Install everything
    
 	```sh
-	scoop install alaweztermcritty nu starship nano neovim helix
+	scoop install wezterm nu starship nano neovim helix
 	```
 
 2. [Install Murex shell in WSL](./advanced_configs/murex.md#windows-with-wsl)
