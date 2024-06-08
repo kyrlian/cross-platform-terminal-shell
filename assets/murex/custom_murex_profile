@@ -31,13 +31,13 @@ function banner {
     
     # https://murex.rocks/user-guide/ansi.html#constants
     out {RESET}{CYAN}$doom_line_1{RESET}
-    out {RESET}{CYAN}$doom_line_2{YELLOW}'  Murex shell [https://murex.rocks] on '${os}{RESET}
+    out {RESET}{CYAN}$doom_line_2{YELLOW}'  '${murex --version |head -n1}' - murex.rocks'{RESET}
     out {RESET}{CYAN}$doom_line_3{BLUE}'  '$(sysversion){RESET}
     out {RESET}{CYAN}$doom_line_4{MAGENTA}'  Date '${date +'%Y-%m-%d %H:%M:%S'}{RESET}
     out {RESET}{CYAN}$doom_line_5{GREEN}'  Directory' ${pwd}{RESET}
     out {RESET}{CYAN}$doom_line_6{RED}'  User' ${whoami}{RESET}
     # out {BLACK}█{RED}█{GREEN}█{YELLOW}█{BLUE}█{MAGENTA}█{CYAN}█{WHITE}█{RESET}█
-    # out {RESET}
+    out {RESET}
 }
 ${banner}
 
