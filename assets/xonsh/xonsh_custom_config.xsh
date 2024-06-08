@@ -27,7 +27,7 @@ def banner():
         "\\ \\/ / _ \\| '_ \\/ __| '_ \\ ",
         " >  < (_) | | | \\__ \\ | | |",
         "/_/\\_\\___/|_| |_|___/_| |_|"]
-    printx("{CYAN}"+logo[0]+"{YELLOW} "+$(xonsh --version).strip()+" [https://xon.sh/] on "+$(uname)+"{RESET}")
+    printx("{CYAN}"+logo[0]+"{YELLOW} "+$(xonsh --version).strip()+" - xon.sh{RESET}")
     printx("{CYAN}"+logo[1]+"{BLUE} "+sysversion+"{RESET}")
     printx("{CYAN}"+logo[2]+"{CYAN} Date: "+$(date '+%Y-%m-%d %H:%M:%S').strip()+"{RESET}")
     printx("{CYAN}"+logo[3]+"{GREEN} Directory: "+$(pwd).strip()+"{RESET}")
