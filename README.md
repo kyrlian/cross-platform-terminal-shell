@@ -4,15 +4,17 @@ Searching for a cross plateform combo : terminal, shell, prompt - for mac and wi
 TOC
 - [Intro](#intro)
 - [1st try: Hyper - Fish - Tmux](#1st-try-hyper---fish---tmux)
-	- [Macos setup](#macos-setup)
-	- [Windows setup](#windows-setup)
-	- [Advanced config](#advanced-config)
+	- [Quick install](#quick-install)
+		- [Macos setup](#macos-setup)
+		- [Windows setup](#windows-setup)
+	- [More information on my setup](#more-information-on-my-setup)
 	- [Verdict and lessons learned](#verdict-and-lessons-learned)
 - [2nd try - Wezterm - Nushell - Starship](#2nd-try---wezterm---nushell---starship)
-	- [Macos setup](#macos-setup-1)
-	- [Windows setup](#windows-setup-1)
-	- [Common setup](#common-setup)
-	- [Advanced config](#advanced-config-1)
+	- [Quick install](#quick-install-1)
+		- [Macos setup](#macos-setup-1)
+		- [Windows setup](#windows-setup-1)
+		- [Common setup](#common-setup)
+	- [More information on my setup](#more-information-on-my-setup-1)
 
 # Intro
 
@@ -33,7 +35,9 @@ My first try to get a cross plateform combo terminal + shell + multiplexer for m
 - Shell: [fish](https://fishshell.com/)
 - Multiplexer: [tmux](https://github.com/tmux/tmux/wiki)
 
-## Macos setup
+## Quick install
+
+### Macos setup
 
 1. Install fish and tmux
 	```sh
@@ -45,7 +49,7 @@ My first try to get a cross plateform combo terminal + shell + multiplexer for m
 		shellArgs: ['--login'],
 	```
 
-## Windows setup
+### Windows setup
 
 1. Install WSL Debian
 	```sh
@@ -69,73 +73,57 @@ My first try to get a cross plateform combo terminal + shell + multiplexer for m
 		shellArgs: ['-d', 'Debian'],
 	```
 
-## Advanced config
+## More information on my setup
 
-- [hyperterm](./advanced_configs/hyperterm.md)
-- [fish](./advanced_configs/fish.md)
-- [tmux](./advanced_configs/tmux.md)
+- [Hyperterm](./advanced_configs/hyperterm.md)
+- [Fish](./advanced_configs/fish.md)
+- [Tmux](./advanced_configs/tmux.md)
 
 ## Verdict and lessons learned
+
 - Hyper is a bit too slow to start for me as I tend to open/close my terminal a lot
 - Fish is fun, but not POSIX so my old aliases and muscle memory is lost, and it's not "modern" enough to warrant learning for me. I'm probably too late for this one
 - In the end I kept getting back to iterm2/win terminal and zsh
 
 # 2nd try - Wezterm - Nushell - Starship
 
-For my second try I tried [Alacrity](https://alacritty.org/) but settled on [Wezterm](https://wezfurlong.org/wezterm/index.html) for the ability to split windows (as I can't use [tmux](https://github.com/tmux/tmux/wiki) nor [zellij](https://zellij.dev/) on windows), [nushell](https://www.nushell.sh/) because it seems different enough to warrant learning a new shell, and [Murex](https://murex.rocks/) as secondary shell to keep a POSIX option, [Starship](https://starship.rs/) to customize my prompt, and included a few editors.
+For my second try I tried [Alacrity](https://alacritty.org/) but settled on [Wezterm](https://wezfurlong.org/wezterm/index.html) for the ability to split windows (as I can't use [tmux](https://github.com/tmux/tmux/wiki) nor [zellij](https://zellij.dev/) on windows), [nushell](https://www.nushell.sh/) because it seems different enough to warrant learning a new shell, [Fish](https://fishshell.com/), [Murex](https://murex.rocks/), [Xonsh](https://xon.sh/) as secondary shells, [Starship](https://starship.rs/) to customize my prompt, and included a few editors.
 
 - Terminal: [Wezterm](https://wezfurlong.org/wezterm/index.html)
-- Shells: [Nushell](https://www.nushell.sh/), [Murex](https://murex.rocks/)
+- Shells: [Nushell](https://www.nushell.sh/), [Fish](https://fishshell.com/), [Murex](https://murex.rocks/), [Xonsh](https://xon.sh/)
 - Prompt: [Starship](https://starship.rs/)
-- Editors: [nano](https://www.nano-editor.org/), [neovim](https://neovim.io/), [helix](https://helix-editor.com/)
-  
-## Macos setup
+- Editors: [Nano](https://www.nano-editor.org/), [Neovim](https://neovim.io/), [Helix](https://helix-editor.com/)
 
-1. Install everything
 
-	```sh
-	brew install wezterm nu murex starship nano neovim helix
-	```
-	Start `wezterm` and enter nushell with `nu`.
+## Quick install
 
-2. Customize nu PATH
+### Macos setup
 
-	Create a `custom_config.nu` file (I have mine in ~/scripts)
-	```sh
-	vi ~/scripts/custom_config.nu
-	```
-	add
-	```sh
-	use std *
-	path add /opt/homebrew/bin /usr/local/bin
-	```
-	
-	Then edit `config.nu` to load your custom profile:
-	```sh
-	vi $nu.config-path
-	```
-	
-	Add at the end:
-	```sh
-	source '~/scripts/custom_config.nu' 
-	```
-	Then continue the [Common setup](#common-setup)
+Install everything
+
+```sh
+brew install wezterm nu fish xonsh murex starship nano neovim helix 
+```
  	
-## Windows setup
+### Windows setup
 
-1. Install everything
+Install everything
    
-	```sh
-	scoop install wezterm nu starship nano neovim helix
-	```
+```sh
+scoop install wezterm nu starship nano neovim helix
+```
 
-2. [Install Murex shell in WSL](./advanced_configs/murex.md#windows-with-wsl)
+In WSL Ubuntu:
+```sh
+wsl.exe --install Ubuntu
+wsl.exe -d Ubuntu -- sudo sh -c "sudo apt update"
+wsl.exe -d Ubuntu -- sudo sh -c "sudo add-apt-repository ppa:maveonair/helix-editor"
+wsl.exe -d Ubuntu -- sudo sh -c "apt-get update && apt-get install fish xonsh tmux helix"
+```
 
-3. Start `wezterm` and enter nushell with `nu`.
+### Common setup
 
-4. Then continue the [Common setup](#common-setup)
-
-## Common setup
+1. Start `wezterm` and enter nushell with `nu`.
 
 2. Set `nu` as default shell in `wezterm` config
    
@@ -145,35 +133,18 @@ For my second try I tried [Alacrity](https://alacritty.org/) but settled on [Wez
 	local wezterm = require 'wezterm'
 	local config = wezterm.config_builder()
 
-	-- This is where you actually apply your config choices
-
-	-- Changing the color scheme:
-	config.color_scheme = 'catppuccin-mocha'
-	-- config.color_scheme = 'dracula'
-
 	-- Set default shell
 	config.default_prog = { 'nu', '-l' }
 
-	-- and finally, return the configuration to wezterm
+	-- Return the configuration to wezterm
 	return config
 	```
 
 	**NOTE**: On macos with homebrew, use the full path `/opt/homebrew/bin/nu`
 
 	Then re-start wezterm to get in nu.
-
-3. Set nu default editor
-   
-	Edit nu config
-	```sh
-	nano $nu.config-path
-	```
-	Search for `buffer_editor`, and add your prefered editor:
-	```sh
-	buffer_editor: "hx" 
-	```
  
-4. Setup starship as nu prompt
+3. Setup starship as nu prompt
   
   	Go to nu config directory using `$nu.config-path` and create the starship overlay
 	```sh
@@ -188,8 +159,7 @@ For my second try I tried [Alacrity](https://alacritty.org/) but settled on [Wez
 	```sh
 	use starship.nu
 	```
-
-## Advanced config
+## More information on my setup  
 
 - [Alacritty](./advanced_configs/alacritty.md)
 - [Fish](./advanced_configs/fish.md)
@@ -198,6 +168,5 @@ For my second try I tried [Alacrity](https://alacritty.org/) but settled on [Wez
 - [Neovim](./advanced_configs/neovim.md)
 - [Nushell](./advanced_configs/nushell.md)
 - [Starship](./advanced_configs/starship.md)
-- [TMUX](./advanced_configs/tmux.md)
 - [Wezterm](./advanced_configs/wezterm.md)
 - [XONSH](./advanced_configs/xonsh.md)

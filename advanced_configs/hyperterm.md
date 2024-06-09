@@ -1,4 +1,43 @@
-# hyperterm config
+# hyperterm
+
+https://hyper.is/
+
+## Install
+
+### Macos
+
+```sh
+brew install hyper
+```
+
+### Windows
+
+Donwload and install hyper [hyper](https://hyper.is/)
+```sh
+scoop install hyper
+```
+
+## Config file location
+
+```sh
+`~/.hyper.js`
+```
+
+## Custom shell
+
+Edit `~/.hyper.js` config file and change `shell`
+
+```sh
+        shell: '/opt/homebrew/bin/fish',
+        shellArgs: ['--login'],
+```
+
+to use with WSL:
+
+```sh
+        shell: 'wsl.exe',
+        shellArgs: ['-d', 'Debian'],
+```
 
 ## hyperterm-summon
 

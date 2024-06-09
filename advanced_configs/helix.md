@@ -1,4 +1,6 @@
-# Helix config
+# Helix editor
+
+https://helix-editor.com/
 
 ## Install 
 

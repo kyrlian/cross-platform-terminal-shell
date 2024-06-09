@@ -1,4 +1,6 @@
-# Murex config
+# Murex shell
+
+https://murex.rocks/
 
 ## Install 
 

@@ -1,4 +1,6 @@
-# Nushell config
+# Nushell
+
+https://www.nushell.sh/
 
 ## Install
 
@@ -11,12 +13,12 @@ brew install nu
 ### Windows 
 
 ```sh
-scoop nu
+scoop install nu
 ```
 
 ## Config location
 
-Search nu config file with:
+Search nu config file from nu command line with:
 
 ```sh
 $nu.config-path
@@ -39,7 +41,7 @@ or to open with vscode
 code $nu.config-path
 ```
 
-## Setup editor
+## Setup default editor
 
 Edit `config.nu`, search for `buffer_editor`, and add your editor, for exemple:
 
@@ -55,7 +57,7 @@ Edit `config.nu`, search for `show_banner`, and set to false:
 show_banner: false
 ```
 
-## Custom config
+## Custom config file
 
 Create `custom_config.nu`
 ```sh

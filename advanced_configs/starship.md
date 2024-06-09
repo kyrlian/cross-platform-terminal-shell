@@ -1,8 +1,8 @@
-# Starship config
+# Starship prompt
+
+https://starship.rs/
 
 ## Install
-
-Install [starship](https://starship.rs/)
 
 ### Mac OS
 

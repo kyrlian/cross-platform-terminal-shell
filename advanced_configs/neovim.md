@@ -1,4 +1,20 @@
-# Neovim config
+# Neovim editor
+
+https://neovim.io/
+
+## Install 
+
+### Macos
+
+```sh
+brew install neovim 
+```
+ 	
+### Windows
+
+```sh
+scoop install neovim
+```
 
 ## Config file location
 

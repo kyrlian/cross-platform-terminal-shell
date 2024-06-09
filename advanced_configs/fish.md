@@ -1,4 +1,6 @@
-# Fish config
+# Fish shell
+
+https://fishshell.com/
 
 ## Install 
 

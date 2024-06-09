@@ -1,4 +1,6 @@
-# Alacritty config
+# Alacritty terminal
+
+https://alacritty.org/
 
 ## Change default shell
 

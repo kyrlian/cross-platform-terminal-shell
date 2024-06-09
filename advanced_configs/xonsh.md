@@ -1,4 +1,6 @@
-# Xonsh config
+# Xonsh
+
+https://xon.sh/
 
 ## Install
 
@@ -29,12 +31,11 @@ brew install xonsh
 
 ## Config file location
 
-```sh
-~/.xonshrc
-```
+`~/.xonshrc`
 
 ## Python virtual envs
-xonsh doenst play well with venv or virtual env, and has a dedicated xontrib to manage python virtual environments called [vox](https://xon.sh/python_virtual_environments.html).
+
+xonsh doesnt play well with venv or virtual env, and has a dedicated xontrib to manage python virtual environments called [vox](https://xon.sh/python_virtual_environments.html).
 
 Here are aliases to use my usual 'venvc' and 'activate' shortcuts:
 
@@ -42,6 +43,11 @@ Here are aliases to use my usual 'venvc' and 'activate' shortcuts:
 aliases['venvc'] = 'vox new @($(basename $(pwd)).strip()+"_virtualenv")'
 aliases['activate'] = 'vox activate @($(basename $(pwd)).strip()+"_virtualenv")'
 aliases['deactivate'] = 'vox deactivate'
+```
+
+**Note**: I generate the env name based on current dir using basename(pwd), you could also use the full path with : 
+```python
+@($(pwd).strip().replace("/","_")+"_virtualenv")
 ```
 
 ## Ressources

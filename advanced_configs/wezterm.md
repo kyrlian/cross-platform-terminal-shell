@@ -1,4 +1,6 @@
-# Wezterm config
+# Wezterm
+
+https://wezfurlong.org/wezterm/
 
 ## Install
 
@@ -26,24 +28,22 @@ You can load a custom config with
 dofile('<your custom config path>/wezterm_config.lua')
 ```
 
+## Change color scheme
+
+Open wezterm config, and add
+
+```lua
+-- Changing the color scheme:
+config.color_scheme = 'catppuccin-mocha'
+```
+
 ## Change default shell
 
 Open wezterm config, and add
 
 ```lua
-local wezterm = require 'wezterm'
-local config = wezterm.config_builder()
-
--- This is where you actually apply your config choices
-
--- Changing the color scheme:
-config.color_scheme = 'catppuccin-mocha'
-
 -- Set default shell
 config.default_prog = { 'nu', '-l' }
-
--- and finally, return the configuration to wezterm
-return config
 ```
 
 ## Custom shortcuts
