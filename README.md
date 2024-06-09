@@ -21,7 +21,7 @@ TOC
 I use MacOS for work, and windows at home, my original setup is mostly the default on each:
 
 - On MacOS: [Iterm2](https://iterm2.com/) with [zsh](https://www.zsh.org/), [ohmyzsh](https://ohmyz.sh/) with the [fishy theme](https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#fishy), and [tmux](https://github.com/tmux/tmux/wiki). (I occasionally use [fish](https://fishshell.com/) and [nu](https://www.nushell.sh/), but I've got a too many little aliases and shell scripts around to quit zsh as my main shell)
-- On Windows: [Windows Terminal](https://aka.ms/terminal) with [wsl Debian](https://wiki.debian.org/InstallingDebianOn/Microsoft/Windows/SubsystemForLinux), [fish shell](https://fishshell.com/), and [tmux](https://github.com/tmux/tmux/wiki). (I don't use the terminal so much on windows, that's why I'm trying fish as my main shell)
+- On Windows: [Windows Terminal](https://aka.ms/terminal) with [wsl Ubuntu](https://ubuntu.com/desktop/wsl), [fish shell](https://fishshell.com/), and [tmux](https://github.com/tmux/tmux/wiki). (I don't use the terminal so much on windows, that's why I'm trying fish as my main shell)
 
 [VS code](https://code.visualstudio.com/) being my main IDE, and I use [homebrew](https://brew.sh/) on mac and [scoop](https://scoop.sh/) on windows as package managers.
 
@@ -51,26 +51,26 @@ My first try to get a cross plateform combo terminal + shell + multiplexer for m
 
 ### Windows setup
 
-1. Install WSL Debian
+1. Install WSL
 	```sh
-	wsl.exe --install Debian
+	wsl.exe --install Ubuntu
 	```
-1. Install fish and tmux in wsl Debian
+2. Install fish and tmux in wsl
 	```sh
-	wsl.exe -d Debian -- sudo sh -c "apt-get update && apt-get install fish tmux"
+	wsl.exe -d Ubuntu -- sudo sh -c "apt-get update && apt-get install fish tmux"
 	```
-1. Set fish as default shell in wsl Debian
+3. Set fish as default shell in wsl
 	```sh
-	wsl.exe -d Debian -- sudo chsh -s /usr/bin/fish
+	wsl.exe -d Ubuntu -- sudo chsh -s /usr/bin/fish
 	```
-1. Donwload and install hyper [hyper](https://hyper.is/)
+4. Donwload and install hyper [hyper](https://hyper.is/)
 	```sh
 	scoop install hyper
 	```
-1. Launch hyper, and setup WSL Debian as shell in hyper : edit hyper preferences and set:
+5. Launch hyper, and setup WSL as shell in hyper : edit hyper preferences and set:
 	```
 		shell: 'wsl.exe',
-		shellArgs: ['-d', 'Debian'],
+		shellArgs: ['-d', 'Ubuntu'],
 	```
 
 ## More information on my setup
@@ -87,7 +87,7 @@ My first try to get a cross plateform combo terminal + shell + multiplexer for m
 
 # 2nd try - Wezterm - Nushell - Starship
 
-For my second try I tried [Alacrity](https://alacritty.org/) but settled on [Wezterm](https://wezfurlong.org/wezterm/index.html) for the ability to split windows (as I can't use [tmux](https://github.com/tmux/tmux/wiki) nor [zellij](https://zellij.dev/) on windows), [nushell](https://www.nushell.sh/) because it seems different enough to warrant learning a new shell, [Fish](https://fishshell.com/), [Murex](https://murex.rocks/), [Xonsh](https://xon.sh/) as secondary shells, [Starship](https://starship.rs/) to customize my prompt, and included a few editors.
+For my second try I tried [Alacrity](https://alacritty.org/) but settled on [Wezterm](https://wezfurlong.org/wezterm/index.html) for the ability to split windows (as I can't use [tmux](https://github.com/tmux/tmux/wiki) nor [zellij](https://zellij.dev/) on windows), [nushell](https://www.nushell.sh/) because it seems different enough to warrant learning a new shell and exists both on mac and windows, [Fish](https://fishshell.com/), [Murex](https://murex.rocks/), [Xonsh](https://xon.sh/) as secondary shells via [wsl Ubuntu](https://ubuntu.com/desktop/wsl), [Starship](https://starship.rs/) to customize my prompt, and included a few editors.
 
 - Terminal: [Wezterm](https://wezfurlong.org/wezterm/index.html)
 - Shells: [Nushell](https://www.nushell.sh/), [Fish](https://fishshell.com/), [Murex](https://murex.rocks/), [Xonsh](https://xon.sh/)
@@ -161,7 +161,6 @@ wsl.exe -d Ubuntu -- sudo sh -c "apt-get update && apt-get install fish xonsh tm
 	```
 ## More information on my setup  
 
-- [Alacritty](./advanced_configs/alacritty.md)
 - [Fish](./advanced_configs/fish.md)
 - [Helix](./advanced_configs/helix.md)
 - [Murex](./advanced_configs/murex.md)
