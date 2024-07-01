@@ -57,6 +57,7 @@ fish_add_path $HOME/scripts
 ##############
 alias ll='ls -al'
 alias venvc='virtualenv virtualenv'
+alias venvc11='virtualenv -p python3.11 virtualenv'
 alias activate='source virtualenv/bin/activate.fish'
 
 ##############
