@@ -16,6 +16,8 @@ brew install wezterm
 scoop install wezterm
 ```
 
+**Optional**: Download and run [open_in_wezterm.reg](../assets/wezterm/open_in_wezterm.reg) to add wezterm to right click context menu.
+
 ## Config file location
 
 `~/.wezterm.lua`
