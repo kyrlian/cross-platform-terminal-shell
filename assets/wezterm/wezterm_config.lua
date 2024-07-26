@@ -67,12 +67,15 @@ end
 -- leader key - https://wezfurlong.org/wezterm/config/keys.html#leader-key
 config.leader = { key = "w", mods = "CTRL" }
 -- key assigments - https://wezfurlong.org/wezterm/config/lua/keyassignment/index.html
+-- modifiers - https://wezfurlong.org/wezterm/config/keys.html#configuring-key-assignments
 config.keys = {
     -- pane split
     { key = "%",          mods = "LEADER",      action = wezterm.action.SplitHorizontal { domain = "CurrentPaneDomain" } },
     { key = "-",          mods = "LEADER",      action = wezterm.action.SplitVertical { domain = "CurrentPaneDomain" } },
     { key = "s",          mods = "LEADER",      action = wezterm.action.SplitHorizontal { domain = "CurrentPaneDomain" } },
     { key = "s",          mods = "LEADER|CTRL", action = wezterm.action.SplitVertical { domain = "CurrentPaneDomain" } },
+    { key = "s",          mods = "CTRL|ALT", action = wezterm.action.SplitHorizontal { domain = "CurrentPaneDomain" } },
+    { key = "s",          mods = "CTRL|ALT|SHIFT", action = wezterm.action.SplitVertical { domain = "CurrentPaneDomain" } },
     -- pane zoom and close
     { key = "Space",      mods = "LEADER",      action = wezterm.action.TogglePaneZoomState },
     { key = "x",          mods = "LEADER",      action = wezterm.action.CloseCurrentPane { confirm = true } },
@@ -90,6 +93,8 @@ config.keys = {
     -- spawn tab and windows
     { key = 't',          mods = 'LEADER',      action = wezterm.action.SpawnTab "CurrentPaneDomain" },
     { key = 'n',          mods = 'LEADER',      action = wezterm.action.SpawnWindow },
+    -- reload config -- not needed if config.automatically_reload_config = true
+    -- { key = 'r',          mods = 'LEADER',      action = wezterm.reload_configuration },
 }
 
 -- Return the configuration to wezterm
