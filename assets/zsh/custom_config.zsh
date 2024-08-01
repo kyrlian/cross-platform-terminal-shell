@@ -50,6 +50,13 @@ alias activate='source virtualenv/bin/activate'
 # Starship prompt
 eval "$(starship init zsh)"
 
+###########################
+## Various integrations ##
+##########################
+
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
+
 ###############
 ## Feedback  ##
 ###############

@@ -67,6 +67,13 @@ alias activate='source virtualenv/bin/activate.fish'
 # Starship prompt
 starship init fish | source
 
+###########################
+## Various integrations ##
+##########################
+
+# Set up fzf key bindings
+fzf --fish | source
+
 ###############
 ## Feedback  ##
 ###############
