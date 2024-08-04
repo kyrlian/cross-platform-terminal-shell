@@ -48,6 +48,8 @@ Open wezterm config, and add
 config.default_prog = { 'nu', '-l' }
 ```
 
+**NOTE**: On macos with homebrew, use the full path `/opt/homebrew/bin/nu`
+
 ## Custom shortcuts
 
 ```lua
