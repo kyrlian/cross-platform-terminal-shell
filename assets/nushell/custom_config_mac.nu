@@ -5,7 +5,7 @@
 #  mac: ~/Library/Application Support/nushell/config.nu 
 #  win: ~\AppData\Roaming\nushell\config.nu 
 # with:
-# source '~/.../nushell/custom_config_mac.nu'
+#  source '~/.../nushell/custom_config_mac.nu'
 
 # First source the common config
 source custom_config_common.nu

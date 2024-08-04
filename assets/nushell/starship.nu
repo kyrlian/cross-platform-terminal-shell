@@ -1,3 +1,9 @@
+# Loaded from config.nu 
+#  mac: ~/Library/Application Support/nushell/config.nu 
+#  win: ~\AppData\Roaming\nushell\config.nu 
+# with:
+#  use 'E:\docs\...\assets\nushell\starship.nu'
+
 # this file is both a valid
 # - overlay which can be loaded with `overlay use starship.nu`
 # - module which can be used with `use starship.nu`
