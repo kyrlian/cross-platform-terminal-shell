@@ -47,7 +47,10 @@ end
 ##############
 ## Path     ##
 ##############
+# Homebrew Mac
 fish_add_path /opt/homebrew/bin
+# Homebrew Linux
+fish_add_path /home/linuxbrew/.linuxbrew/bin
 fish_add_path /usr/local/bin
 fish_add_path $HOME/.local/bin
 fish_add_path $HOME/scripts

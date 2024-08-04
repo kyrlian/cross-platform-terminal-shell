@@ -15,30 +15,21 @@ brew install murex
 1. Install WSL - if you haven't already
 
 	```sh
-	wsl.exe --install Debian
-	```
-
-    or 
-
-	```sh
 	wsl.exe --install Ubuntu
 	```
 
-2. Download murex for linux
-   
-    https://murex.rocks/DOWNLOAD.html#linux
-
-    Unzip somewhere, I have it in:
-
+2. Install with homebrew
+ 
     ```sh
-    C:\Program Files\murex\murex-6-linux-amd64
+    brew install murex
     ```
 
-3. Register murex in wsl /etc/shells 
+3. or install manually 
    
-    ```sh
-    wsl.exe
-    ```
+    Donwload from https://murex.rocks/DOWNLOAD.html#linux
+ 
+    Register in wsl /etc/shells 
+
     ```sh
     sudo ln -s '/mnt/c/Program Files/murex/murex-6-linux-amd64' /usr/bin/murex
     sudo vi /etc/shells
@@ -48,14 +39,9 @@ brew install murex
 4. Launch wsl with murex shell
    
     ```sh
-	wsl.exe -- /usr/bin/murex
+	wsl.exe -- murex
     ```
 
-5. Optional: Set murex as default shell 
-   
-    ```sh
-    wsl.exe -- chsh -s /usr/bin/murex
-    ```
 
 ## Custom murex profile
 

@@ -19,6 +19,11 @@ scoop install helix
 ### wsl Ubuntu
 
 ```sh
+brew install helix
+```
+
+Or with apt:
+```sh
 sudo apt update
 sudo add-apt-repository ppa:maveonair/helix-editor
 sudo apt update
