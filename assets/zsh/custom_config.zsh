@@ -1,6 +1,8 @@
 # My custom zsh profile
 # Sourced by  ~/.zshrc
 
+setopt interactivecomments
+
 # Color support : $fg[red]
 # https://stackoverflow.com/questions/689765/how-can-i-change-the-color-of-my-prompt-in-zsh-different-from-normal-text
 autoload -U colors && colors
@@ -55,7 +57,13 @@ eval "$(starship init zsh)"
 ##########################
 
 # Set up fzf key bindings and fuzzy completion
-source <(fzf --zsh)
+if type fzf > /dev/null
+then
+    source <(fzf --zsh)
+fi
+
+# Homebrew
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 ###############
 ## Feedback  ##
