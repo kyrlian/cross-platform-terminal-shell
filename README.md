@@ -78,3 +78,4 @@ wsl.exe -d Ubuntu -- sudo sh -c "apt-get update && apt-get install fish xonsh tm
 - [Starship](./advanced_configs/starship.md)
 - [Wezterm](./advanced_configs/wezterm.md)
 - [XONSH](./advanced_configs/xonsh.md)
+- [zsh](./advanced_configs/zsh.md)
