@@ -22,11 +22,11 @@ export def custom_banner [] {
   let dt = date now | format date "%Y-%m-%d %H:%M:%S"
   print $"(ansi reset)"
   # old (sys) syntax before 0.94.0
-  print $"(ansi green)($ellie.0)  (ansi yellow_bold)Nushell (ansi reset)(ansi yellow)v(version | get version) on ((sys).host.name)(ansi reset)"
-  print $"(ansi green)($ellie.1)  (ansi light_blue_bold)RAM (ansi reset)(ansi light_blue)((sys).mem.used) / ((sys).mem.total)(ansi reset)"
+  # print $"(ansi green)($ellie.0)  (ansi yellow_bold)Nushell (ansi reset)(ansi yellow)v(version | get version) on ((sys).host.name)(ansi reset)"
+  # print $"(ansi green)($ellie.1)  (ansi light_blue_bold)RAM (ansi reset)(ansi light_blue)((sys).mem.used) / ((sys).mem.total)(ansi reset)"
   # New syntax from 0.94.0
-  #  print $"(ansi green)($ellie.0)  (ansi yellow_bold)Nushell (ansi reset)(ansi yellow)v(version | get version) on ((sys host).name)(ansi reset)"
-  #  print $"(ansi green)($ellie.1)  (ansi light_blue_bold)RAM (ansi reset)(ansi light_blue)((sys mem).used) / ((sys mem).total)(ansi reset)"
+  print $"(ansi green)($ellie.0)  (ansi yellow_bold)Nushell (ansi reset)(ansi yellow)v(version | get version) on ((sys host).name)(ansi reset)"
+  print $"(ansi green)($ellie.1)  (ansi light_blue_bold)RAM (ansi reset)(ansi light_blue)((sys mem).used) / ((sys mem).total)(ansi reset)"
   print $"(ansi green)($ellie.2)  (ansi light_purple_bold)Date (ansi reset)(ansi light_purple)($dt)(ansi reset)"
   print $"(ansi green)($ellie.3)  (ansi light_green_bold)Directory (ansi reset)(ansi light_green)(pwd)(ansi reset)"
   # print $"(ansi black)█(ansi red)█(ansi green)█(ansi yellow)█(ansi blue)█(ansi magenta)█(ansi cyan)█(ansi white)█(ansi reset)█"
