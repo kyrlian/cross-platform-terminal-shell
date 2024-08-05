@@ -17,6 +17,12 @@ brew install xonsh
 	wsl.exe --install Ubuntu
 	```
 2. Install xonsh in wsl Ubuntu
+
+	With homebrew:
+	```sh
+	wsl.exe -d Ubuntu -- sudo sh -c "brew install xonsh"
+	```
+	Or, if you prefer apt:
 	```sh
 	wsl.exe -d Ubuntu -- sudo sh -c "apt-get update && apt-get install xonsh"
 	```
@@ -33,7 +39,7 @@ brew install xonsh
 
 `~/.xonshrc`
 
-## Python virtual envs
+## Python virtual envs
 
 xonsh doesnt play well with venv or virtual env, and has a dedicated xontrib to manage python virtual environments called [vox](https://xon.sh/python_virtual_environments.html).
 

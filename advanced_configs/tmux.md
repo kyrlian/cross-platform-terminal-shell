@@ -1,7 +1,5 @@
 # tmux terminal multiplexer
 
-https://github.com/tmux/tmux/wiki
-
 ## Install 
 
 ### Mac
@@ -11,6 +9,14 @@ brew install tmux
 ```
 
 ### Windows with WSL
+
+With homebrew:
+
+```sh
+wsl.exe -d Ubuntu -- sudo sh -c "brew install tmux"
+```
+
+Or, if you prefer apt:
 
 ```sh
 wsl.exe -d Ubuntu -- sudo sh -c "apt-get update && apt-get install tmux"
@@ -27,3 +33,7 @@ Enable mouse support and use Control+Space prefix
 set-option -g prefix C-Space
 set -g mouse on 
 ```
+
+# Resources
+
+- [Tmux wiki](https://github.com/tmux/tmux/wiki)

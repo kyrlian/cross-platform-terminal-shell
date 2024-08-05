@@ -12,7 +12,7 @@ brew install fish
 
 ### Windows with WSL (Ubuntu)
 
-With hombrew
+With homebrew:
 
 ```sh
 wsl.exe -d Ubuntu -- sudo sh -c "brew install fish"
