@@ -45,13 +45,13 @@ if is_os("darwin") then
         -- config.default_prog = { '/opt/homebrew/bin/xonsh', '-l' } -- xonsh shell
 elseif is_os("windows") then
     -- Windows
-    -- config.default_prog = { 'nu', '-l' } -- nu shell
+    config.default_prog = { 'nu', '-l' } -- nu shell
     -- config.default_prog = { 'C:/Program Files/murex/murex-6-windows-amd64.exe' } -- murex for windows
     -- config.default_prog = { 'wsl' } -- Default wsl with default shell
     -- config.default_prog = { 'wsl', '-d', 'Debian' } -- wsl Debian with default shell
     -- config.default_prog = { 'wsl', '-d', 'Ubuntu' } -- wsl Ubuntu with default shell
     -- config.default_prog = { 'wsl', '-d', 'Ubuntu', '-e', '/usr/bin/zsh', '-l' } -- wsl Ubuntu with zsh shell
-    config.default_prog = { 'wsl', '-d', 'Ubuntu', '-e', '/usr/bin/fish', '-l' } -- wsl Ubuntu with fish shell
+    -- config.default_prog = { 'wsl', '-d', 'Ubuntu', '-e', '/usr/bin/fish', '-l' } -- wsl Ubuntu with fish shell
     -- config.default_prog = { 'wsl', '-d', 'Ubuntu', '-e', '/usr/bin/murex' } -- wsl Ubuntu with murex shell
     -- config.default_prog = { 'wsl', '-d', 'Ubuntu', '-e', '/usr/bin/xonsh', '-l' } -- wsl Ubuntu with xonsh shell
 end
