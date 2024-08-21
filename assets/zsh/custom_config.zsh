@@ -63,7 +63,17 @@ then
 fi
 
 # Homebrew
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+# mac
+if [ -d /opt/homebrew/ ]
+then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
+# wsl
+if [ -d /home/linuxbrew/ ]
+then
+    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+fi
 
 ###############
 ## Feedback  ##
