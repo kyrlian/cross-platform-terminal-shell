@@ -12,7 +12,9 @@ local wezterm = require 'wezterm'
 local config = wezterm.config_builder()
 config.automatically_reload_config = true
 
--- utils
+---------------
+-- Utils     --
+---------------
 -- https://wezfurlong.org/wezterm/config/lua/wezterm/target_triple.html
 local is_os = function(os) -- linux, darwin, windows
     return wezterm.target_triple:find(os) ~= nil
@@ -45,8 +47,6 @@ else
     -- config.color_scheme = 'Tokyo Night Day'
     config.color_scheme = 'Dark Pastel'
 end
-
-
 
 -- Font - list fonts with `wezterm ls-fonts --list-system`
 config.font = wezterm.font({ family = 'IBM Plex Mono' })
