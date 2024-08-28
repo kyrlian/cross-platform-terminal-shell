@@ -43,7 +43,8 @@ path+=$HOME/scripts
 ##############
 alias ll='ls -al'
 alias venvc='virtualenv virtualenv'
-alias activate='source virtualenv/bin/activate'
+# alias activate='source virtualenv/bin/activate'
+alias activate='if [ -d virtualenv ]; then; source virtualenv/bin/activate; elif [ -d .venv ]; then; source .venv/bin/activate; else; echo No venv found; fi'
 
 ##############
 ## Prompt   ##

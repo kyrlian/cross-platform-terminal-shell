@@ -61,7 +61,18 @@ fish_add_path $HOME/scripts
 alias ll='ls -al'
 alias venvc='virtualenv virtualenv'
 alias venvc11='virtualenv -p python3.11 virtualenv'
-alias activate='source virtualenv/bin/activate.fish'
+# alias activate='source virtualenv/bin/activate.fish'
+# https://fishshell.com/docs/current/cmds/if.html
+function activate
+        if test -d virtualenv
+                source virtualenv/bin/activate.fish
+        else if test -d .venv
+                source .venv/bin/activate.fish
+        else
+                echo No venv found
+        end
+end
+
 
 ##############
 ## Prompt   ##
