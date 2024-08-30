@@ -113,7 +113,7 @@ config.keys = {
     { key = "s",          mods = "CTRL|ALT|SHIFT", action = wezterm.action.SplitVertical { domain = "CurrentPaneDomain" } },
     -- pane zoom and close
     { key = "Space",      mods = "LEADER",         action = wezterm.action.TogglePaneZoomState },
-    { key = "x",          mods = "LEADER",         action = wezterm.action.CloseCurrentPane { confirm = true } },
+    { key = "w",          mods = "LEADER",         action = wezterm.action.CloseCurrentPane { confirm = true } },
     { key = "f",          mods = "LEADER",         action = wezterm.action.ToggleFullScreen },
     -- pane focus
     { key = "LeftArrow",  mods = "LEADER",         action = wezterm.action.ActivatePaneDirection "Left" },
