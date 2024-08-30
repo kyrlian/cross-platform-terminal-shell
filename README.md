@@ -40,7 +40,7 @@ For my second try I tried [Alacrity](https://alacritty.org/) but settled on [Wez
 Install everything
 
 ```sh
-brew install wezterm nu fish xonsh murex starship nano neovim helix 
+brew install wezterm nushell fish xonsh murex starship nano neovim helix 
 ```
  	
 ### Windows setup
