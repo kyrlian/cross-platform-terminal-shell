@@ -15,14 +15,14 @@
 function fish_greeting
     switch (uname)
         case Linux
-                set sysversion (hostnamectl | grep Operating | xargs)
+            set sysversion (hostnamectl | grep Operating | xargs)
         case Darwin
-                set sysversion (system_profiler SPSoftwareDataType | grep 'System Version' | xargs)
+            set sysversion (system_profiler SPSoftwareDataType | grep 'System Version' | xargs)
         case '*'
-                set sysversion Unknown
+            set sysversion Unknown
     end
 
-    set ascfish[1] '    _______    °' 
+    set ascfish[1] '    _______    °'
     set ascfish[2] '  _ \\/     \\   °'
     set ascfish[3] ' | \\/  _  @ \\  °'
     set ascfish[4] ' |    (_>   < ° '
@@ -31,17 +31,29 @@ function fish_greeting
 
     # https://fishshell.com/docs/current/cmds/set_color.html
     # On linux echo "a$(set_color blue)b" doesnt work - but this does : echo "a"$(set_color blue)"b"
-    set_color cyan; echo $ascfish[1]; set_color normal
-    set_color cyan; echo $ascfish[2](set_color yellow) (fish --version)" - fishshell.com"; set_color normal
-    set_color cyan; echo $ascfish[3](set_color blue)" $sysversion"; set_color normal
-    set_color cyan; echo $ascfish[4](set_color magenta)" Date: "(date +'%Y-%m-%d %H:%M:%S'); set_color normal
-    set_color cyan; echo $ascfish[5](set_color green)" Directory: "(pwd); set_color normal
-    set_color cyan; echo $ascfish[6](set_color red)" User: "(whoami); set_color normal
+    set_color cyan
+    echo $ascfish[1]
+    set_color normal
+    set_color cyan
+    echo $ascfish[2](set_color yellow) (fish --version)" - fishshell.com"
+    set_color normal
+    set_color cyan
+    echo $ascfish[3](set_color blue)" $sysversion"
+    set_color normal
+    set_color cyan
+    echo $ascfish[4](set_color magenta)" Date: "(date +'%Y-%m-%d %H:%M:%S')
+    set_color normal
+    set_color cyan
+    echo $ascfish[5](set_color green)" Directory: "(pwd)
+    set_color normal
+    set_color cyan
+    echo $ascfish[6](set_color red)" User: "(whoami)
+    set_color normal
     # echo (set_color BLACK)"█"(set_color RED)"█"(set_color GREEN)"█"(set_color YELLOW)"█"(set_color BLUE)"█"(set_color MAGENTA)"█"(set_color CYAN)"█"(set_color WHITE)"█"(set_color normal)"█"
 end
 
 function banner
-        fish_greeting
+    fish_greeting
 end
 
 ##############
@@ -59,18 +71,19 @@ fish_add_path $HOME/scripts
 ## Aliases  ##
 ##############
 alias ll='ls -al'
+alias helix='hx'
 alias venvc='virtualenv virtualenv'
 alias venvc11='virtualenv -p python3.11 virtualenv'
 # alias activate='source virtualenv/bin/activate.fish'
 # https://fishshell.com/docs/current/cmds/if.html
 function activate
-        if test -d virtualenv
-                source virtualenv/bin/activate.fish
-        else if test -d .venv
-                source .venv/bin/activate.fish
-        else
-                echo No venv found
-        end
+    if test -d virtualenv
+        source virtualenv/bin/activate.fish
+    else if test -d .venv
+        source .venv/bin/activate.fish
+    else
+        echo No venv found
+    end
 end
 
 
@@ -91,4 +104,6 @@ fzf --fish | source
 ###############
 ## Feedback  ##
 ###############
-set_color cyan; echo (date +'%H:%M:%S')" Fish custom profile loaded"; set_color normal
+set_color cyan
+echo (date +'%H:%M:%S')" Fish custom profile loaded"
+set_color normal
