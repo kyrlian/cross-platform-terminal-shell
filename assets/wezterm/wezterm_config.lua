@@ -128,6 +128,7 @@ config.keys = {
     -- spawn tab and windows
     { key = 't',          mods = 'LEADER',         action = wezterm.action.SpawnTab "CurrentPaneDomain" },
     { key = 'n',          mods = 'LEADER',         action = wezterm.action.SpawnWindow },
+    { key = 't',          mods = 'LEADER|CTRL',    action = wezterm.action.ShowTabNavigator },
     -- reload config -- not needed if config.automatically_reload_config = true (the default)
     -- Is also already mapped to cmd + R on mac
     -- https://wezfurlong.org/wezterm/config/lua/keyassignment/ReloadConfiguration.html
