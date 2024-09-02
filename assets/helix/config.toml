@@ -1,7 +1,9 @@
 # Location: 
 # mac/linux/wsl : ~/.config/helix/config.toml
 # win: ~\AppData\Roaming\helix
-theme = "dark_plus"
+theme = "modus_vivendi_deuteranopia"
+# theme = "dark_plus"
 # theme = "dracula_at_night"
 # theme = "catppuccin_mocha"
+# theme = "base16_transparent"
 # theme = "dracula"
