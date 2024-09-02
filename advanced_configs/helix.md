@@ -54,4 +54,4 @@ theme = "catppuccin_mocha"
 
 - [Helix doc - configuration](https://docs.helix-editor.com/configuration.html)
 - [Helix doc - keymap](https://docs.helix-editor.com/keymap.html)
-- [My Helix config](./assets/helix/config.toml)
+- [My Helix config](../assets/helix/config.toml)
