@@ -1,0 +1,10 @@
+# This is loaded when in the ~/dev/k directory with the following conditional include in ~/.gitconfig :
+
+# [includeif "gitdir:~/dev/k/"]
+#   path = ~/dev/k/k.gitconfig
+
+[user]
+	name = kyrlian
+	email = kyrlian@gmail.com
+[github]
+	user = kyrlian
