@@ -56,12 +56,12 @@ Install WSL Ubuntu
 wsl.exe --install Ubuntu
 ```
 
-Install everything on WSL with (homebrew)[https://brew.sh/]:
+Install everything on WSL with [homebrew](https://brew.sh/)
 ```sh
 wsl.exe -d Ubuntu -- sudo sh -c "brew install fish xonsh tmux helix"
 ```
 
-Or, with apt-get:
+Or, with apt-get
 ```sh
 wsl.exe -d Ubuntu -- sudo sh -c "sudo apt update"
 wsl.exe -d Ubuntu -- sudo sh -c "sudo add-apt-repository ppa:maveonair/helix-editor"
@@ -70,8 +70,8 @@ wsl.exe -d Ubuntu -- sudo sh -c "apt-get update && apt-get install fish xonsh tm
 
 ## More information on my setup  
 
-- [Git](./advanced_configs/git.md)
 - [Fish](./advanced_configs/fish.md)
+- [Git](./advanced_configs/git.md)
 - [Helix](./advanced_configs/helix.md)
 - [Murex](./advanced_configs/murex.md)
 - [Neovim](./advanced_configs/neovim.md)
@@ -80,3 +80,4 @@ wsl.exe -d Ubuntu -- sudo sh -c "apt-get update && apt-get install fish xonsh tm
 - [Wezterm](./advanced_configs/wezterm.md)
 - [XONSH](./advanced_configs/xonsh.md)
 - [Zsh](./advanced_configs/zsh.md)
+- [All my custom configs](./assets/)
