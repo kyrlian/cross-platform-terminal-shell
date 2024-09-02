@@ -70,6 +70,7 @@ wsl.exe -d Ubuntu -- sudo sh -c "apt-get update && apt-get install fish xonsh tm
 
 ## More information on my setup  
 
+- [Git](./advanced_configs/git.md)
 - [Fish](./advanced_configs/fish.md)
 - [Helix](./advanced_configs/helix.md)
 - [Murex](./advanced_configs/murex.md)
@@ -78,4 +79,4 @@ wsl.exe -d Ubuntu -- sudo sh -c "apt-get update && apt-get install fish xonsh tm
 - [Starship](./advanced_configs/starship.md)
 - [Wezterm](./advanced_configs/wezterm.md)
 - [XONSH](./advanced_configs/xonsh.md)
-- [zsh](./advanced_configs/zsh.md)
+- [Zsh](./advanced_configs/zsh.md)
