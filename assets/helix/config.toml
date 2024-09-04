@@ -12,8 +12,8 @@ theme = "base16_transparent"
 
 [editor]
 "color-modes" = true
-"cursorline" = true
-"cursorcolumn" =true
+# "cursorline" = true
+# "cursorcolumn" = true
 
 [editor.statusline]
 right = ["diagnostics", "selections", "register", "position", "file-encoding", "file-line-ending", "file-type"]
