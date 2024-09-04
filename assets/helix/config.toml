@@ -1,9 +1,25 @@
+# https://docs.helix-editor.com/configuration.html
 # Location: 
 # mac/linux/wsl : ~/.config/helix/config.toml
 # win: ~\AppData\Roaming\helix
-theme = "modus_vivendi_deuteranopia"
+
+# theme = "modus_vivendi_deuteranopia"
 # theme = "dark_plus"
 # theme = "dracula_at_night"
 # theme = "catppuccin_mocha"
-# theme = "base16_transparent"
+theme = "base16_transparent"
 # theme = "dracula"
+
+[editor]
+"color-modes" = true
+"cursorline" = true
+"cursorcolumn" =true
+
+[editor.statusline]
+right = ["diagnostics", "selections", "register", "position", "file-encoding", "file-line-ending", "file-type"]
+separator = "│"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+# type :config-open to edit from helix

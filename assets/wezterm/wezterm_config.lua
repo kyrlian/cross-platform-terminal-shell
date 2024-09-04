@@ -44,18 +44,22 @@ if is_dark() then
     config.color_scheme = 'Dark Pastel'
     -- config.color_scheme = 'Catppuccin Mocha'
 else
-    -- config.color_scheme = 'Tokyo Night Day'
-    config.color_scheme = 'Dark Pastel'
+    -- config.color_scheme = 'Terminal Basic'
+    config.color_scheme = 'DanQing Light (base16)' 
+    -- config.color_scheme = 'Londontube (light) (terminal.sexy)' 
+    -- config.color_scheme = 'Dark Pastel'
 end
 
 -- Font - list fonts with `wezterm ls-fonts --list-system`
 config.font = wezterm.font({ family = 'IBM Plex Mono' })
+-- config.font = wezterm.font({ family = 'Departure Mono' })
+
 -- Font size
 config.font_size = 14.0
 
 -- styling
 --- blurred background
-config.window_background_opacity = 0.9
+config.window_background_opacity = 0.95
 config.macos_window_background_blur = 30
 --- no border, integrated buttons
 config.window_decorations = 'RESIZE|INTEGRATED_BUTTONS'
