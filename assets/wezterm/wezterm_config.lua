@@ -33,7 +33,7 @@ local function is_dark()
     end
     return true
 end
-  
+
 ---------------
 -- Settings  --
 ---------------
@@ -41,25 +41,26 @@ end
 -- Changing the color scheme:
 --- https://wezfurlong.org/wezterm/colorschemes/index.html
 if is_dark() then
-    config.color_scheme = 'deep'
-    -- config.color_scheme = 'Dark Pastel'
-    -- config.color_scheme = '3024 (dark) (terminal.sexy)' 
-    -- config.color_scheme = 'BlulocoDark'       
-    -- config.color_scheme = 'Default (dark) (terminal.sexy)'
-    -- config.color_scheme = 'Default Dark (base16)'
-    -- config.color_scheme = 'Catppuccin Mocha'
+  -- config.color_scheme = '3024 (dark) (terminal.sexy)' 
+  -- config.color_scheme = 'BlulocoDark'       
+  -- config.color_scheme = 'Catppuccin Mocha'
+  -- config.color_scheme = 'Dark Pastel'
+  config.color_scheme = 'deep'
+  -- config.color_scheme = 'Default (dark) (terminal.sexy)'
+  -- config.color_scheme = 'Default Dark (base16)'
 else
-    -- config.color_scheme = '3024 (light) (terminal.sexy)' 
-    -- config.color_scheme = 'Terminal Basic'
-    -- config.color_scheme = 'BlulocoLight'
-    config.color_scheme = 'Bluloco Light (Gogh)'    
-    -- config.color_scheme = 'Default (light) (terminal.sexy)'
-    -- config.color_scheme = 'Default (light) (base16)' 
-    -- config.color_scheme = 'dirtysea (base16)'
-    -- config.color_scheme = 'DanQing Light (base16)' 
-    -- config.color_scheme = 'Edge Light (base16)'
-    -- config.color_scheme = 'Londontube (light) (terminal.sexy)' 
-    -- config.color_scheme = 'Dark Pastel'
+  -- config.color_scheme = '3024 (light) (terminal.sexy)' 
+  -- config.color_scheme = 'BlulocoLight'
+  -- config.color_scheme = 'Bluloco Light (Gogh)' -- BEST LIGHT   
+  -- config.color_scheme = 'Dark Pastel'
+  config.color_scheme = 'deep'
+  -- config.color_scheme = 'Default (light) (terminal.sexy)'
+  -- config.color_scheme = 'Default (light) (base16)' 
+  -- config.color_scheme = 'dirtysea (base16)'
+  -- config.color_scheme = 'DanQing Light (base16)' 
+  -- config.color_scheme = 'Edge Light (base16)'
+  -- config.color_scheme = 'Londontube (light) (terminal.sexy)' 
+  -- config.color_scheme = 'Terminal Basic'
 end
 
 -- Font - list fonts with `wezterm ls-fonts --list-system`
