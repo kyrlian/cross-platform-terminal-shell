@@ -43,15 +43,21 @@ Run helix, and open the config with `:config-open`
 
 Type `:theme ` (note the space after 'theme') to display available themes. Type <Tab> to cycle the themes.
 
-Once you find one you like add theme = "your theme" in the config, and save.
+Once you find one you like add `theme = "your theme"` in the config, and save.
+
+Note: Using a 'base16' theme inherits the terminal settings. So if your terminal switches light/dark mode, helix will follow !
 
 ```sh
-theme = "catppuccin_mocha"
+# theme = "modus_vivendi_deuteranopia"
+# theme = "dark_plus"
+# theme = "dracula_at_night"
+# theme = "catppuccin_mocha"
+theme = "base16_transparent"
 # theme = "dracula"
 ```
 
-## Ressources
+# Ressources
 
 - [Helix doc - configuration](https://docs.helix-editor.com/configuration.html)
 - [Helix doc - keymap](https://docs.helix-editor.com/keymap.html)
-- [My Helix config](./assets/helix/config.toml)
+- [My Helix config](../assets/helix/config.toml)

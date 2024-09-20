@@ -39,6 +39,9 @@ alias mu = murex
 # Python venv
 alias venvc = python -m virtualenv virtualenv
 alias activate = overlay use virtualenv\Scripts\activate.nu
+# alias activate = if ('virtualenv' | path exists) { overlay use virtualenv\Scripts\activate.nu } else if ('.venv' | path exists) { overlay use .venv\Scripts\activate.nu } else { print No venv found }
+
+
 
 # swap files location
 def swap [a, b] {

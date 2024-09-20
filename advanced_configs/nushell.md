@@ -7,7 +7,7 @@ https://www.nushell.sh/
 ### Mac
 
 ```sh
-brew install nu
+brew install nushell
 ```
  	
 ### Windows 
