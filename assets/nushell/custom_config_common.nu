@@ -37,6 +37,13 @@ custom_banner
 ## Common config  ##
 ####################
 
+##############
+## Env vars ##
+##############
+
+# Aider - https://aider.chat/docs/config/dotenv.html
+$env.AIDER_MODEL = 'ollama/llama3.1'
+$env.OLLAMA_API_BASE = 'http://127.0.0.1:11434'
 
 ##############
 ## Aliases  ##
