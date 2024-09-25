@@ -60,8 +60,9 @@ fish_add_path $HOME/scripts
 ##############
 ## Aliases  ##
 ##############
-alias ll='ls -al'
+alias ll='ls -alhG'
 alias helix='hx'
+
 alias venvc='virtualenv virtualenv'
 alias venvc11='virtualenv -p python3.11 virtualenv'
 # alias activate='source virtualenv/bin/activate.fish'
@@ -88,8 +89,18 @@ starship init fish | source
 ## Various integrations ##
 ##########################
 
+# homebrew
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# mcfly history
+mcfly init fish | source
+
 # Set up fzf key bindings
 fzf --fish | source
+
+# aider
+set --export AIDER_MODEL ollama/llama3.1
+set --export OLLAMA_API_BASE http://127.0.0.1:11434
 
 ###############
 ## Feedback  ##

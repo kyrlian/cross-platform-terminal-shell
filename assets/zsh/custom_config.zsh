@@ -41,7 +41,10 @@ path+=$HOME/scripts
 ##############
 ## Aliases  ##
 ##############
-alias ll='ls -al'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias grep='grep --color=auto'
+alias ll='ls -alhG'
 alias helix='hx'
 
 alias venvc='virtualenv virtualenv'
@@ -64,6 +67,10 @@ if type fzf > /dev/null
 then
     source <(fzf --zsh)
 fi
+
+# aider
+export AIDER_MODEL=ollama/llama3.1
+export OLLAMA_API_BASE=http://127.0.0.1:11434
 
 # Homebrew
 # mac
