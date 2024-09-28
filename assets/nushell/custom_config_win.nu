@@ -31,10 +31,11 @@ alias muw = `c:\Program Files\murex\murex-6-windows-amd64.exe` # Murex for windo
 alias debian = wsl -d Debian # wsl Debian with default shell
 alias ubuntu = wsl -d Ubuntu # wsl Ubuntu with default shell
 def murex [] { wsl -d Ubuntu -e /usr/bin/murex } # wsl Ubuntu with murex shell
-def fish [] { wsl -d Ubuntu -e /usr/bin/fish -l } # wsl Ubuntu with fish shell
-def xonsh [] { wsl -d Ubuntu -e /usr/bin/xonsh } # wsl Ubuntu with xonsh shell
-def zsh [] { wsl -d Ubuntu -e /usr/bin/zsh -l } # wsl Ubuntu with zsh shell
 alias mu = murex
+def fish [] { wsl -d Ubuntu -e /usr/bin/fish -l } # wsl Ubuntu with fish shell
+# def xonsh [] { wsl -d Ubuntu -e /usr/bin/xonsh } # wsl Ubuntu with xonsh shell - removed to use windows xonsh (uv tool install xonsh)
+def xonsh [] { uvx xonsh } # run the uv tool version of xonsh
+def zsh [] { wsl -d Ubuntu -e /usr/bin/zsh -l } # wsl Ubuntu with zsh shell
 
 # Python venv
 alias venvc = python -m virtualenv virtualenv

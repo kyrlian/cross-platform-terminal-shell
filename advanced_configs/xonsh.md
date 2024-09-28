@@ -9,7 +9,20 @@ https://xon.sh/
 ```sh
 brew install xonsh
 ```
-	
+
+### Windows native
+
+Install via [uv](https://docs.astral.sh/uv/) python package manager
+
+```sh
+uv tool install xonsh
+```
+
+run with
+```sh
+uvx xonsh
+```
+
 ### Windows with WSL (Ubuntu)
 
 1. Install WSL Ubuntu if needed
