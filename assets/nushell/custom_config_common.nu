@@ -52,6 +52,9 @@ $env.OLLAMA_API_BASE = 'http://127.0.0.1:11434'
 alias ll = ls -al
 alias vi = nvim
 
+def dict [word: string] { curl dict://dict.org/d:$word } # dict protocol - https://en.wikipedia.org/wiki/DICT
+def prefix [word: string] { curl dict://dict.org/m:$word::prefix } # dict protocol - https://en.wikipedia.org/wiki/DICT
+
 # starship prompt
 ## Done in config.nu
 # use starship.nu
