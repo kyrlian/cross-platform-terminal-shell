@@ -63,19 +63,20 @@ fish_add_path $HOME/scripts
 alias ll='ls -alhG'
 alias helix='hx'
 
-alias venvc='virtualenv virtualenv'
-alias venvc11='virtualenv -p python3.11 virtualenv'
-# alias activate='source virtualenv/bin/activate.fish'
-# https://fishshell.com/docs/current/cmds/if.html
-function activate
-    if test -d virtualenv
-        source virtualenv/bin/activate.fish
-    else if test -d .venv
-        source .venv/bin/activate.fish
-    else
-        echo No venv found
-    end
-end
+# not needed when using uv
+# alias venvc='virtualenv virtualenv'
+# alias venvc11='virtualenv -p python3.11 virtualenv'
+# # alias activate='source virtualenv/bin/activate.fish'
+# # https://fishshell.com/docs/current/cmds/if.html
+# function activate
+#     if test -d virtualenv
+#         source virtualenv/bin/activate.fish
+#     else if test -d .venv
+#         source .venv/bin/activate.fish
+#     else
+#         echo No venv found
+#     end
+# end
 
 
 ##############
@@ -83,24 +84,42 @@ end
 ##############
 
 # Starship prompt
-starship init fish | source
+if type starship > /dev/null
+    starship init fish | source
+end
 
 ###########################
 ## Various integrations ##
 ##########################
 
-# homebrew
-eval "$(/opt/homebrew/bin/brew shellenv)"
+# homebrew - http://brew.sh/
+if type brew > /dev/null
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+end
 
-# mcfly history
-mcfly init fish | source
+# mcfly history - https://github.com/cantino/mcfly
+if type mcfly > /dev/null
+    mcfly init fish | source
+end
 
-# Set up fzf key bindings
-fzf --fish | source
+# Set up fzf key bindings - https://github.com/junegunn/fzf
+if type fzf > /dev/null
+    fzf --fish | source
+end
 
-# aider
-set --export AIDER_MODEL ollama/llama3.1
-set --export OLLAMA_API_BASE http://127.0.0.1:11434
+# aider - https://aider.chat
+if type aider > /dev/null
+    set --export AIDER_MODEL ollama/llama3.1
+    set --export OLLAMA_API_BASE http://127.0.0.1:11434
+end
+
+# Carapace - https://carapace.sh/
+if type carapace > /dev/null
+    set -Ux CARAPACE_BRIDGES 'zsh,fish,bash,inshellisense' # optional
+    mkdir -p ~/.config/fish/completions
+    carapace --list | awk '{print $1}' | xargs -I{} touch ~/.config/fish/completions/{}.fish
+    carapace _carapace | source
+end
 
 ###############
 ## Feedback  ##

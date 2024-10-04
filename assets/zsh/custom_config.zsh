@@ -56,7 +56,10 @@ alias activate='if [ -d virtualenv ]; then; source virtualenv/bin/activate; elif
 ##############
 
 # Starship prompt
-eval "$(starship init zsh)"
+if type starship > /dev/null
+then
+    eval "$(starship init zsh)"
+fi
 
 ###########################
 ## Various integrations ##
@@ -69,8 +72,20 @@ then
 fi
 
 # aider
-export AIDER_MODEL=ollama/llama3.1
-export OLLAMA_API_BASE=http://127.0.0.1:11434
+if type aider > /dev/null
+then
+    export AIDER_MODEL=ollama/llama3.1
+    export OLLAMA_API_BASE=http://127.0.0.1:11434
+fi
+
+# Carapace
+if type carapace > /dev/null
+then
+    export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense' # optional
+    zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
+    source <(carapace _carapace)
+fi
+
 
 # Homebrew
 # mac

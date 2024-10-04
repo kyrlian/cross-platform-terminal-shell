@@ -68,6 +68,17 @@ aliases['deactivate'] = 'vox deactivate'
 # Starship config - https://starship.rs/#xonsh
 execx($(starship init xonsh))
 
+
+###########################
+## Various integrations ##
+##########################
+
+# Carapace
+$CARAPACE_BRIDGES='zsh,fish,bash,inshellisense' # optional
+$COMPLETIONS_CONFIRM=True
+exec($(carapace _carapace))
+
+
 ###############
 ## Feedback  ##
 ###############

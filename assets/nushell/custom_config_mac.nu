@@ -34,6 +34,18 @@ alias venvc = virtualenv virtualenv
 alias activate = overlay use ./virtualenv/bin/activate.nu
 # alias activate = if ('virtualenv' | path exists) { overlay use ./virtualenv/bin/activate.nu } else if ('.venv' | path exists) { overlay use ./.venv/bin/activate.nu } else { print No venv found }
 
+###########################
+## Various integrations ##
+##########################
+
+## carapace
+$env.CARAPACE_BRIDGES = 'zsh,fish,bash,inshellisense' # optional
+mkdir ~/.cache/carapace
+carapace _carapace nushell | save --force ~/.cache/carapace/init.nu
+source ~/.cache/carapace/init.nu
+
+
+
 ###############
 ## Feedback  ##
 ###############
