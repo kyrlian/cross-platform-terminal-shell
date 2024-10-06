@@ -31,7 +31,7 @@ For my second try I tried [Alacrity](https://alacritty.org/) but settled on [Wez
 - Shells: [Nushell](https://www.nushell.sh/), [Fish](https://fishshell.com/), [Murex](https://murex.rocks/), [Xonsh](https://xon.sh/)
 - Prompt: [Starship](https://starship.rs/)
 - Editors: [Nano](https://www.nano-editor.org/), [Neovim](https://neovim.io/), [Helix](https://helix-editor.com/)
-
+- Helpers: [carapace](https://carapace.sh/), [mcfly](https://github.com/cantino/mcfly), [fzf](https://github.com/junegunn/fzf)
 
 ## Quick install
 
@@ -40,7 +40,7 @@ For my second try I tried [Alacrity](https://alacritty.org/) but settled on [Wez
 Install everything
 
 ```sh
-brew install wezterm nushell fish xonsh murex starship nano neovim helix 
+brew install wezterm nushell fish xonsh murex starship nano neovim helix mcfly fzf
 ```
  	
 ### Windows setup
@@ -48,7 +48,8 @@ brew install wezterm nushell fish xonsh murex starship nano neovim helix
 Install everything on Windows
    
 ```sh
-scoop install wezterm nu starship nano neovim helix
+scoop bucket add extras
+scoop install wezterm nu starship nano neovim helix carapace-bin
 ```
 
 Install WSL Ubuntu
@@ -58,14 +59,14 @@ wsl.exe --install Ubuntu
 
 Install everything on WSL with [homebrew](https://brew.sh/)
 ```sh
-wsl.exe -d Ubuntu -- sudo sh -c "brew install fish xonsh tmux helix"
+wsl.exe -d Ubuntu -- sudo sh -c "brew install fish xonsh tmux helix mcfly fzf"
 ```
 
 Or, with apt-get
 ```sh
 wsl.exe -d Ubuntu -- sudo sh -c "sudo apt update"
 wsl.exe -d Ubuntu -- sudo sh -c "sudo add-apt-repository ppa:maveonair/helix-editor"
-wsl.exe -d Ubuntu -- sudo sh -c "apt-get update && apt-get install fish xonsh tmux helix"
+wsl.exe -d Ubuntu -- sudo sh -c "apt-get update && apt-get install fish xonsh tmux helix mcfly fzf"
 ```
 
 ## More information on my setup  

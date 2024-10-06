@@ -92,21 +92,6 @@ end
 ## Various integrations ##
 ##########################
 
-# homebrew - http://brew.sh/
-if type brew > /dev/null
-    eval "$(/opt/homebrew/bin/brew shellenv)"
-end
-
-# mcfly history - https://github.com/cantino/mcfly
-if type mcfly > /dev/null
-    mcfly init fish | source
-end
-
-# Set up fzf key bindings - https://github.com/junegunn/fzf
-if type fzf > /dev/null
-    fzf --fish | source
-end
-
 # aider - https://aider.chat
 if type aider > /dev/null
     set --export AIDER_MODEL ollama/llama3.1
@@ -121,8 +106,25 @@ if type carapace > /dev/null
     carapace _carapace | source
 end
 
+# fzf key bindings - https://github.com/junegunn/fzf
+if type fzf > /dev/null
+    fzf --fish | source
+end
+
+# homebrew - http://brew.sh/
+if type brew > /dev/null
+    # eval "$(/opt/homebrew/bin/brew shellenv)"
+    eval "$(brew shellenv)"
+end
+
+# mcfly history - https://github.com/cantino/mcfly
+if type mcfly > /dev/null
+    mcfly init fish | source
+end
+
 ###############
 ## Feedback  ##
 ###############
+
 echo (set_color cyan)(date +'%H:%M:%S')" Fish custom profile loaded"(set_color normal)
 #set_color normal

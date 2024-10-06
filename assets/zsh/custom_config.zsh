@@ -65,20 +65,14 @@ fi
 ## Various integrations ##
 ##########################
 
-# Set up fzf key bindings and fuzzy completion
-if type fzf > /dev/null
-then
-    source <(fzf --zsh)
-fi
-
-# aider
+# aider - https://aider.chat
 if type aider > /dev/null
 then
     export AIDER_MODEL=ollama/llama3.1
     export OLLAMA_API_BASE=http://127.0.0.1:11434
 fi
 
-# Carapace
+# Carapace - https://carapace.sh/
 if type carapace > /dev/null
 then
     export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense' # optional
@@ -86,21 +80,32 @@ then
     source <(carapace _carapace)
 fi
 
+# fzf key bindings and fuzzy completion - https://github.com/junegunn/fzf
+if type fzf > /dev/null
+then
+    source <(fzf --zsh)
+fi
 
-# Homebrew
-# mac
+# Homebrew - mac - http://brew.sh/
 if [ -d /opt/homebrew/ ]
 then
     eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
-# wsl
+# Homebrew - wsl - http://brew.sh/
 if [ -d /home/linuxbrew/ ]
 then
     eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fi
 
+# mcfly - https://github.com/cantino/mcfly
+if type mcfly > /dev/null
+then
+    eval "$(mcfly init zsh)"
+fi
+
 ###############
 ## Feedback  ##
 ###############
+
 echo "$fg[cyan]$(date +'%H:%M:%S') Zsh custom profile loaded$reset_color"
