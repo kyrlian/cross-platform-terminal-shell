@@ -104,6 +104,13 @@ then
     eval "$(mcfly init zsh)"
 fi
 
+# watsonx flows engine - https://wxflows.ibm.stepzen.com/
+if type wxflows > /dev/null
+then
+    export WXFLOWS_DOMAIN="https://$(wxflows whoami --account).$(wxflows whoami --domain)"
+    export WXFLOWS_APIKEY="$(wxflows whoami --apikey)"
+fi
+
 ###############
 ## Feedback  ##
 ###############

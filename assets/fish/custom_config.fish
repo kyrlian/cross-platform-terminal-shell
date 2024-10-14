@@ -122,6 +122,12 @@ if type mcfly > /dev/null
     mcfly init fish | source
 end
 
+# watsonx flows engine - https://wxflows.ibm.stepzen.com/
+if type wxflows > /dev/null
+    set --export  WXFLOWS_DOMAIN "https://$(wxflows whoami --account).$(wxflows whoami --domain)"
+    set --export  WXFLOWS_APIKEY "$(wxflows whoami --apikey)"
+end
+
 ###############
 ## Feedback  ##
 ###############
