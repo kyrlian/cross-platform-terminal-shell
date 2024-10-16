@@ -84,6 +84,8 @@ alias helix='hx'
 ##############
 
 # Starship prompt
+# echo "starship"
+# time if type starship > /dev/null
 if type starship > /dev/null
     starship init fish | source
 end
@@ -93,40 +95,51 @@ end
 ##########################
 
 # aider - https://aider.chat
+# echo "aider"
+# time if type aider > /dev/null
 if type aider > /dev/null
     set --export AIDER_MODEL ollama/llama3.1
     set --export OLLAMA_API_BASE http://127.0.0.1:11434
 end
 
 # Carapace - https://carapace.sh/
+# echo "carapace"
+# time if type carapace > /dev/null
 if type carapace > /dev/null
     set -Ux CARAPACE_BRIDGES 'zsh,fish,bash,inshellisense' # optional
     mkdir -p ~/.config/fish/completions
-    carapace --list | awk '{print $1}' | xargs -I{} touch ~/.config/fish/completions/{}.fish
+    # carapace --list | awk '{print $1}' | xargs -I{} touch ~/.config/fish/completions/{}.fish
     carapace _carapace | source
 end
 
 # fzf key bindings - https://github.com/junegunn/fzf
+# echo "fzf"
+# time if type fzf > /dev/null
 if type fzf > /dev/null
     fzf --fish | source
 end
 
 # homebrew - http://brew.sh/
+# echo "brew"
+# time if type brew > /dev/null
 if type brew > /dev/null
     # eval "$(/opt/homebrew/bin/brew shellenv)"
     eval "$(brew shellenv)"
 end
 
 # mcfly history - https://github.com/cantino/mcfly
+# echo "mcfly"
+# time if type mcfly > /dev/null
 if type mcfly > /dev/null
     mcfly init fish | source
 end
 
 # watsonx flows engine - https://wxflows.ibm.stepzen.com/
-if type wxflows > /dev/null
-    set --export  WXFLOWS_DOMAIN "https://$(wxflows whoami --account).$(wxflows whoami --domain)"
-    set --export  WXFLOWS_APIKEY "$(wxflows whoami --apikey)"
-end
+# echo "wxflows"
+# time if type wxflows > /dev/null
+#     set --export  WXFLOWS_DOMAIN "https://$(wxflows whoami --account).$(wxflows whoami --domain)"
+#     set --export  WXFLOWS_APIKEY "$(wxflows whoami --apikey)"
+# end
 
 ###############
 ## Feedback  ##
