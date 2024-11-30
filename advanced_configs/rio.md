@@ -53,13 +53,19 @@ keys = [
 
 ## Rendering filters
 
+Shaders are composed of multiple files, so it's simpler to get all the shaders first
+```sh
+git clone https://github.com/libretro/slang-shaders.git
+```
+
+Then choose your prefered filter in the configuration:
 ```toml
 [renderer]
 performance = "high"
 backend = "automatic"
 disable-unfocused-render = false
 level = 1
-filters = ["C:/Users/key/AppData/Local/rio/shaders/crt-hyllian.slangp"]
+filters = ["C:\\Users\\key\\AppData\\Local\\rio\\slang-shaders\\crt\\crt-gdv-mini-ultra-trinitron.slangp"]
 ```
 
 ## Ressources
