@@ -49,7 +49,7 @@ Install everything on Windows
    
 ```sh
 scoop bucket add extras
-scoop install wezterm nu starship nano neovim helix carapace-bin
+scoop install rio wezterm nu starship nano neovim helix carapace-bin
 ```
 
 Install WSL Ubuntu
@@ -77,6 +77,7 @@ wsl.exe -d Ubuntu -- sudo sh -c "apt-get update && apt-get install fish xonsh tm
 - [Murex](./advanced_configs/murex.md)
 - [Neovim](./advanced_configs/neovim.md)
 - [Nushell](./advanced_configs/nushell.md)
+- [Rio](./advanced_configs/rio.md)
 - [Starship](./advanced_configs/starship.md)
 - [Wezterm](./advanced_configs/wezterm.md)
 - [XONSH](./advanced_configs/xonsh.md)

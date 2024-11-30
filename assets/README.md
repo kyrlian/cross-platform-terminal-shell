@@ -5,6 +5,7 @@
 - [Helix](./helix/)
 - [Murex](./murex/)
 - [Nushell](./nushell/)
+- [RIO](./rio/)
 - [Starship](./starship/)
 - [Wezterm](./wezterm/)
 - [XONSH](./xonsh/)
@@ -20,5 +21,6 @@ ln -s ~/.config/starship.toml ~/assets/starship/starship.toml
 ln -s ~/.murex_profile ~/assets/murex/custom_murex_profile
 ln -s .xonshrc ~/assets/xonsh/xonsh_custom_config.py
 ln -s ~/.config/helix/config.toml ~/assets/helix/config.toml
-ln -s ~/.conifg/fish/config.fish ~/assets/fish/custom_config.fish
+ln -s ~/.config/fish/config.fish ~/assets/fish/custom_config.fish
+ln -s ~/.config/rio/config.toml ~/assets/rio/config.toml
 ```
