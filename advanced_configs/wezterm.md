@@ -79,6 +79,14 @@ config.keys = {
 }
 ```
 
+## Finder shortcut
+
+To add an "Open with WezTerm" shortcut in Macos Finder > Quick Actions, double click on the Automator workflow [Open in WezTerm.workflow](../assets/WezTerm/Open%20in%WezTerm.workflow/)
+
+## Explorer shortcut
+
+To add an "Open with WezTerm" shortcut in Windows Explorer, double click on the registry file [open_in_wezterm.reg](../assets/WezTerm/open_in_wezterm.reg)
+
 ## Ressources
 
 - [My wezterm config](../assets/wezterm/wezterm_config.lua)

@@ -7,7 +7,7 @@ https://raphamorim.io/rio/
 ### Macos 
 
 ```sh
-brew install rio
+brew install rio --cask
 ```
 	
 ### Windows
@@ -18,10 +18,12 @@ scoop install rio
 
 ## Config file location
 
-Open the config file with `Ctrl + Shift + ,` (comma)
-
 - Linux/Macos: `~/.config/rio/config.toml`
 - Windows: `~\AppData\Local\rio`
+
+You can open the config file from rio with the shortcut:
+- Macos: `Command + ,` (comma)
+- Win: `Ctrl + Shift + ,` (comma)
 
 ## Change default shell
 
@@ -35,6 +37,12 @@ args = []
 
 - Get a theme file [here](https://github.com/mbadolato/iTerm2-Color-Schemes/tree/master/rio)
 - Create a `themes` folder in the config file location and put your theme file there.
+
+```sh
+cd ~/.config/rio/
+mkdir themes
+```
+
 - Change the `theme` value in the config file to your theme name (without extension)
 
 ```toml
@@ -55,6 +63,7 @@ keys = [
 
 Shaders are composed of multiple files, so it's simpler to get all the shaders first
 ```sh
+cd ~/.config/rio/
 git clone https://github.com/libretro/slang-shaders.git
 ```
 
@@ -68,8 +77,12 @@ level = 1
 filters = ["C:\\Users\\key\\AppData\\Local\\rio\\slang-shaders\\crt\\crt-gdv-mini-ultra-trinitron.slangp"]
 ```
 
+## Finder shortcut
+
+To add an "Open with Rio" shortcut in Macos Finder > Quick Actions, double click on the Automator workflow [Open in RIO.workflow](../assets/rio/Open%20in%20RIO.workflow/)
+
 ## Ressources
-- [My RIO config](../assets/rio/config.toml)
+- [My RIO configs (mac & linux)](../assets/rio/)
 - [Rio bindings actions](https://raphamorim.io/rio/docs/config/bindings/#action)
 - [Rio theming](https://raphamorim.io/rio/docs/config/theme)
 - [Theme files](https://github.com/mbadolato/iTerm2-Color-Schemes/tree/master/rio)

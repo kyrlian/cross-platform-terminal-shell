@@ -170,9 +170,7 @@ performance = "high"
 backend = "automatic"
 disable-unfocused-render = false
 level = 1
-filters = [
-    "C:/Users/key/AppData/Local/rio/shaders/newpixie-crt.slangp",
-]
+filters = ["C:\\Users\\key\\AppData\\Local\\rio\\slang-shaders\\crt\\crt-gdv-mini-ultra-trinitron.slangp"]
 
 # Keyboard
 #
