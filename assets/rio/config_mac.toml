@@ -80,7 +80,7 @@ theme = "elementary"
 # Confirm before exiting Rio
 # Default is `true`
 #
-# confirm-before-quit = false
+confirm-before-quit = false
 
 # Cursor
 #
@@ -282,9 +282,9 @@ filters = ["~/.config/rio/slang-shaders/crt/crt-gdv-mini-ultra-trinitron.slangp"
 #   - (Linux/BSD) user login shell
 #   - (Windows) powershell
 #
-[shell]
-program = "/opt/homebrew/bin/fish"
-args = []
+# [shell]
+# program = "/opt/homebrew/bin/fish"
+# args = []
 # Example 1 using fish shell from bin path:
 #
 # [shell]
