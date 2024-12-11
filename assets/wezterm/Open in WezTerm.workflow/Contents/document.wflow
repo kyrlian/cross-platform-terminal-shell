@@ -59,7 +59,7 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>COMMAND_STRING</key>
-					<string>path+=/opt/homebrew/bin;wezterm start --cwd "$1"&amp;;disown</string>
+					<string>open /Applications/WezTerm.app --args start --cwd "$1"</string>
 					<key>CheckedForUserDefaultShell</key>
 					<true/>
 					<key>inputMethod</key>

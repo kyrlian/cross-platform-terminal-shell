@@ -83,6 +83,11 @@ config.keys = {
 
 To add an "Open with WezTerm" shortcut in Macos Finder > Quick Actions, double click on the Automator workflow [Open in WezTerm.workflow](../assets/wezterm/Open%20in%WezTerm.workflow/)
 
+Or manually create an automator workflow with a single step "Run Shell Script" and the following content:
+```sh
+open /Applications/WezTerm.app --args start --cwd "$1"
+```
+
 ## Explorer shortcut
 
 To add an "Open with WezTerm" shortcut in Windows Explorer, double click on the registry file [open_in_wezterm.reg](../assets/wezterm/open_in_wezterm.reg)

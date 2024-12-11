@@ -81,6 +81,11 @@ filters = ["C:\\Users\\key\\AppData\\Local\\rio\\slang-shaders\\crt\\crt-gdv-min
 
 To add an "Open with Rio" shortcut in Macos Finder > Quick Actions, double click on the Automator workflow [Open in RIO.workflow](../assets/rio/Open%20in%20RIO.workflow/)
 
+Or manually create an automator workflow with a single step "Run Shell Script" and the following content:
+```sh
+open /Applications/Rio.app --args --working-dir "$1"
+```
+
 ## Explorer shortcut
 
 To add an "Open with Rio" shortcut in Windows Explorer, double click on the registry file [open_in_rio.reg](../assets/rio/open_in_eio.reg)
