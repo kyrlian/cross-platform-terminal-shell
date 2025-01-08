@@ -7,6 +7,10 @@ setopt interactivecomments
 # https://stackoverflow.com/questions/689765/how-can-i-change-the-color-of-my-prompt-in-zsh-different-from-normal-text
 autoload -U colors && colors
 
+# zsh auto-completions (needed for carapace)
+autoload -Uz compinit
+compinit
+
 #############
 ## Banner  ##
 #############
@@ -75,9 +79,9 @@ fi
 # Carapace - https://carapace.sh/
 if type carapace > /dev/null
 then
-    export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense' # optional
+    export CARAPACE_BRIDGES='zsh' # optional
     zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
-    source <(carapace _carapace)
+    source <(carapace _carapace zsh)
 fi
 
 # fzf key bindings and fuzzy completion - https://github.com/junegunn/fzf

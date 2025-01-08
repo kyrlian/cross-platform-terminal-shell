@@ -106,10 +106,10 @@ end
 # echo "carapace"
 # time if type carapace > /dev/null
 if type carapace > /dev/null
-    set -Ux CARAPACE_BRIDGES 'zsh,fish,bash,inshellisense' # optional
+    set -Ux CARAPACE_BRIDGES 'fish' # optional
     mkdir -p ~/.config/fish/completions
     # carapace --list | awk '{print $1}' | xargs -I{} touch ~/.config/fish/completions/{}.fish
-    carapace _carapace | source
+    carapace _carapace fish | source
 end
 
 # fzf key bindings - https://github.com/junegunn/fzf

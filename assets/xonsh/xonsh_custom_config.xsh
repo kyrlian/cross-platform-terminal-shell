@@ -74,9 +74,8 @@ execx($(starship init xonsh))
 ##########################
 
 # Carapace
-$CARAPACE_BRIDGES='zsh,fish,bash,inshellisense' # optional
 $COMPLETIONS_CONFIRM=True
-exec($(carapace _carapace))
+exec($(carapace _carapace xonsh))
 
 
 ###############
