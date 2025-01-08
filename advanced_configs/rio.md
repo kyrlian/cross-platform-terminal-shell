@@ -88,7 +88,7 @@ open /Applications/Rio.app --args --working-dir "$1"
 
 ## Explorer shortcut
 
-To add an "Open with Rio" shortcut in Windows Explorer, double click on the registry file [open_in_rio.reg](../assets/rio/open_in_eio.reg)
+To add an "Open with Rio" shortcut in Windows Explorer, double click on the registry file [open_in_rio.reg](../assets/rio/open_in_rio.reg)
 
 ## Ressources
 - [My RIO configs (mac & linux)](../assets/rio/)

@@ -1,6 +1,7 @@
 # Custom configurations
 
 - [Fish](./fish/)
+- [Ghostty](./ghostty/)
 - [Git](./git/)
 - [Helix](./helix/)
 - [Murex](./murex/)
@@ -17,10 +18,11 @@ You can replace the native config files with links to your custom config files, 
 
 Ex:
 ```sh
-ln -s ~/.config/starship.toml ~/assets/starship/starship.toml
-ln -s ~/.murex_profile ~/assets/murex/custom_murex_profile
-ln -s .xonshrc ~/assets/xonsh/xonsh_custom_config.py
-ln -s ~/.config/helix/config.toml ~/assets/helix/config.toml
-ln -s ~/.config/fish/config.fish ~/assets/fish/custom_config.fish
-ln -s ~/.config/rio/config.toml ~/assets/rio/config.toml
+ln -s ~/assets/starship/starship.toml ~/.config/starship.toml
+ln -s ~/assets/murex/custom_murex_profile ~/.murex_profile
+ln -s ~/assets/xonsh/xonsh_custom_config.xsh ~/.xonshrc
+ln -s ~/assets/helix/config.toml ~/.config/helix/config.toml
+ln -s ~/assets/fish/custom_config.fish ~/.config/fish/config.fish
+ln -s ~/assets/rio/config.toml ~/.config/rio/config.toml
+ln -s ~/assets/ghostty/config ~/.config/ghostty/config
 ```
