@@ -1,1 +1,3 @@
-keybind = global:cmd+escape=toggle_quick_terminal
+ # ~/.config/ghostty/config    
+ keybind = global:cmd+escape=toggle_quick_terminal
+theme = MaterialDarker
