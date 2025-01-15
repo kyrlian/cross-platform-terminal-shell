@@ -1,7 +1,8 @@
 # Homebrew
+https://brew.sh/
 
 ## Install
-- See (brew.sh)[https://brew.sh/]
+- See [brew.sh](https://brew.sh/)
 
-## Ressources 
+## Ressources
 - [Homebrew](https://docs.brew.sh)

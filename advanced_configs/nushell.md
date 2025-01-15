@@ -9,8 +9,8 @@ https://www.nushell.sh/
 ```sh
 brew install nushell
 ```
- 	
-### Windows 
+
+### Windows
 
 ```sh
 scoop install nu
@@ -46,7 +46,7 @@ code $nu.config-path
 Edit `config.nu`, search for `buffer_editor`, and add your editor, for exemple:
 
 ```sh
-buffer_editor: "helix" 
+buffer_editor: "helix"
 ```
 
 ## Deactivate default banner
@@ -107,7 +107,7 @@ use starship.nu
 - [Nushell](https://www.nushell.sh/)
 - [Nushell - configuration](https://github.com/nushell/nushell?tab=readme-ov-file#configuration)
 - [Custom banner](https://gist.github.com/jeffock/dce0c67169111ce3e17287ea7c2d0183)
-- My custom files: 
+- My custom files:
   - [custom_config_common.nu](../assets/nushell/custom_config_common.nu)
   - [custom_config_mac.nu](../assets/nushell/custom_config_mac.nu)
   - [custom_config_win.nu](../assets/nushell/custom_config_win.nu)

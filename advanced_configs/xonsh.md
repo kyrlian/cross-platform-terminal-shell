@@ -1,10 +1,10 @@
-# Xonsh
+# Xonsh shell
 
 https://xon.sh/
 
 ## Install
 
-### Macos 
+### Macos
 
 ```sh
 brew install xonsh
@@ -64,7 +64,7 @@ aliases['activate'] = 'vox activate @($(basename $(pwd)).strip()+"_virtualenv")'
 aliases['deactivate'] = 'vox deactivate'
 ```
 
-**Note**: I generate the env name based on current dir using basename(pwd), you could also use the full path with : 
+**Note**: I generate the env name based on current dir using basename(pwd), you could also use the full path with :
 ```python
 @($(pwd).strip().replace("/","_")+"_virtualenv")
 ```

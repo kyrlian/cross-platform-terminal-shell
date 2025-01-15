@@ -1,6 +1,8 @@
 # tmux terminal multiplexer
 
-## Install 
+https://github.com/tmux/tmux
+
+## Install
 
 ### Mac
 
@@ -31,7 +33,7 @@ Enable mouse support and use Control+Space prefix
 
 ```sh
 set-option -g prefix C-Space
-set -g mouse on 
+set -g mouse on
 ```
 
 # Resources

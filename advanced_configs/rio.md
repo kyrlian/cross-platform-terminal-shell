@@ -4,12 +4,12 @@ https://raphamorim.io/rio/
 
 ## Install
 
-### Macos 
+### Macos
 
 ```sh
 brew install rio --cask
 ```
-	
+
 ### Windows
 
 ```sh

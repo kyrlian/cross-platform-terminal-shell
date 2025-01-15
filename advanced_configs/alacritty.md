@@ -2,27 +2,36 @@
 
 https://alacritty.org/
 
-## Change default shell
+## Install
 
-Create and edit `$HOME/.config/alacritty/alacritty.toml` 
+### Mac
 
 ```sh
-mkdir -p $HOME/.config/alacritty
-cd alacritty
-nano alacritty.toml
+brew install --cask alacritty
+```
+### Windows
+
+```sh
+scoop install alacritty
 ```
 
-add you shell, here `nu`:
+## Config location
+
+- Linux and Mac: `~/.config/alacritty/alacritty.toml`
+- Windows: `%AppData%\alacritty\alacritty.toml`
+
+## Change default shell
+
+Create and edit the config file and your shell, in a `[shell]` section, here `nu`:
 
 ```toml
 [shell]
 program = "nu"
 ```
 
-And re-start alacritty to get in the new shell.
+Re-start alacritty to get in the new shell.
 
 ## Ressources
 
 - https://dev.to/yjdoc2/completely-oxidizing-my-terminal-setup-43d8
 - https://alacritty.org/config-alacritty.html
-

@@ -1,6 +1,3 @@
-
-# Previous setup
-
 # 1st try: Hyper - Fish - Tmux
 
 My first try to get a cross plateform combo terminal + shell + multiplexer for mac and windows WSL was:
@@ -60,5 +57,5 @@ My first try to get a cross plateform combo terminal + shell + multiplexer for m
 ## Verdict and lessons learned
 
 - Hyper is a bit too slow to start for me as I tend to open/close my terminal a lot
-- Fish is fun, but not POSIX so my old aliases and muscle memory is lost, and it's not "modern" enough to warrant learning for me. I'm probably too late for this one
-- In the end I kept getting back to iterm2/win terminal and zsh
+- Fish is fun, but not POSIX so my old aliases and muscle memory is lost
+- I keep alternating with iterm2/win terminal and zsh
