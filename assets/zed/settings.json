@@ -26,8 +26,8 @@
   "buffer_font_size": 16,
   "theme": {
     "mode": "system",
-    "light": "One Light",
-    "dark": "Andromeda"
+    "light": "Summercamp",
+    "dark": "Summercamp"
   },
   "autosave": "on_focus_change",
   "formatter": "language_server"

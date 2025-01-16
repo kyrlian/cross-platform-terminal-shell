@@ -26,4 +26,5 @@ ln -s ~/assets/murex/custom_murex_profile ~/.murex_profile
 ln -s ~/assets/rio/config.toml ~/.config/rio/config.toml
 ln -s ~/assets/starship/starship.toml ~/.config/starship.toml
 ln -s ~/assets/xonsh/xonsh_custom_config.xsh ~/.xonshrc
+ln -s ~/assets/zed/settings.json ~/.config/zed/settings.json
 ```
