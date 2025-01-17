@@ -4,12 +4,12 @@ https://wezfurlong.org/wezterm/
 
 ## Install
 
-### Macos 
+### Macos
 
 ```sh
 brew install wezterm
 ```
-	
+
 ### Windows
 
 ```sh
@@ -85,7 +85,7 @@ To add an "Open with WezTerm" shortcut in Macos Finder > Quick Actions, double c
 
 Or manually create an automator workflow with a single step "Run Shell Script" and the following content:
 ```sh
-open /Applications/WezTerm.app --args start --cwd "$1"
+open -a /Applications/WezTerm.app --args start --cwd "$1"
 ```
 
 ## Explorer shortcut

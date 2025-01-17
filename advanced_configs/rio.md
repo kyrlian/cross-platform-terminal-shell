@@ -83,7 +83,7 @@ To add an "Open with Rio" shortcut in Macos Finder > Quick Actions, double click
 
 Or manually create an automator workflow with a single step "Run Shell Script" and the following content:
 ```sh
-open /Applications/Rio.app --args --working-dir "$1"
+open -a /Applications/Rio.app --args --working-dir "$1"
 ```
 
 ## Explorer shortcut

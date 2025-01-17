@@ -4,7 +4,7 @@ https://ghostty.org
 
 ## Install
 
-### Macos 
+### Macos
 
 ```sh
 brew install ghostty
@@ -25,9 +25,12 @@ You can open the config file from ghostty with the shortcut:
 To add an "Open with Ghostty" shortcut in Macos Finder > Quick Actions, double click on the Automator workflow [Open in ghostty.workflow](../assets/ghostty/)
 
 Or manually create an automator workflow with a single step "Run Shell Script" and the following content:
+
 ```sh
-open /Applications/Ghostty.app --args --working-directory="$1"
+open -a /Applications/Ghostty.app "$1"
 ```
+
+> **Note**: Ghostty natively adds `New Ghostty Tab Here` and `New Ghostty Window Here` in `Services`
 
 ## Ressources
 - [My ghostty config](../assets/ghostty/)

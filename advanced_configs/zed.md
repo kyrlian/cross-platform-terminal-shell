@@ -30,6 +30,15 @@ By default Zed doesn't autosave, you can activate it in the config with
 
 See [doc - autosave](https://zed.dev/docs/configuring-zed#autosave)
 
+## Finder shortcut
+
+To add an "Open in Zed" shortcut in Macos Finder > Quick Actions, double click on the Automator workflow [Open in Zed.workflow](../assets/zed/Open%20in%20Zed.workflow/)
+
+Or manually create an automator workflow with a single step "Run Shell Script" and the following content:
+```sh
+open -a /Applications/Zed.app "$1"
+```
+
 # Ressources
 
 - [Zed doc](https://zed.dev/docs/)
