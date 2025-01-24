@@ -10,8 +10,18 @@
   "assistant": {
     "default_model": {
       "provider": "ollama",
-      "model": "deepseek-coder:6.7b-base"
+      "model": "granite3.1-dense:8b"
     },
+    "inline_alternatives": [
+      {
+        "provider": "ollama",
+        "model": "starcoder2:3b"
+      },
+      {
+        "provider": "ollama",
+        "model": "granite3.1-moe:3b"
+      }
+    ],
     "dock": "left",
     "version": "2"
   },
@@ -23,12 +33,35 @@
   },
   "base_keymap": "VSCode",
   "ui_font_size": 16,
-  "buffer_font_size": 16,
+  "buffer_font_size": 14,
   "theme": {
     "mode": "system",
     "light": "Summercamp",
     "dark": "Summercamp"
   },
   "autosave": "on_focus_change",
-  "formatter": "language_server"
+  "formatter": "language_server",
+  "languages": {
+    "Python": {
+      "tab_size": 4,
+      "formatter": "language_server",
+      "format_on_save": "on"
+    }
+  },
+  "terminal": {
+    "detect_venv": {
+      "on": {
+        "directories": [
+          ".env",
+          "env",
+          ".venv",
+          "venv"
+        ],
+        "activate_script": "default"
+      }
+    },
+    "shell": {
+      "program": "/opt/homebrew/bin/nu"
+    }
+  }
 }
