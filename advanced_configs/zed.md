@@ -39,7 +39,18 @@ Or manually create an automator workflow with a single step "Run Shell Script" a
 open -a /Applications/Zed.app "$1"
 ```
 
+## Prompt database dump
+
+[export_mdb.py](../assets/zed/export_mdb.py) is a script to dump the zed prompt database (LMDB) as json.
+
+Assumes the DB is `~/.config/zed/prompts/prompts-library-db.0.mdb`
+
+Might break any time if the db format changes.
+
+Run with: `uv run export_mdb.py`
+
 # Ressources
 
 - [Zed doc](https://zed.dev/docs/)
 - [My Zed config](../assets/zed/settings.json)
+- [Script to dumb the prompt db](../assets/zed/export_mdb.py)
