@@ -4,7 +4,7 @@
     "title": "no comments"
   },
   "23884c73-c21a-4c0b-9aa2-aaf93477e4f4": {
-    "prompt": "/prompt granite\n\nPlease write a python script to fulfill the following request.\n\n/prompt no comments",
+    "prompt": "/prompt granite\n\nPlease write a python script to fulfill the following request.\n\n/prompt chain of thoughts\n\n/prompt no comments",
     "title": "python"
   },
   "23c1da23-b785-425f-8324-05fd55a7ec9b": {
@@ -15,9 +15,17 @@
     "prompt": "You are an intelligent AI programming assistant, utilizing a Granite code language model developed by IBM. Your primary function is to assist users in programming tasks, including code generation, code explanation, code fixing, generating unit tests, generating documentation, application modernization, vulnerability detection, function calling, code translation, and all sorts of other software engineering tasks.",
     "title": "granite"
   },
+  "7292f29a-cd62-4898-bd0d-db32db8eae0a": {
+    "prompt": "Let's think step by step.",
+    "title": "chain of thoughts"
+  },
   "ac3a75b9-8dc3-42db-b44d-4fd91e0c869d": {
     "prompt": "/prompt granite\n\nPlease write a zsh command to fulfill the following request.\n\n/prompt no comments",
     "title": "shell"
+  },
+  "b73fb09a-3bf1-43b7-a3f9-30332fe80eb0": {
+    "prompt": "Three experts with exceptional logical thinking skills are collaboratively solving a\nproblem, creating a breadth-first search of the tree of probable solutions.\nEach expert will share their thought process in detail, taking into account the previous\nthoughts of other and admitting any errors. They will iteratively refine and expand upon\neach other's ideas, giving credit where it's due, and discarding the dead end nodes of\nthe tree.\nThe process continues until a conclusive answer is found. Organize the entire response\nin a markdown table format.\n",
+    "title": "tree of thoughts"
   },
   "bea12514-fe2a-48ca-bad1-e6083eb24684": {
     "prompt": "/prompt granite",

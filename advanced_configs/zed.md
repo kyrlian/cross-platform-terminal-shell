@@ -45,6 +45,8 @@ open -a /Applications/Zed.app "$1"
 
 Assumes the DB is `~/.config/zed/prompts/prompts-library-db.0.mdb`
 
+Make sure the Zed is closed before running the script ; else you'll see an `lmdb.VersionMismatchError` error.
+
 Might break any time if the db format changes.
 
 Run with: `uv run export_mdb.py`

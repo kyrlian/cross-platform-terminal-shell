@@ -1,6 +1,6 @@
 # /// script
 # dependencies = [
-#   "lmdb",
+#   "lmdb==1.6.2",
 # ]
 # ///
 
@@ -53,6 +53,7 @@ def writefile(output_file, content):
 
 def lmm_to_json(env_path):
     # https://lmdb.readthedocs.io
+    print(f"opening {env_path}")
     env = lmdb.open(env_path, readonly=True,subdir=True, max_dbs=2)
     # dump_db(env)
     # https://github.com/zed-industries/zed/blob/d4d36d1adf0559cb4e6010c4fef880e0725ea0b0/crates/prompt_library/src/prompt_store.rs#L129-L132
@@ -63,7 +64,7 @@ def lmm_to_json(env_path):
 
 def main():
     home_dir = os.path.expanduser('~')
-    mdb_dir = f"{home_dir}/.config/zed/prompts/prompts-library-db.0.mdb"
+    mdb_dir = f"{home_dir}/.config/zed/prompts/prompts-library-db.0.mdb/"
     lmm_to_json(mdb_dir)
 
 if __name__ == "__main__":
