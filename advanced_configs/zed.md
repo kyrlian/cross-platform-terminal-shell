@@ -39,6 +39,22 @@ Or manually create an automator workflow with a single step "Run Shell Script" a
 open -a /Applications/Zed.app "$1"
 ```
 
+## Explorer shortcut
+
+To add an "Open with Zed" shortcut in Windows Explorer, double click on the registry file [open_in_zed.reg](../assets/zed/open_in_zed.reg)
+
+Or open the file with your favorite editor, and manually create the regedit entries.
+
+## Change terminal shell
+
+Add a `shell` section in the config, for example:
+
+```json
+"shell": {
+  "program": "/opt/homebrew/bin/nu"
+}
+```
+
 ## Prompt database dump
 
 [export_mdb.py](../assets/zed/export_mdb.py) is a script to dump the zed prompt database (LMDB) as json.

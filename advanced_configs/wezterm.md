@@ -92,6 +92,8 @@ open -a /Applications/WezTerm.app --args start --cwd "$1"
 
 To add an "Open with WezTerm" shortcut in Windows Explorer, double click on the registry file [open_in_wezterm.reg](../assets/wezterm/open_in_wezterm.reg)
 
+Or open the file with your favorite editor, and manually create the regedit entries.
+
 ## Ressources
 
 - [My wezterm config](../assets/wezterm/wezterm_config.lua)
