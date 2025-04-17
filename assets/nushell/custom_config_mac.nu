@@ -30,9 +30,8 @@ path add ~/scripts
 alias mu = murex
 
 # Python venv
-alias venvc = virtualenv virtualenv
-alias activate = overlay use ./virtualenv/bin/activate.nu
-# alias activate = if ('virtualenv' | path exists) { overlay use ./virtualenv/bin/activate.nu } else if ('.venv' | path exists) { overlay use ./.venv/bin/activate.nu } else { print No venv found }
+alias venvc = virtualenv venv
+alias activate = overlay use ./venv/bin/activate.nu
 
 ###########################
 ## Various integrations ##
