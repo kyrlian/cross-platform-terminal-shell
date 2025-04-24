@@ -23,6 +23,7 @@ path add /opt/homebrew/bin
 path add /usr/local/bin
 path add ~/.local/bin
 path add ~/scripts
+path add ~/.rd/bin
 
 ##############
 ## Aliases  ##
