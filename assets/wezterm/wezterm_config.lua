@@ -124,10 +124,10 @@ config.keys = {
     -- pane split
     { key = "%",          mods = "LEADER",         action = wezterm.action.SplitHorizontal { domain = "CurrentPaneDomain" } },
     { key = "-",          mods = "LEADER",         action = wezterm.action.SplitVertical { domain = "CurrentPaneDomain" } },
-    { key = "s",          mods = "LEADER",         action = wezterm.action.SplitHorizontal { domain = "CurrentPaneDomain" } },
-    { key = "s",          mods = "LEADER|CTRL",    action = wezterm.action.SplitVertical { domain = "CurrentPaneDomain" } },
-    { key = "s",          mods = "CTRL|ALT",       action = wezterm.action.SplitHorizontal { domain = "CurrentPaneDomain" } },
-    { key = "s",          mods = "CTRL|ALT|SHIFT", action = wezterm.action.SplitVertical { domain = "CurrentPaneDomain" } },
+    { key = "d",          mods = "CMD",            action = wezterm.action.SplitHorizontal { domain = "CurrentPaneDomain" } },
+    { key = "d",          mods = "CMD|SHIFT",      action = wezterm.action.SplitVertical { domain = "CurrentPaneDomain" } },
+    { key = "d",          mods = "CTRL|ALT",       action = wezterm.action.SplitHorizontal { domain = "CurrentPaneDomain" } },
+    { key = "d",          mods = "CTRL|ALT|SHIFT", action = wezterm.action.SplitVertical { domain = "CurrentPaneDomain" } },
     -- pane zoom and close
     { key = "Space",      mods = "LEADER",         action = wezterm.action.TogglePaneZoomState },
     { key = "w",          mods = "LEADER",         action = wezterm.action.CloseCurrentPane { confirm = true } },
