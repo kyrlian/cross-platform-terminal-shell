@@ -3,5 +3,8 @@
 keybind = global:cmd+escape=toggle_quick_terminal
 
 theme = MaterialDarker
+# theme = catppuccin-frappe
+# theme = dark:catppuccin-frappe,light:catppuccin-latte
 
-command = /opt/homebrew/bin/nu
+#command = /opt/homebrew/bin/nu
+command = /opt/homebrew/bin/fish
