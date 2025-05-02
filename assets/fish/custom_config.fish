@@ -64,19 +64,18 @@ alias ll='ls -alhG'
 alias helix='hx'
 
 # not needed when using uv
-# alias venvc='virtualenv virtualenv'
-# alias venvc11='virtualenv -p python3.11 virtualenv'
-# # alias activate='source virtualenv/bin/activate.fish'
-# # https://fishshell.com/docs/current/cmds/if.html
-# function activate
-#     if test -d virtualenv
-#         source virtualenv/bin/activate.fish
-#     else if test -d .venv
-#         source .venv/bin/activate.fish
-#     else
-#         echo No venv found
-#     end
-# end
+alias venvc='python3 -m venv venv'
+alias venvc11='python3.11 -m venv venv'
+# https://fishshell.com/docs/current/cmds/if.html
+function activate
+    if test -d venv
+        source venv/bin/activate.fish
+    else if test -d .venv
+        source .venv/bin/activate.fish
+    else
+        echo No venv found
+    end
+end
 
 
 ##############
