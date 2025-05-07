@@ -31,14 +31,26 @@ wsl.exe -d Ubuntu -- sudo sh -c "apt-get update && apt-get install fish"
 ```
 
 
-Add this to run a custom config:
+Add this to run a custom config (here copied to `~/.config/fish/custom_config.fish`):
 ```sh
 if status is-interactive
     # Commands to run in interactive sessions can go here
-    set customconf /mnt/.../custom_config.fish
+    set customconf {$HOME}/.config/fish/custom_config.fish
     test -e $customconf ; and source $customconf
 end
 ```
+
+## Link config
+
+On mac/linux you can replace the native config files with links to your custom config files, for example if your custom config files are in `~/assets/`: 
+
+```sh
+cd ~/assets/
+ln -s ${PWD}/fish/local_profile_mac.fish ~/.config/fish/local_profile_mac.fish
+ln -s ${PWD}/fish/custom_config.fish ~/.config/fish/custom_config.fish
+ln -s ${PWD}/fish/config.fish ~/.config/fish/config.fish
+```
+(I have split my config in several files)
 
 ## Tmux
 
