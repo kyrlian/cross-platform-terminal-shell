@@ -2,7 +2,7 @@
 # Sourced from ~/.config/fish/config.fish
 # with:
 # if status is-interactive
-#       set customconf {$HOME}/scripts/custom-profile.fish
+#       set customconf {$HOME}/scripts/custom_config.fish
 #       set customconf /mnt/e/docs/coding/shell/cross-platform-terminal-shell/assets/fish/custom_config.fish
 #       test -e $customconf ; and source $customconf
 # end
