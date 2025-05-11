@@ -58,4 +58,4 @@ My first try to get a cross plateform combo terminal + shell + multiplexer for m
 
 - Hyper is a bit too slow to start for me as I tend to open/close my terminal a lot
 - Fish is fun, but not POSIX so my old aliases and muscle memory is lost
-- I keep alternating with iterm2/win terminal and zsh
+- I keep alternating with hyper/fish and iterm2/zsh on mac, and getting back to win terminal/shell on windows

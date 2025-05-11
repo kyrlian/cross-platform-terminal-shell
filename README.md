@@ -1,13 +1,16 @@
 # Cross Platform Terminal & Shell <!-- omit in toc -->
+
 Searching for a cross plateform combo : terminal, shell, prompt - for mac and windows.
 
 TOC
 - [Intro](#intro)
 - [1st try: Hyper - Fish - Tmux](#1st-try-hyper---fish---tmux)
 - [2nd try: Wezterm - Nushell - Starship](#2nd-try-wezterm---nushell---starship)
+- [Current: Ghostty/Rio - Fish/Nushell - Starship](#current-ghosttyrio---fishnushell---starship)
 - [More information on my setup](#more-information-on-my-setup)
+- [Other various stuff](#other-various-stuff)
 
-# Intro
+## Intro
 
 I use MacOS for work, and windows at home, my original setup is mostly the default on each:
 
@@ -16,49 +19,13 @@ I use MacOS for work, and windows at home, my original setup is mostly the defau
 
 [VS code](https://code.visualstudio.com/) being my main IDE, and I use [homebrew](https://brew.sh/) on mac and WSL, and [scoop](https://scoop.sh/) on windows as package managers.
 
-As I code more and more at home, and there is more and more cross plateform tools, I started to search for a set of tools I could use on both plateforms.
+As I code more and more at home, and there is more and more cross plateform tools, I started to search for a set of tools I could use on both plateforms. Of course I ended-up with different configs!
 
-# 1st try: [Hyper - Fish - Tmux](./1st_try.md)
+## 1st try: [Hyper - Fish - Tmux](./1st_try.md)
 
-# 2nd try: [Wezterm - Nushell - Starship](./2nd_try.md)
+## 2nd try: [Wezterm - Nushell - Starship](./2nd_try.md)
 
-# Current
-
-- Terminals: [Rio](https://raphamorim.io/rio/), [Ghostty](https://ghostty.org)
-- Shells: [Nushell](https://www.nushell.sh/), [Fish](https://fishshell.com/)
-- Prompt: [Starship](https://starship.rs/)
-- Editors: [Nano](https://www.nano-editor.org/), [Neovim](https://neovim.io/), [Helix](https://helix-editor.com/)
-- Helpers: [carapace](https://carapace.sh/), [mcfly](https://github.com/cantino/mcfly), [fzf](https://github.com/junegunn/fzf)
-
-## Quick install
-
-### Macos setup
-
-Install everything
-
-```sh
-brew install ghostty nushell fish starship nano neovim helix carapace mcfly fzf
-brew install rio --cask
-```
-
-### Windows setup
-
-Install everything on Windows
-
-```sh
-scoop bucket add extras
-scoop install rio nu starship nano neovim helix carapace-bin
-```
-
-Install WSL Ubuntu
-```sh
-wsl.exe --install Ubuntu
-```
-
-Install everything on WSL with [homebrew](https://brew.sh/)
-```sh
-wsl.exe -d Ubuntu -- sudo sh -c "brew install fish tmux helix carapace mcfly fzf"
-```
+## Current: [Ghostty/Rio - Fish/Nushell - Starship](./current.md)
 
 ## More information on my setup
 
@@ -78,3 +45,8 @@ wsl.exe -d Ubuntu -- sudo sh -c "brew install fish tmux helix carapace mcfly fzf
 - [Zed](./advanced_configs/zed.md)
 - [Zsh](./advanced_configs/zsh.md)
 - [All my custom configs](./assets/)
+
+## Other various stuff
+
+- [My personal comparison of shells and terminals](./comparisons.md)
+- [My list of nice TUI apps](./tui_list.md)

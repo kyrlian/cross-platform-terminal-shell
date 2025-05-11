@@ -48,3 +48,27 @@ wsl.exe -d Ubuntu -- sudo sh -c "sudo apt update"
 wsl.exe -d Ubuntu -- sudo sh -c "sudo add-apt-repository ppa:maveonair/helix-editor"
 wsl.exe -d Ubuntu -- sudo sh -c "apt-get update && apt-get install fish xonsh tmux helix mcfly fzf"
 ```
+
+## More information on my setup
+
+- [Fish](./advanced_configs/fish.md)
+- [Ghostty](./advanced_configs/ghostty.md)
+- [Git](./advanced_configs/git.md)
+- [Helix](./advanced_configs/helix.md)
+- [Hyperterm](./advanced_configs/hyperterm.md)
+- [Murex](./advanced_configs/murex.md)
+- [Neovim](./advanced_configs/neovim.md)
+- [Nushell](./advanced_configs/nushell.md)
+- [Rio](./advanced_configs/rio.md)
+- [Starship](./advanced_configs/starship.md)
+- [Tmux](./advanced_configs/tmux.md)
+- [Wezterm](./advanced_configs/wezterm.md)
+- [XONSH](./advanced_configs/xonsh.md)
+- [Zed](./advanced_configs/zed.md)
+- [Zsh](./advanced_configs/zsh.md)
+- [All my custom configs](./assets/)
+
+## Verdict and lessons learned
+
+- Wezterm is very configurable, but a bit slow to start. I have a weird bug that create a new line each type I type a letter. Probably something in my config.
+- New shells like Xonsh or Murex are fun, but hard to use daily. At least now I'm getting used to fish.
