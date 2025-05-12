@@ -9,6 +9,6 @@
 
 ## Terminals
 
-- Ghostty: fast, ready to use, easy to configure. Not available on windows yet. My current favorite on linux.
+- Ghostty: fast, ready to use, easy to configure. Has a "quake console" ! Not available on windows yet. My current favorite on linux/macos.
 - Rio: ok, some stuff missing like resizable panes. My current favorite on windows.
 - Wezterm: very configurable with lua, a bit slow to start. I have a weird bug on windows that create a new line each type I type a letter. Probably something in my config.
