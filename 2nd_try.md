@@ -70,5 +70,5 @@ wsl.exe -d Ubuntu -- sudo sh -c "apt-get update && apt-get install fish xonsh tm
 
 ## Verdict and lessons learned
 
-- Wezterm is very configurable, but a bit slow to start. I have a weird bug that create a new line each type I type a letter. Probably something in my config.
+- Wezterm is very configurable, but a bit slow to start. I have a weird bug on windows that create a new line each type I type a letter. Probably something in my config.
 - New shells like Xonsh or Murex are fun, but hard to use daily. At least now I'm getting used to fish.
