@@ -6,11 +6,13 @@
 - [Helix](./helix/)
 - [Murex](./murex/)
 - [Nushell](./nushell/)
+- [OSH](./osh/)
 - [RIO](./rio/)
 - [Starship](./starship/)
 - [TMUX](./tmux/)
 - [Wezterm](./wezterm/)
 - [XONSH](./xonsh/)
+- [YSH](./ysh/)
 - [Zed](./zed/)
 - [Zsh](./zsh/)
 
