@@ -36,10 +36,11 @@ def fish [] { wsl -d Ubuntu -e /usr/bin/fish -l } # wsl Ubuntu with fish shell
 # def xonsh [] { wsl -d Ubuntu -e /usr/bin/xonsh } # wsl Ubuntu with xonsh shell - removed to use windows xonsh (uv tool install xonsh)
 def xonsh [] { uvx xonsh } # run the uv tool version of xonsh
 def zsh [] { wsl -d Ubuntu -e /usr/bin/zsh -l } # wsl Ubuntu with zsh shell
+def tmux [] { wsl -d Ubuntu -e /home/linuxbrew/.linuxbrew/bin/tmux -l } # wsl Ubuntu with tmux shell
 
 # Python venv
-alias venvc = python -m virtualenv virtualenv
-alias activate = overlay use virtualenv\Scripts\activate.nu
+alias venvc = python -m virtualenv venv
+alias activate = overlay use venv\Scripts\activate.nu
 # alias activate = if ('virtualenv' | path exists) { overlay use virtualenv\Scripts\activate.nu } else if ('.venv' | path exists) { overlay use .venv\Scripts\activate.nu } else { print No venv found }
 
 
