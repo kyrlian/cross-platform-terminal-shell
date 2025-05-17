@@ -165,12 +165,12 @@ confirm-before-quit = false
 # disable-unfocused-render = false
 # level = 1
 # filters = []
-[renderer]
-performance = "high"
-backend = "automatic"
-disable-unfocused-render = false
-level = 1
-filters = ["C:\\Users\\key\\AppData\\Local\\rio\\slang-shaders\\crt\\crt-gdv-mini-ultra-trinitron.slangp"]
+# [renderer]
+# performance = "high"
+# backend = "automatic"
+# disable-unfocused-render = false
+# level = 1
+# filters = ["C:\\Users\\key\\AppData\\Local\\rio\\slang-shaders\\crt\\crt-gdv-mini-ultra-trinitron.slangp"]
 
 # Keyboard
 #
@@ -283,8 +283,12 @@ filters = ["C:\\Users\\key\\AppData\\Local\\rio\\slang-shaders\\crt\\crt-gdv-min
 #   - (Windows) powershell
 #
 [shell]
-program = "nu"
-args = []
+# program = "nu"
+# args = []
+program = "wsl"
+args = ["-d", "Ubuntu", "-e", "/usr/bin/fish", "-l"]
+# args = ["-d", "Ubuntu", "-e", "/home/linuxbrew/.linuxbrew/bin/tmux", "-l"]
+
 # Example 1 using fish shell from bin path:
 #
 # [shell]
