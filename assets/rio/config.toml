@@ -1,3 +1,27 @@
+theme = "dracula"
+confirm-before-quit = false
+
+[bindings]
+keys = [
+   { key = "s", with = "control", action = "SplitRight" },
+   { key = "s", with = "control | shift", action = "SplitDown" },
+]
+
+[shell]
+program = "nu"
+args = []
+
+# Rio now allows you to have different configurations per OS
+# You can write ovewrite properties like `Shell`, `Navigation` and `Window`.
+# https://rioterm.com/docs/config#platform
+[platform]
+# Microsoft Windows overwrite
+windows.shell.program = "wsl"
+windows.shell.args = ["-d", "Ubuntu", "-e", "/usr/bin/tmux", "-l"]
+# windows.shell.args = ["-d", "Ubuntu", "-e", "/usr/bin/fish", "-l"]
+# Linux overwrite
+linux.shell.program = "tmux"
+linux.shell.args = ["-l"]
 
 # Hide the cursor while typing
 #
@@ -19,7 +43,6 @@
 # (windows: C:\Users\USER\AppData\Local\rio\themes\dracula.toml)
 #
 # Example:
-theme = "dracula"
 # theme = "elementary"
 
 # Padding-x
@@ -80,7 +103,7 @@ theme = "dracula"
 # Confirm before exiting Rio
 # Default is `true`
 #
-confirm-before-quit = false
+# confirm-before-quit = false
 
 # Cursor
 #
@@ -282,13 +305,6 @@ confirm-before-quit = false
 #   - (Linux/BSD) user login shell
 #   - (Windows) powershell
 #
-[shell]
-# program = "nu"
-# args = []
-program = "wsl"
-args = ["-d", "Ubuntu", "-e", "/usr/bin/fish", "-l"]
-# args = ["-d", "Ubuntu", "-e", "/home/linuxbrew/.linuxbrew/bin/tmux", "-l"]
-
 # Example 1 using fish shell from bin path:
 #
 # [shell]
@@ -341,12 +357,10 @@ args = ["-d", "Ubuntu", "-e", "/usr/bin/fish", "-l"]
 #   { key = "q", with = "super", action = "Quit" },
 #   # Bytes[27, 91, 53, 126] is equivalent to "\x1b[5~"
 #   { key = "home", with = "super | shift", bytes = [27, 91, 53, 126] }
-# ]
-[bindings]
-keys = [
-   { key = "s", with = "control", action = "SplitRight" },
-   { key = "s", with = "control | shift", action = "SplitDown" },
-]
+#   { key = "s", with = "control", action = "SplitRight" },
+#   { key = "s", with = "control | shift", action = "SplitDown" },
+#]
+
 # Platform
 #
 # Rio now allows you to have different configurations per OS
