@@ -1,4 +1,6 @@
-# Cross Platform Terminal & Shell <!-- omit in toc -->
+# Cross Platform Terminal & Shell<!-- omit in toc -->
+
+# Migrated to https://codeberg.org/kyrlian/cross-platform-terminal-shell<!-- omit in toc -->
 
 Searching for a cross plateform combo : terminal, shell, prompt - for mac and windows.
 
